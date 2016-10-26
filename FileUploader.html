@@ -13,15 +13,12 @@ window.onload = function() {
             if (file.type.match(textType)) {
                 var reader = new FileReader();
 				
-				
 				reader.readAsText(file); 
 				
-				var rawText=reader.result;
-				
-				var editText=changeRawText(rawText);
-				
                 reader.onload = function(e) {
-                    fileDisplayArea.innerText = reader.result;
+					var rawText = reader.result;
+					saveRawText(rawText);
+					showText(fileDisplayArea);
                 }
 
                    
@@ -31,8 +28,17 @@ window.onload = function() {
         });
 }
 
+function showText(area) {
+	area.innerText = sessionStorage.getItem('rawText');
+}
+
+function saveRawText(rawText) {
+	sessionStorage.getItem('rawText');
+	sessionStorage.setItem('rawText',rawText);
+}
+
 function changeRawText(rawText) {
-	var cleanedText = rawText.replace(/100m/g, "YOLOLOLOLOLOLOLO");
+	var cleanedText = rawText.replace(/Hello/g, "-changed Text-");
 	return cleanedText;
 }
 </script>
