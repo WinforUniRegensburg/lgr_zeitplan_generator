@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zeitplangenerator</title>
+</head>
+<header>
+	<script type="text/javascript">
+	
+function readSingleFile(evt) {
+    //Retrieve the first (and only!) File from the FileList object
+    var f = evt.target.files[0]; 
+
+    if (f) {
+      var r = new FileReader();
+      r.onload = function(e) { 
+	      var contents = e.target.result;
+        alert( "Got the file.n" 
+              +"name: " + f.name + "n"
+              +"type: " + f.type + "n"
+              +"size: " + f.size + " bytesn"
+              + "starts with: " + contents.substr(1, contents.indexOf("n"))
+        );  
+      }
+      r.readAsText(f);
+    } else { 
+      alert("Failed to load file");
+    }
+  }
+
+  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
+	
+	
+	/*	function generateTableContent() {
+			
+			var content = "Teilnehmer-Gala-2016-06-02.htm";
+			
+			//var filestring ="";
+			//var firstPos = filestring.indexOf("locate");
+			//var reader = new FileReader();
+				
+			var events = [
+				{
+					"timestamp":"d2016-06-05t12-00",
+					"category":"Frauen,U20,U18",
+					"name":"100m (Vorprogramm)"
+				},
+				{
+					"timestamp":"d2016-06-05t11-15",
+					"category":"M&auml;nner,U20,U18",
+					"name":"100m (Vorprogramm)"
+				}
+			];
+			
+			var json = JSON.stringify(events);			
+			sessionStorage.getItem('events');
+			sessionStorage.setItem('events',json);
+			
+			return true;
+		}*/
+	</script>
+</header>
+<body>
+	<form id="submit" method="post" action="table.html"> <!--onsubmit="return generateTableContent()"-->
+		<input type="file" name="file" /><p>
+		<input type="submit" value="ok" />
+	</form>
+</body>
+</html>

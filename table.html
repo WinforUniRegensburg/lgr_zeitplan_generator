@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head><title>Tabelle</title></head>
+
+<body onLoad="showTable()">
+<script type="text/javascript">
+function showTable() {
+	var json = sessionStorage.getItem('events');
+	document.getElementById("textWithJSON").innerHTML = json;
+	var events = JSON.parse(json);
+	var array = [];
+	for(var i=0; i<events.length; i++) {
+		array[i] = [];
+	}
+	
+	//sort events by timestamp
+	events.sort(function (a,b) { return a[0]-b[0] });
+	
+	var date = null;
+	var time = null;
+	var category = null;
+	var name = null;
+	for(var i=0; i<events.length; i++) {
+		date = getDate(events[i].timestamp);
+		time = getTime(events[i].timestamp);
+		
+		
+	}
+	
+	var table = "<table><tr><td>Zeit</td><td>M&auml;nner</td><td>mU20/18</td><td>mU16</td><td>Frauen</td><td>wU20/18</td><td>wU16</td></tr>";
+	for(var i = 0; i<events.length; i++) {
+		/*var table = table
+		+"<tr>"
+		+"<td>"+events[i].time+"</td>
+		+"<td>"+events[i].time+"</td>
+		+"<td>"+events[i].time+"</td>
+		+"<td>"+events[i].time+"</td>
+		+"<td>"+events[i].time+"</td>
+		+"<td>"+events[i].time+"</td>
+		+"</tr>";*/
+		for(var i = 0; i<events.length; i++) {
+	}
+	"</table>"
+	document.getElementById("textWithJSON").innerHTML = json;
+}
+
+function getDate(timestamp) {
+	return timestamp.slice(0,11);
+}
+
+function getTime(timestamp) {
+	return timestamp.slice(12,17);
+}
+</script>
+<p id="textWithJSON">beiwbfewqh</p>
+<!--
+<table>
+	<tr>
+		<td>Zeit</td>
+		<td>M&auml;nner</td>
+		<td>mU20/18</td>
+		<td>mU16</td>
+		<td>Frauen</td>
+		<td>wU20/18</td>
+		<td>wU16</td>
+	</tr>
+<table>
+-->
+
+
+<table>
+</body>
+</html>
