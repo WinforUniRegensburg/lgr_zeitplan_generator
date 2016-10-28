@@ -4,50 +4,38 @@
 	<title>Zeitplangenerator</title>
 </head>
 <header>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js">
+	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js">-->
+	<script type="text/javascript" >
 	
-function readSingleFile(evt) {
-    //Retrieve the first (and only!) File from the FileList object
-    var f = evt.target.files[0]; 
-
-    if (f) {
-      var r = new FileReader();
-      r.onload = function(e) { 
-	      var contents = e.target.result;
-        alert( "Got the file.n" 
-              +"name: " + f.name + "n"
-              +"type: " + f.type + "n"
-              +"size: " + f.size + " bytesn"
-              + "starts with: " + contents.substr(1, contents.indexOf("n"))
-        );  
-      }
-      r.readAsText(f);
-    } else { 
-      alert("Failed to load file");
-    }
-  }
-
-  document.getElementById('fileinput').addEventListener('change', readSingleFile, false);
-	
-	
-	/*	function generateTableContent() {
-			
-			var content = "Teilnehmer-Gala-2016-06-02.htm";
-			
-			//var filestring ="";
-			//var firstPos = filestring.indexOf("locate");
-			//var reader = new FileReader();
-				
+		function generateTableContent() {
+		
+			//Idea for category: one token for the gender + a boolean array for the age
 			var events = [
 				{
-					"timestamp":"d2016-06-05t12-00",
-					"category":"Frauen,U20,U18",
-					"name":"100m (Vorprogramm)"
+					"date":"2016-06-05",
+					"time":"12.00",
+					"category":"Frauen",
+					"discipline":"100m Hindernis Finale",
+					"eventName":"Vorprogramm",
 				},
 				{
-					"timestamp":"d2016-06-05t11-15",
-					"category":"M&auml;nner,U20,U18",
-					"name":"100m (Vorprogramm)"
+					"date":"2016-06-05",
+					"time":"12.00",
+					"category":"Frauen U20",
+					"discipline":"100m Hindernis Finale",
+					"eventName":"Vorprogramm",
+				},				{
+					"date":"2016-06-05",
+					"time":"11.15",
+					"category":"M&auml;nner",
+					"discipline":"100m Hindernis",
+					"eventName":"Vorprogramm",
+				},				{
+					"date":"2016-06-05",
+					"time":"11.15",
+					"category":"M&auml;nner U18",
+					"discipline":"100m Hindernis",
+					"eventName":"Vorprogramm",
 				}
 			];
 			
@@ -56,12 +44,11 @@ function readSingleFile(evt) {
 			sessionStorage.setItem('events',json);
 			
 			return true;
-		}*/
+		}
 	</script>
 </header>
-<body>
-	<form id="submit" method="post" action="table.html"> <!--onsubmit="return generateTableContent()"-->
-		<input type="file" name="file" /><p>
+<body onload="generateTableContent()">
+	<form id="submit" action="table.html"> <!--onsubmit="return generateTableContent()"-->
 		<input type="submit" value="ok" />
 	</form>
 </body>
