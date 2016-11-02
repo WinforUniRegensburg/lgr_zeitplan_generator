@@ -1,0 +1,4 @@
+[1031/172624:ERROR:process_reader_win.cc(142)] SuspendThread: Zugriff verweigert (0x5)
+[1031/172624:ERROR:exception_snapshot_win.cc(87)] thread ID 6156 not found in process
+[1031/172624:WARNING:crash_report_exception_handler.cc(56)] ProcessSnapshotWin::Initialize failed
+[1031/172624:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Es wurde versucht, auf einen Prozess zuzugreifen, der gerade beendet wurde.  (0xc000010a)
