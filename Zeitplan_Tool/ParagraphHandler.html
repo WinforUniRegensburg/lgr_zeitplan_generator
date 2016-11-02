@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+<head><title>Paragraph handler!</title></head>
+<script type="text/javascript">
+window.onload = function() {
+
+
+    //TODO Bene ---put in magic here---
+	//has to cut out the paragraphes from the raw text
+	//This function will be started when the window is loaded
+	
+	
+	//added some example code
+	var test = "some example text";
+	var raw = getRawText();
+	var addingStrings = test + " " + raw;
+	
+	//save paragraph. after that you can display the String
+	saveParagraphText(addingStrings/*that "addingStrings" is of course an example*/);
+	showText();
+}
+
+//puts text in the HTML below "<pre id="displayArea"><pre>"
+function showText() {
+    var area = document.getElementById('displayArea');
+	area.innerHTML = sessionStorage.getItem('paragraphText');
+}
+
+//saves the paragraphes should be executed before showing the text
+function saveParagraphText(paragraphText) {
+	sessionStorage.getItem('paragraphText');
+	sessionStorage.setItem('paragraphText',paragraphText);
+}
+
+//returns the rawText from the File Uploader before
+function getRawText() {
+	return sessionStorage.getItem('rawText');
+}
+
+</script>
+<body id="body">
+	<!--<form id="submit" action="Cleaner.html>-->
+	<form id="submit" action=""> <!-- prevents you to get to the next page--->
+		<input type="submit" name="button" value="ok"/>
+	</form>
+<pre id="displayArea"><pre>
+</form>
+</body>
+</html>

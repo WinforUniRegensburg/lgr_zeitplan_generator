@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html>
+<head><title>Cleaner!</title></head>
+<script type="text/javascript">
+window.onload = function() {
+
+	//var paragraphs = getParagraphesText();
+    
+	//TODO ---put in magic here---
+	//has to parse the raw paragraphes to an structured events array. see the example events type...
+	//This function will be started when the window is loaded
+		
+		
+	//test data. That stuff below has to be generated out of the raw paragraphs
+	
+	var events = [
+	{
+		"date":"2016-06-05",
+		"time":"12.00",
+		"category":"Frauen",
+		"discipline":"100m Hindernis Finale",
+		"eventName":"Vorprogramm"
+	},{
+		"date":"2016-06-05",
+		"time":"12.00",
+		"category":"Frauen U20",
+		"discipline":"100m Hindernis Finale"
+		"eventName":"Vorprogramm",
+	},{
+		"date":"2016-06-05",
+		"time":"11.15",
+		"category":"M&auml;nner",
+		"discipline":"100m Hindernis",
+		"eventName":"Vorprogramm"
+	},{
+		"date":"2016-06-05",
+		"time":"11.15",
+		"category":"M&auml;nner U18",
+		"discipline":"100m Hindernis",
+		"eventName":"Vorprogramm"
+	}
+	];
+	
+	//save the events. after that you can display the String
+	saveJSON(events);
+	showJSONText();
+}
+
+//puts text in the HTML below "<pre id="displayArea"><pre>"
+function showJSONText() {
+	
+	var json = sessionStorage.getItem('events');
+	var events = JSON.parse(json);
+	var myHTMLCode = "";
+	for (var i=0; i<events.length; i++) {
+		myHTMLCode = myHTMLCode + events[i].discipline + "</br>";
+	}
+
+    var area = document.getElementById('displayArea');
+	area.innerHTML = myHTMLCode;
+}
+
+//saves the events
+function saveJSON(events) {
+	var json = JSON.stringify(events);			
+	sessionStorage.getItem('events');
+	sessionStorage.setItem('events',json);
+}
+/*
+//returns the paragraphText from the Paragraph handler before
+function getParagraphesText() {
+	return sessionStorage.getItem('paragraphText');
+}
+*/
+</script>
+<body id="body">
+	<!--<form id="submit" action="GenerateTable.html">-->
+	<form id="submit" action=""> <!-- prevents you to get to the next page--->
+		<!--<input type="submit" name="button" value="ok"/>-->
+	</form>
+<pre id="displayArea"><pre>
+</form>
+</body>
+</html>

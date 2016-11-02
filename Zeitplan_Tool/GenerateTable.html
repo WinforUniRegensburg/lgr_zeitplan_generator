@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head><title>Table</title></head>
+<script type="text/javascript">
+window.onload = function() {
+	var json = getEventsJSON();
+	var events = JSON.parse(json);
+	var table = "<strong>table content</strong>";
+
+	//TODO  ---put in magic here---
+	//This function will be started when the window is loaded
+
+	saveTableHTML(table);
+	showTable();
+}
+
+//puts text in the HTML below "<pre id="displayArea"><pre>"
+function showTable() {
+    var area = document.getElementById('displayArea');
+	area.innerHTML = sessionStorage.getItem('table');
+}
+
+//saves the tabel content should be executed before saving the text
+function saveTableHTML(table) {
+	sessionStorage.getItem('table');
+	sessionStorage.setItem('table',table);
+}
+
+//returns the events in JSON format from the Cleaner before
+function getEventsJSON() {
+	return sessionStorage.getItem('events');
+}
+</script>
+<body id="body">
+<pre id="displayArea"><pre>
+</form>
+</body>
+</html>
