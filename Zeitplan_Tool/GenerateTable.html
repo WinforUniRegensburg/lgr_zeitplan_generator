@@ -5,11 +5,66 @@
 window.onload = function() {
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
-	var table = "<strong>table content</strong>";
-
-	//TODO  ---put in magic here---
-	//This function will be started when the window is loaded
-
+	var table = "<table>"
+	
+	//evalutate the oldest possible athlete 
+	var oldest = 0;
+	for (var i = 0; i < events.length; i++) {
+		if(oldest < events[i].category.length) {
+			oldest = events[i].category.length;
+		}
+	}
+	
+	//generate table head
+	table = table + "<tr>" + "<th>" + "Zeit" + "</th>";
+	//women side
+	for (var i = 0; i < oldest; i++) {
+		table = table +
+		"<th>" + "Frauen " + i + " " + "</th>";
+	}
+	//men side
+	for (var i = 0; i < oldest; i++) {
+		table = table +
+		"<th>" + "M&auml;nner " + i + " " + "</th>";
+	}
+	table = table + "</tr>";
+	
+	//fill in the content
+	for (var i = 0; i < events.length; i++) {
+	table = table + "<tr>";
+	table = table + "<td>" + events[i].time + "</td>";
+		//female side content
+		if (events[i].gender == "Frauen") {
+			for (var j = 0; j < oldest; j++) {
+				if (events[i].category[j]) {
+					table = table + "<td>" + events[i].discipline + "</td>";
+				} else {
+					table = table + "<td></td>";
+				}
+			} 
+			//empty male side
+			for (var j = 0; j < oldest; j++) {
+				table = table + "<td></td>";
+			}
+			
+		//male side content
+		} else {
+			//empty female side
+			for (var j = 0; j < oldest; j++) {
+				table = table + "<td></td>";
+			}
+			for (var j = 0; j < oldest; j++) {
+				if (events[i].category[j]) {
+					table = table + "<td>" + events[i].discipline + "</td>";
+				} else {
+					table = table + "<td></td>";
+				}
+			}
+		}
+	table = table + "</tr>";
+	}
+	table = table + "</table>";
+	
 	saveTableHTML(table);
 	showTable();
 }

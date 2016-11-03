@@ -15,31 +15,35 @@ window.onload = function() {
 	
 	//shows how to generate an object
 	var singleEvent1 = new Event (	'2016.06.05', '12.00', 
-									['f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f'],
-									'100m Hindernis Finale', 'Vorprogramm');
-	var singleEvent2 = new Event (	'2016.06.05', '11.15', 
-									['f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f'],
-									'100m Zeitlauf', 'Vorprogramm');	
+									[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
+									'100m Hindernis Finale', 'Vorprogramm', 'Frauen');
+	var singleEvent2 = new Event (	'2016.06.05', '13.15', 
+									[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
+									'100m Zeitlauf', 'Vorprogramm', 'Frauen');	
 	//puts objects in an array
 	var events = [singleEvent1, singleEvent2];
 	
 	//shows an example for pushing a new event in the array
 	var singleEvent3 = new Event (	'2016.06.05', '10.15', 
-									['f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f'],
-									'20min Power-Schach', 'Vorprogramm');
+									[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
+									'20min Power-Schach', 'Vorprogramm', 'M&auml;nner');
 	events.push(singleEvent3);
 	//end of example
+	
+	events = events.sort(function (a,b) { return a.time-b.time });
 
 	saveJSON(events);
 	showJSONText();
 }
 
-function Event(date, time, category, discipline, eventName) {
+//constructor for an event
+function Event(date, time, category, discipline, eventName, gender) {
 	this.date = date;
 	this.time = time;
 	this.category = category;
 	this.discipline = discipline;
 	this.eventName = eventName;
+	this.gender = gender;
 }
 
 //puts text in the HTML below "<pre id="displayArea"><pre>"
@@ -70,9 +74,8 @@ function getParagraphesText() {
 
 </script>
 <body id="body">
-	<!--<form id="submit" action="GenerateTable.html">-->
-	<form id="submit" action=""> <!-- prevents you to get to the next page--->
-		<!--<input type="submit" name="button" value="ok"/>-->
+	<form id="submit" action="GenerateTable.html">
+		<input type="submit" id="submitButton" value="weiter" />
 	</form>
 <pre id="displayArea"><pre>
 </form>
