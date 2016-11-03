@@ -13,37 +13,33 @@ window.onload = function() {
 		
 	//test data. That stuff below has to be generated out of the raw paragraphs
 	
-	var events = [
-	{
-		"date":"2016-06-05",
-		"time":"12.00",
-		"category":"Frauen",
-		"discipline":"100m Hindernis Finale",
-		"eventName":"Vorprogramm"
-	},{
-		"date":"2016-06-05",
-		"time":"12.00",
-		"category":"Frauen U20",
-		"discipline":"100m Hindernis Finale"
-		"eventName":"Vorprogramm",
-	},{
-		"date":"2016-06-05",
-		"time":"11.15",
-		"category":"M&auml;nner",
-		"discipline":"100m Hindernis",
-		"eventName":"Vorprogramm"
-	},{
-		"date":"2016-06-05",
-		"time":"11.15",
-		"category":"M&auml;nner U18",
-		"discipline":"100m Hindernis",
-		"eventName":"Vorprogramm"
-	}
-	];
+	//shows how to generate an object
+	var singleEvent1 = new Event (	'2016.06.05', '12.00', 
+									['f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f'],
+									'100m Hindernis Finale', 'Vorprogramm');
+	var singleEvent2 = new Event (	'2016.06.05', '11.15', 
+									['f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f'],
+									'100m Zeitlauf', 'Vorprogramm');	
+	//puts objects in an array
+	var events = [singleEvent1, singleEvent2];
 	
-	//save the events. after that you can display the String
+	//shows an example for pushing a new event in the array
+	var singleEvent3 = new Event (	'2016.06.05', '10.15', 
+									['f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f','f'],
+									'20min Power-Schach', 'Vorprogramm');
+	events.push(singleEvent3);
+	//end of example
+
 	saveJSON(events);
 	showJSONText();
+}
+
+function Event(date, time, category, discipline, eventName) {
+	this.date = date;
+	this.time = time;
+	this.category = category;
+	this.discipline = discipline;
+	this.eventName = eventName;
 }
 
 //puts text in the HTML below "<pre id="displayArea"><pre>"
@@ -66,12 +62,12 @@ function saveJSON(events) {
 	sessionStorage.getItem('events');
 	sessionStorage.setItem('events',json);
 }
-/*
+
 //returns the paragraphText from the Paragraph handler before
 function getParagraphesText() {
 	return sessionStorage.getItem('paragraphText');
 }
-*/
+
 </script>
 <body id="body">
 	<!--<form id="submit" action="GenerateTable.html">-->
