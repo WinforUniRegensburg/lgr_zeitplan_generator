@@ -4,8 +4,14 @@
 <script type="text/javascript">
 window.onload = function() {
 
-	//var paragraphs = getParagraphesText();
+	var json = getParagraphesText();
+	var paragraphs = JSON.parse(json);
+	
+	
+	document.getElementById('displayArea').innerHTML = paragraphs[0].firstLine + "<br>" + paragraphs[0].secondLine;
     
+	
+	
 	//TODO ---put in magic here---
 	//has to parse the raw paragraphes to an structured events array. see the example events type...
 	//This function will be started when the window is loaded
@@ -32,8 +38,8 @@ window.onload = function() {
 	
 	events = events.sort(function (a,b) { return a.time-b.time });
 
-	saveJSON(events);
-	showJSONText();
+	//saveJSON(events);
+	//showJSONText();
 }
 
 //constructor for an event

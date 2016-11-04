@@ -15,7 +15,7 @@ window.onload = function() {
 	
 	
 	//finds the paragraphes with the class "ev1"
-	var $html = $('p.ev1').clone();
+	var $html = $('p.ev1').clone().text();
 	
 	//after finding the paragraphes, deletes the content of the page
 	document.getElementById('displayArea').innerHTML = "";
@@ -30,6 +30,44 @@ window.onload = function() {
 	
 	//saves the the text which we had copied
 	saveParagraphText(paragraphs);
+	
+	var text = sessionStorage.getItem('paragraphText');
+	var array = [];
+	var startSliceP = 0;
+	var endSliceP = 0;
+	var middleSliceLine = 0;
+	while (text != "") {
+			
+		endSliceP = text.search('Beginn')+13;
+		
+		var storageOneParagraph = text.slice(0, endSliceP);
+		
+		middleSliceLine = storageOneParagraph.search('Datum');
+		
+		var storageFirstLine = storageOneParagraph.slice(0, middleSliceLine-1);
+		var storageSecondLine = storageOneParagraph.slice(middleSliceLine);
+		
+		array.push(new StrucParagraph(storageFirstLine, storageSecondLine));
+		text = text.slice(endSliceP);
+	}
+	
+	var arrayJSON = JSON.stringify(array);
+	saveParagraphText(arrayJSON);
+	showText();
+/*	//output of the array
+	var txt = "";
+	for (var i = 0; i<array.length; i++) {
+		txt = txt + array[i].firstLine + "<br>" + array[i].secondLine+"<br><br>"; 
+	}
+	saveParagraphText(txt);
+	showText();
+*/
+}
+
+//constructor for an strucParagraph
+function StrucParagraph(firstLine, secondLine) {
+	this.firstLine = firstLine;
+	this.secondLine = secondLine;
 }
 
 //puts text in the HTML below "<pre id="displayArea"><pre>"
@@ -51,9 +89,9 @@ function getRawText() {
 
 </script>
 <body id="body">
-	<!--<form id="submit" action="Cleaner.html>-->
-	<form id="submit" action=""> <!-- prevents you to get to the next page--->
-		<input type="submit" name="button" value="ok"/>
+	<form id="submit" action="Cleaner.html">
+	<!--<form id="submit" action=""> <!-- prevents you to get to the next page--->
+		<input type="submit" name="button" value="weiter"/>
 	</form>
 <pre id="displayArea"><pre>
 </form>
