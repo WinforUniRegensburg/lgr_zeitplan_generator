@@ -1,23 +1,35 @@
 <!DOCTYPE>
 <html>
 <head><title>Paragraph handler!</title></head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
 window.onload = function() {
-
-
-    //TODO Bene ---put in magic here---
-	//has to cut out the paragraphes from the raw text
-	//This function will be started when the window is loaded
-	
-	
-	//added some example code
-	var test = "some example text";
 	var raw = getRawText();
-	var addingStrings = test + " " + raw;
 	
-	//save paragraph. after that you can display the String
-	saveParagraphText(addingStrings/*that "addingStrings" is of course an example*/);
+	//saves the raw text so it will be displayed in a first stepp
+	saveParagraphText(raw);
+	
+	//we need to display the text once, so the html will be created, so the tags can be found by JQuery
 	showText();
+	
+	
+	
+	//finds the paragraphes with the class "ev1"
+	var $html = $('p.ev1').clone();
+	
+	//after finding the paragraphes, deletes the content of the page
+	document.getElementById('displayArea').innerHTML = "";
+	
+	//puts in the new content on the page
+	$('pre').prepend($html);
+	
+	
+	
+	//copies the content of the page 
+	var paragraphs = document.getElementById('displayArea').innerHTML;
+	
+	//saves the the text which we had copied
+	saveParagraphText(paragraphs);
 }
 
 //puts text in the HTML below "<pre id="displayArea"><pre>"
@@ -43,6 +55,7 @@ function getRawText() {
 	<form id="submit" action=""> <!-- prevents you to get to the next page--->
 		<input type="submit" name="button" value="ok"/>
 	</form>
+<pre id="paragraphArea"><pre>
 <pre id="displayArea"><pre>
 </form>
 </body>
