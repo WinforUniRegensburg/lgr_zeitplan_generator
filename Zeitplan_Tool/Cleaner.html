@@ -7,8 +7,97 @@ window.onload = function() {
 	var json = getParagraphesText();
 	var paragraphs = JSON.parse(json);
 	
+	var txt = ""
 	
-	document.getElementById('displayArea').innerHTML = paragraphs[0].firstLine + "<br>" + paragraphs[0].secondLine;
+	var events = [];
+	
+	// #holyShitBelow
+	for (var i = 0; i<paragraphs.length; i++) {
+		var firstLine = paragraphs[i].firstLine;
+		var secondLine = paragraphs[i].secondLine;
+	
+		var dateIndex = secondLine.search('Datum')+7;
+		var date = secondLine.slice(dateIndex, dateIndex+10);
+		
+		var timeIndex = secondLine.search('Beginn')+8;
+		var time = secondLine.slice(timeIndex) + " Uhr";
+		
+		
+		//get the eventName and cut it out of the firstLine
+		var eventName = "";
+		if (firstLine.includes("(")) {
+			var brokenFirstLineEvent = firstLine.split(" (");
+			var brokenFirstLineEventHelper = brokenFirstLineEvent[1].split(")");
+			eventName = brokenFirstLineEventHelper[0];			
+			firstLine = brokenFirstLineEvent[0] + brokenFirstLineEventHelper[1];
+		}
+	
+		//get the discipline and cut it out of the firstLine
+		var brokenFristLineDiscipline = firstLine.split(", ");
+		var brokenFirstLineDisciplineHelper = brokenFristLineDiscipline[1].split(" - ");
+		firstLine = brokenFirstLineDisciplineHelper[0];
+		var discipline = brokenFristLineDiscipline[0] + " " + brokenFirstLineDisciplineHelper[1];
+		
+		//only the gender and category are left in the firstLine
+		var brokenFLGender = firstLine.split(" ");
+		
+		var gender = "";
+		for (var j = 0; j < brokenFLGender.length; j++) {
+			var token = brokenFLGender[j].trim();
+			if (token == 'Frauen' || token == 'weibliche' || token == 'weiblich') {
+				gender='Frauen';
+				break;
+			} else {
+				gender='Männer'
+			}
+		}
+		
+		var maxAge = 0;
+		for (var j = 0; j < brokenFLGender.length; j++) {
+			var token = brokenFLGender[j];
+			if (token.charAt(0) == 'U') {
+				var maxAgeLoc = parseInt(token.slice(1));
+				if (maxAgeLoc>maxAge) {
+					maxAge = maxAgeLoc;
+				}
+			} else {
+				maxAge = 30;
+			}
+		}
+		var category = [];
+		for (var j = 0; j < maxAge; j++) {
+			category[j] = true;
+		}
+		
+		
+		var singleEvent = new Event (	date, 
+										time, 
+										category,
+										discipline, 
+										eventName, 
+										gender);
+		events.push(singleEvent);
+		
+		txt = txt + 
+		singleEvent.date + "<br>" 
+		+ singleEvent.time + "<br>" 
+		+ singleEvent.eventName + "<br>" 
+		+ singleEvent.discipline +"<br>"
+		+ singleEvent.gender + "<br>"
+		+ singleEvent.category[0] + "<br><br><br>";
+	}
+	
+	
+	/*var txt = 
+		singleEvent.date + "<br>" 
+		+ singleEvent.time + "<br>" 
+		+ singleEvent.eventName + "<br>" 
+		+ singleEvent.discipline +"<br>"
+		+ singleEvent.gender + "<br>"
+		+ singleEvent.category[0];
+	
+	*/
+	document.getElementById('displayArea').innerHTML = txt;
     
 	
 	
@@ -16,7 +105,7 @@ window.onload = function() {
 	//has to parse the raw paragraphes to an structured events array. see the example events type...
 	//This function will be started when the window is loaded
 		
-		
+/*		
 	//test data. That stuff below has to be generated out of the raw paragraphs
 	
 	//shows how to generate an object
@@ -35,10 +124,16 @@ window.onload = function() {
 									'20min Power-Schach', 'Vorprogramm', 'M&auml;nner');
 	events.push(singleEvent3);
 	//end of example
-	
-	events = events.sort(function (a,b) { return a.time-b.time });
+	*/
 
-	//saveJSON(events);
+	
+	
+	//events = events.sort(function (a,b) { return a.time-b.time });
+
+	
+	
+	
+	saveJSON(events);
 	//showJSONText();
 }
 
