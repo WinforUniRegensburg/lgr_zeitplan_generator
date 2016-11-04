@@ -11,6 +11,7 @@ window.onload = function() {
 	var events = [];
 	
 	// #holyShitBelow
+	// creates one event object out of a paragraph
 	for (var i = 0; i<paragraphs.length; i++) {
 	
 		//extracts a copy of the first and second line of the paragraph
@@ -18,15 +19,25 @@ window.onload = function() {
 		var secondLine = paragraphs[i].secondLine;
 	
 		//get the date from the secondLine
+		//TODO Problem small ähnlich wie bei paragraphHandler das +x besser machen, indem man erkennt, dass es sich um ein Datum handelt... 
+		//Irgendwie über die Zeichenfolge?
 		var dateIndex = secondLine.search('Datum')+7;
 		var date = secondLine.slice(dateIndex, dateIndex+10);
 		
 		//get the time from the secondLine
+		//TODO Problem small wie im Block oben
 		var timeIndex = secondLine.search('Beginn')+8;
 		var time = secondLine.slice(timeIndex) + " Uhr";
 		
 		//get the eventName and cut it out of the firstLine 
 		//eventName is supposed to be in round brackets
+		//
+		//
+		//  ----------------------------------->   TODO Problem BIG IMPORTANT  <--------------------------------------
+		//
+		//
+		// Es gibt in den Daten die unregelmäßigkeit, dass Teile der ersten Zeile in Klammern stehen, obwohl wir die Veranstaltungsart so ermitteln!
+		// Nicht immer ist eine Veranstaltungsart im Datensatz vorhanden!
 		var eventName = "";
 		if (firstLine.includes("(")) {
 			var brokenFirstLineEvent = firstLine.split(" (");
@@ -48,6 +59,8 @@ window.onload = function() {
 		var gender = "";
 		for (var j = 0; j < brokenFLGender.length; j++) {
 			var token = brokenFLGender[j].trim();
+			//TODO Problem wenn die Abfrage auf weiblich fehlschlägt, obwohl es Wettkampf für Frauen war wird auf Männer gesetzt...
+			// -> Prüfen ob diese Abfrage richtig arbeitet!!!
 			if (token == 'Frauen' || token == 'weibliche' || token == 'weiblich') {
 				gender='Frauen';
 				break;
@@ -65,10 +78,13 @@ window.onload = function() {
 				if (maxAgeLoc>maxAge) {
 					maxAge = maxAgeLoc;
 				}
-			} else {
-				maxAge = 30;
-			}
+			} 
 		} 
+		//TODO Problem eher was zum Abstimmen... Was ist das Alter, auf welches wir setzen, wenn mit der Methode oben kein Alter ermittelt wird??
+		//Hier als Übergangslösung maxAge auf 30 gesetzt
+		if (maxAge == 0) {
+			maxAge = 30;
+		}
 		//creates the categories
 		var category = [];
 		for (var j = 0; j < maxAge; j++) {
@@ -99,6 +115,8 @@ window.onload = function() {
 	//display debugging output
 	document.getElementById('displayArea').innerHTML = txt;
 
+	
+	//TODO Problem den Sortieralgorythmus anpassen -> macht Tom
 	//events = events.sort(function (a,b) { return a.time-b.time });
 
 	//saves events in the JSON format
@@ -126,6 +144,8 @@ function saveJSON(events) {
 function getParagraphesText() {
 	return sessionStorage.getItem('paragraphText');
 }
+
+//TODO Problem automatisch zur nächsten Seite wechseln
 
 </script>
 <body id="body">

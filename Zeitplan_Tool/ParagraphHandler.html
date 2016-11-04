@@ -31,13 +31,16 @@ window.onload = function() {
 	//saves the the text which we had copied
 	saveParagraphText(paragraphs);
 	
+	//slices the text, so we can put the paragraph (1. line, 2. line) Object in the array.
 	var text = sessionStorage.getItem('paragraphText');
 	var array = [];
 	var startSliceP = 0;
 	var endSliceP = 0;
 	var middleSliceLine = 0;
 	while (text != "") {
-			
+		
+		// TODO Problem small... ggf. das +13 so machen, dass es besser aussieht, also erkennen, 
+		// dass es sich nach Beginn: um eine Uhrzeit handelt und aufgrund dessen die Zahl setzen		
 		endSliceP = text.search('Beginn')+13;
 		
 		var storageOneParagraph = text.slice(0, endSliceP);
@@ -54,14 +57,6 @@ window.onload = function() {
 	var arrayJSON = JSON.stringify(array);
 	saveParagraphText(arrayJSON);
 	showText();
-/*	//output of the array
-	var txt = "";
-	for (var i = 0; i<array.length; i++) {
-		txt = txt + array[i].firstLine + "<br>" + array[i].secondLine+"<br><br>"; 
-	}
-	saveParagraphText(txt);
-	showText();
-*/
 }
 
 //constructor for an strucParagraph
@@ -87,10 +82,11 @@ function getRawText() {
 	return sessionStorage.getItem('rawText');
 }
 
+//TODO Problem automatisch auf die nächste Seite wechseln
+
 </script>
 <body id="body">
 	<form id="submit" action="Cleaner.html">
-	<!--<form id="submit" action=""> <!-- prevents you to get to the next page--->
 		<input type="submit" name="button" value="weiter"/>
 	</form>
 <pre id="displayArea"><pre>
