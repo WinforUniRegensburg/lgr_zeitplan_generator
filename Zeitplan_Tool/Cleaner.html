@@ -27,7 +27,7 @@ window.onload = function() {
 		//get the time from the secondLine
 		//TODO Problem small wie im Block oben
 		var timeIndex = secondLine.search('Beginn')+8;
-		var time = secondLine.slice(timeIndex) + " Uhr";
+		var time = secondLine.slice(timeIndex);
 		
 		//get the eventName and cut it out of the firstLine 
 		//eventName is supposed to be in round brackets
@@ -116,8 +116,21 @@ window.onload = function() {
 	document.getElementById('displayArea').innerHTML = txt;
 
 	
-	//TODO Problem den Sortieralgorythmus anpassen -> macht Tom
-	//events = events.sort(function (a,b) { return a.time-b.time });
+	//sorting the event objects 1st Order: date, 2nd Order: time
+	events = events.sort(function (a,b) { 
+	
+		var helper = a.date.trim().split(".");
+		var helper2 = a.time.trim().split(":");
+		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		var sortKeyAnum = parseInt(sortKeyA);
+		
+		helper = b.date.trim().split(".");
+		helper2 = b.time.trim().split(":");
+		var sortKeyB = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		var sortKeyBnum = parseInt(sortKeyB);
+		
+		return sortKeyAnum-sortKeyBnum;
+	});
 
 	//saves events in the JSON format
 	saveJSON(events);
