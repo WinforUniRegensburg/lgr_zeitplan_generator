@@ -21,11 +21,13 @@ window.onload = function() {
 		//get the date from the secondLine
 		//TODO Problem small ähnlich wie bei paragraphHandler das +x besser machen, indem man erkennt, dass es sich um ein Datum handelt... 
 		//Irgendwie über die Zeichenfolge?
+		//Abstimmung mit Gerit
 		var dateIndex = secondLine.search('Datum')+7;
 		var date = secondLine.slice(dateIndex, dateIndex+10);
 		
 		//get the time from the secondLine
 		//TODO Problem small wie im Block oben
+		//Abstimmung mit Gerit
 		var timeIndex = secondLine.search('Beginn')+8;
 		var time = secondLine.slice(timeIndex);
 		
@@ -38,6 +40,7 @@ window.onload = function() {
 		//
 		// Es gibt in den Daten die unregelmäßigkeit, dass Teile der ersten Zeile in Klammern stehen, obwohl wir die Veranstaltungsart so ermitteln!
 		// Nicht immer ist eine Veranstaltungsart im Datensatz vorhanden!
+		// Abstimmung mit Gerit
 		var eventName = "";
 		if (firstLine.includes("(")) {
 			var brokenFirstLineEvent = firstLine.split(" (");
@@ -61,6 +64,7 @@ window.onload = function() {
 			var token = brokenFLGender[j].trim();
 			//TODO Problem wenn die Abfrage auf weiblich fehlschlägt, obwohl es Wettkampf für Frauen war wird auf Männer gesetzt...
 			// -> Prüfen ob diese Abfrage richtig arbeitet!!!
+			// Abstimmung mit Gerit
 			if (token == 'Frauen' || token == 'weibliche' || token == 'weiblich') {
 				gender='Frauen';
 				break;
@@ -82,6 +86,7 @@ window.onload = function() {
 		} 
 		//TODO Problem eher was zum Abstimmen... Was ist das Alter, auf welches wir setzen, wenn mit der Methode oben kein Alter ermittelt wird??
 		//Hier als Übergangslösung maxAge auf 30 gesetzt
+		//Abstimmung mit Gerit
 		if (maxAge == 0) {
 			maxAge = 30;
 		}
@@ -119,6 +124,7 @@ window.onload = function() {
 	//sorting the event objects 1st Order: date, 2nd Order: time
 	events = events.sort(function (a,b) { 
 	
+		//converts the date and time in a logical integer which we can better compare
 		var helper = a.date.trim().split(".");
 		var helper2 = a.time.trim().split(":");
 		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
@@ -138,6 +144,10 @@ window.onload = function() {
 
 //constructor for an event
 function Event(date, time, category, discipline, eventName, gender) {
+
+	//TODO Problem Abstimmung mit Gerit
+	//zweites Array mit category einfügen, sodass zwischen Männern und Frauen zur gleichen Uhrzeit unterschieden werden könnte
+	
 	this.date = date;
 	this.time = time;
 	this.category = category;

@@ -8,6 +8,7 @@ window.onload = function() {
         fileInput.addEventListener('change', function(e) {
             var file = fileInput.files[0];
 			//TODO Problem File automatisch ziehen
+			//Abstimmung mit Gerit
             var textType = /html.*/;
             if (file.type.match(textType)) {
                 var reader = new FileReader();
