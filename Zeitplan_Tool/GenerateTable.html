@@ -6,20 +6,47 @@ window.onload = function() {
 
 	//TODO Problem die Spalten zusammenziehen
 	
-	//TODO Problem verschiedene Tabellen erstellen für die jeweiligen Tage + Überschriften
-	
 	//TODO Anpassen zu neuen Datentyp, sobald wir ihn verwenden!
 
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
 	
+	var eventsSplitDays = splitEvents(events);
+	
 	var pageContent = "";
 	
-	
-	pageContent = generateTable(events);
+	for (var i = 0; i < eventsSplitDays.length; i++) {
+		//generate the headline of the table
+		pageContent = pageContent + "<p>" + "<h2>" +
+		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</p>";
+			
+		//generate the table itself
+		pageContent = pageContent + "<p>" +
+			generateTable(eventsSplitDays[i]) + "</p>";
+	}
 	
 	saveTableHTML(pageContent);
 	showTable();
+}
+
+function splitEvents(events) {
+	var returnArray = [];
+	returnArray[0] = [];
+	
+	var indexReturnArray = 0;
+	var currentDate = events[0].date;
+	
+	for (var i = 0; i<events.length; i++) {		
+		if (events[i].date == currentDate) {
+			returnArray[indexReturnArray].push(events[i]);
+		} else {
+			indexReturnArray = indexReturnArray + 1;
+			returnArray[indexReturnArray] = [];
+			returnArray[indexReturnArray].push(events[i]);
+			currentDate = events[i].date;
+		}
+	}
+	return returnArray;
 }
 
 function generateTable(events) {
