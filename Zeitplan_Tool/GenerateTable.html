@@ -12,7 +12,21 @@ window.onload = function() {
 
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
-	var table = "<table>"
+	
+	var pageContent = "";
+	
+	
+	pageContent = generateTable(events);
+	
+	saveTableHTML(pageContent);
+	showTable();
+}
+
+function generateTable(events) {
+	//------------------- Start Table Algorithm ------------------------------
+	// requires an array of Events called "events" as imput 
+	// generates output: called table with a table of the input event array
+	var table = "<table>";
 	
 	//evalutate the oldest possible athlete 
 	var oldest = 0;
@@ -72,8 +86,9 @@ window.onload = function() {
 	}
 	table = table + "</table>";
 	
-	saveTableHTML(table);
-	showTable();
+	//----------------------------End Table Algorithm--------------------------------------
+	
+	return table;
 }
 
 //puts text in the HTML below "<pre id="displayArea"><pre>"
