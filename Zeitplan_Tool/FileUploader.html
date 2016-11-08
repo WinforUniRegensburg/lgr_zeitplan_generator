@@ -17,6 +17,7 @@ window.onload = function() {
 					var rawText = reader.result;
 					saveRawText(rawText);
 					showText(fileDisplayArea);
+					document.getElementById("submit").submit();
                 } 
             } else {
                 fileDisplayArea.innerText = "File not supported!"
@@ -30,9 +31,7 @@ function saveRawText(rawText) {
 	sessionStorage.getItem('rawText');
 	sessionStorage.setItem('rawText',rawText);
 }
-
-//TODO Problem automatisches weiterleiten auf die nächste Seite
-
+//TODO Problem Abstimmung mit Gerit, Aufteilung in 4 Files?
 </script>
 <body id="body">
 read in "rawTable"

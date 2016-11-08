@@ -10,7 +10,6 @@ window.onload = function() {
 	var txt = ""
 	var events = [];
 	
-	// #holyShitBelow
 	// creates one event object out of a paragraph
 	for (var i = 0; i<paragraphs.length; i++) {
 	
@@ -140,6 +139,7 @@ window.onload = function() {
 
 	//saves events in the JSON format
 	saveJSON(events);
+	document.getElementById("submit").submit();
 }
 
 //constructor for an event
@@ -167,9 +167,6 @@ function saveJSON(events) {
 function getParagraphesText() {
 	return sessionStorage.getItem('paragraphText');
 }
-
-//TODO Problem automatisch zur nächsten Seite wechseln
-
 </script>
 <body id="body">
 	<form id="submit" action="GenerateTable.html">

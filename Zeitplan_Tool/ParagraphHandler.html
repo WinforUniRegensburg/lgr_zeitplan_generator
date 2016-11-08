@@ -58,6 +58,7 @@ window.onload = function() {
 	var arrayJSON = JSON.stringify(array);
 	saveParagraphText(arrayJSON);
 	showText();
+	document.getElementById("submit").submit();
 }
 
 //constructor for an strucParagraph
@@ -82,9 +83,6 @@ function saveParagraphText(paragraphText) {
 function getRawText() {
 	return sessionStorage.getItem('rawText');
 }
-
-//TODO Problem automatisch auf die nächste Seite wechseln
-
 </script>
 <body id="body">
 	<form id="submit" action="Cleaner.html">
