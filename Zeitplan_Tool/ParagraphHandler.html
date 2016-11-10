@@ -37,12 +37,11 @@ window.onload = function() {
 	var startSliceP = 0;
 	var endSliceP = 0;
 	var middleSliceLine = 0;
+	var patternTimeLength = 5;
 	while (text != "") {
+
 		
-		// TODO Problem small... ggf. das +13 so machen, dass es besser aussieht, also erkennen, 
-		// dass es sich nach Beginn: um eine Uhrzeit handelt und aufgrund dessen die Zahl setzen
-		// Abstimmung mit Gerit
-		endSliceP = text.search('Beginn')+13;
+		endSliceP = text.search(/([01]\d|2[0-3]):[0-5]\d/g)+patternTimeLength;
 		
 		var storageOneParagraph = text.slice(0, endSliceP);
 		
@@ -57,8 +56,8 @@ window.onload = function() {
 	
 	var arrayJSON = JSON.stringify(array);
 	saveParagraphText(arrayJSON);
-	//showText();
-	document.getElementById("submit").submit();
+	showText();
+	//document.getElementById("submit").submit();
 }
 
 //constructor for an strucParagraph
