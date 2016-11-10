@@ -1,5 +1,6 @@
 <!DOCTYPE>
-<html>
+<html lang="de">
+<meta charset="utf-8"/>
 <head><title>File Uploader!</title></head>
 <script type="text/javascript">
 window.onload = function() {
@@ -7,17 +8,15 @@ window.onload = function() {
         var fileDisplayArea = document.getElementById('displayArea');
         fileInput.addEventListener('change', function(e) {
             var file = fileInput.files[0];
-			//TODO Problem File automatisch ziehen
-			//Abstimmung mit Gerit
             var textType = /html.*/;
             if (file.type.match(textType)) {
                 var reader = new FileReader();
-				reader.readAsText(file); 
+				reader.readAsText(file, 'ISO-8859-1');
                 reader.onload = function(e) {
 					var rawText = reader.result;
 					saveRawText(rawText);
 					showText(fileDisplayArea);
-					document.getElementById("submit").submit();
+					//document.getElementById("submit").submit();
                 } 
             } else {
                 fileDisplayArea.innerText = "File not supported!"
@@ -31,7 +30,6 @@ function saveRawText(rawText) {
 	sessionStorage.getItem('rawText');
 	sessionStorage.setItem('rawText',rawText);
 }
-//TODO Problem Abstimmung mit Gerit, Aufteilung in 4 Files?
 </script>
 <body id="body">
 read in "rawTable"

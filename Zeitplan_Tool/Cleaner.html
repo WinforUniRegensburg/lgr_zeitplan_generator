@@ -20,7 +20,7 @@ window.onload = function() {
 		//get the date from the secondLine
 		//TODO Problem small ähnlich wie bei paragraphHandler das +x besser machen, indem man erkennt, dass es sich um ein Datum handelt... 
 		//Irgendwie über die Zeichenfolge?
-		//Abstimmung mit Gerit
+		//Abstimmung mit Gerit: Regulärer Ausdruck
 		var dateIndex = secondLine.search('Datum')+7;
 		var date = secondLine.slice(dateIndex, dateIndex+10);
 		
@@ -32,7 +32,7 @@ window.onload = function() {
 		
 		//get the eventName and cut it out of the firstLine 
 		//eventName is supposed to be in round brackets
-		//
+		// eventName nicht relevant (bzgl. Gala, Vorprogramm etc.) -> Wichtig: A-D, DLV
 		//
 		//  ----------------------------------->   TODO Problem BIG IMPORTANT  <--------------------------------------
 		//
@@ -63,7 +63,7 @@ window.onload = function() {
 			var token = brokenFLGender[j].trim();
 			//TODO Problem wenn die Abfrage auf weiblich fehlschlägt, obwohl es Wettkampf für Frauen war wird auf Männer gesetzt...
 			// -> Prüfen ob diese Abfrage richtig arbeitet!!!
-			// Abstimmung mit Gerit
+			// Abstimmung mit Gerit: Sollte passen
 			if (token == 'Frauen' || token == 'weibliche' || token == 'weiblich') {
 				gender='Frauen';
 				break;
@@ -76,6 +76,7 @@ window.onload = function() {
 		var maxAge = 0;
 		for (var j = 0; j < brokenFLGender.length; j++) {
 			var token = brokenFLGender[j];
+			//mehrere U-Werte abspeichern
 			if (token.charAt(0) == 'U') {
 				var maxAgeLoc = parseInt(token.slice(1));
 				if (maxAgeLoc>maxAge) {
@@ -117,7 +118,7 @@ window.onload = function() {
 	}
 
 	//display debugging output
-	document.getElementById('displayArea').innerHTML = txt;
+	//document.getElementById('displayArea').innerHTML = txt;
 
 	
 	//sorting the event objects 1st Order: date, 2nd Order: time

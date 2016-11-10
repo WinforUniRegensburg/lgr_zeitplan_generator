@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html lang="de">
+<html>
 <head><title>Table</title></head>
 <script type="text/javascript">
 window.onload = function() {
@@ -10,6 +10,10 @@ window.onload = function() {
 
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
+	
+	//TODO sortieren verschieben
+	
+	//TODO events zusammenziehen
 	
 	var eventsSplitDays = splitEvents(events);
 	
@@ -53,7 +57,7 @@ function generateTable(events) {
 	//------------------- Start Table Algorithm ------------------------------
 	// requires an array of Events called "events" as imput 
 	// generates output: called table with a table of the input event array
-	var table = "<table>";
+	var table = '<table border="1">';
 	
 	//evalutate the oldest possible athlete 
 	var oldest = 0;
