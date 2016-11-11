@@ -64,9 +64,6 @@ window.onload = function() {
 		var gender = "";
 		for (var j = 0; j < brokenFLGender.length; j++) {
 			var token = brokenFLGender[j].trim();
-			//TODO Problem wenn die Abfrage auf weiblich fehlschlägt, obwohl es Wettkampf für Frauen war wird auf Männer gesetzt...
-			// -> Prüfen ob diese Abfrage richtig arbeitet!!!
-			// Abstimmung mit Gerit: Sollte passen
 			if (token == 'Frauen' || token == 'weibliche' || token == 'weiblich') {
 				gender='Frauen';
 				break;
@@ -75,69 +72,56 @@ window.onload = function() {
 			}
 		}
 		
-		//get the allowed age of the athletes, if no age is found it will be set to 30
-		var maxAge = 0;
+		//get the allowed age of the athletes
+		var category = [];
 		for (var j = 0; j < brokenFLGender.length; j++) {
 			var token = brokenFLGender[j];
-			//TODO mehrere U-Werte abspeichern
+			
+			//Main classes
+			if (token == 'Frauen' || token == 'Männer') {
+				category.push(token);
+			}	
+			//Youth classes
+			var shortGender = "";
+			if (gender == 'Frauen') {
+				shortGender='W';
+			} else {
+				shortGender='M';
+			}
 			if (token.charAt(0) == 'U') {
-				var maxAgeLoc = parseInt(token.slice(1));
-				if (maxAgeLoc>maxAge) {
-					maxAge = maxAgeLoc;
-				}
+				category.push(shortGender + token);
 			} 
+			/* not able to test!
+			//Older classes 
+			if (token.charAt(0) == 'W' || (token.charAt(0) == 'M' && token != 'Männer')) {
+				category.push(token);
+			}
+			*/
 		} 
-		//TODO Problem eher was zum Abstimmen... Was ist das Alter, auf welches wir setzen, wenn mit der Methode oben kein Alter ermittelt wird??
-		//Hier als Übergangslösung maxAge auf 30 gesetzt
-		//Abstimmung mit Gerit
-		if (maxAge == 0) {
-			maxAge = 30;
-		}
-		//creates the categories according to the allowed age
-		var category = [];
-		for (var j = 0; j < maxAge; j++) {
-			category[j] = true;
-		}
 		
 		//collect all evaluated information
 		var singleEvent = new Event (	date, 
 										time, 
 										category,
-										discipline, 
-										gender);
+										discipline);
 										
 		//add the singleEvent to the event array
 		events.push(singleEvent);
 		
+		var catTxt ="";
+		for(var j = 0; j < singleEvent.category.length; j++) {
+			catTxt = catTxt + singleEvent.category[j] + " ";
+		}
 		//makes some output for debugging
 		txt = txt + 
 		singleEvent.date + "<br>" 
 		+ singleEvent.time + "<br>" 
 		+ singleEvent.discipline +"<br>"
-		+ singleEvent.gender + "<br>"
-		+ singleEvent.category[0] + "<br><br><br>";
+		+ catTxt + "<br><br><br>";
 	}
 
 	//display debugging output
 	document.getElementById('displayArea').innerHTML = txt;
-
-	
-	//sorting the event objects 1st Order: date, 2nd Order: time
-	events = events.sort(function (a,b) { 
-	
-		//converts the date and time in a logical integer which we can better compare
-		var helper = a.date.trim().split(".");
-		var helper2 = a.time.trim().split(":");
-		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
-		var sortKeyAnum = parseInt(sortKeyA);
-		
-		helper = b.date.trim().split(".");
-		helper2 = b.time.trim().split(":");
-		var sortKeyB = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
-		var sortKeyBnum = parseInt(sortKeyB);
-		
-		return sortKeyAnum-sortKeyBnum;
-	});
 
 	//saves events in the JSON format
 	saveJSON(events);
@@ -145,7 +129,7 @@ window.onload = function() {
 }
 
 //constructor for an event
-function Event(date, time, category, discipline, gender) {
+function Event(date, time, category, discipline) {
 
 	//TODO Problem Abstimmung mit Gerit
 	//zweites Array mit category einfügen, sodass zwischen Männern und Frauen zur gleichen Uhrzeit unterschieden werden könnte
@@ -154,7 +138,6 @@ function Event(date, time, category, discipline, gender) {
 	this.time = time;
 	this.category = category;
 	this.discipline = discipline;
-	this.gender = gender;
 }
 
 //saves the events

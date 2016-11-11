@@ -4,26 +4,34 @@
 <script type="text/javascript">
 window.onload = function() {
 
-	//TODO Problem die Spalten zusammenziehen
-	
-	//TODO Anpassen zu neuen Datentyp, sobald wir ihn verwenden!
-
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
 	
-	//TODO sortieren hierher verschieben
+	//sorting the event objects 1st Order: date, 2nd Order: time
+	events = events.sort(function (a,b) { 
 	
-	//TODO events zusammenziehen
-	
-	var eventsSplitDays = splitEvents(events);
-	
+		//converts the date and time in a logical integer which we can better compare
+		var helper = a.date.trim().split(".");
+		var helper2 = a.time.trim().split(":");
+		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		var sortKeyAnum = parseInt(sortKeyA);
+		
+		helper = b.date.trim().split(".");
+		helper2 = b.time.trim().split(":");
+		var sortKeyB = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		var sortKeyBnum = parseInt(sortKeyB);
+		
+		return sortKeyAnum-sortKeyBnum;
+	});
+
 	var pageContent = "";
+	var eventsSplitDays = splitEvents(events);
 	
 	for (var i = 0; i < eventsSplitDays.length; i++) {
 		//generate the headline of the table
 		pageContent = pageContent + "<p>" + "<h2>" +
 		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</p>";
-			
+		
 		//generate the table itself
 		pageContent = pageContent + "<p>" +
 			generateTable(eventsSplitDays[i]) + "</p>";
@@ -31,6 +39,73 @@ window.onload = function() {
 	
 	saveTableHTML(pageContent);
 	showTable();
+}
+
+function generateTable(events) {
+	var table = '<table border="1">';
+	var tableHead = getTableHead(events); //Its the array of values which are in the headline of the table
+	
+	table = table + generateTableHead(tableHead);
+	//table = table + generateTableBody(tableHead, events); -> not yet implemented
+	
+	table = table + '</table>';
+	
+	return table;
+}
+
+function mergeEvents(events) {
+	var mergedEvents = [];
+	//TODO merge the events -> so we can access it for one row
+	
+	return mergedEvents;
+}
+
+function generateTableBody(tableHead, events) {
+	var tableBody = '';
+	var rowElements = mergeEvents(events);
+	//TODO generate tablebody with the rowElements
+	
+	return tableBody;
+}
+
+function generateTableHead (tableHead) {
+	//parses the TableHead array to a HTML string which can be added to the 
+	var txt = "<tr>";
+	for(var i = 0; i<tableHead.length; i++) {
+		txt = txt + "<th>" + tableHead[i] + "</th>";
+	}
+	txt = txt + "</tr>";
+	return txt;
+}
+
+function getTableHead(events) {
+	//generate the head of the table
+	var tableHead = [];
+	//get every event
+	for (var i = 0; i < events.length; i++) {
+	
+		var category = events[i].category;
+		//get every category of its event
+		for (var j = 0; j < category.length; j++) {
+			//token = a single category
+			var token = category[j];
+			
+			//check if the single category is already in the tableHead
+			var canBeAdded = true;
+			for (var k = 0; k < tableHead.length; k++) {
+				if(token == tableHead[k]) {
+					canBeAdded=false;
+				}
+			}
+			if (canBeAdded) {
+				tableHead.push(token);
+			}
+		}
+	}
+	
+	//TODO sort TableHead
+	
+	return tableHead;
 }
 
 function splitEvents(events) {
@@ -52,7 +127,7 @@ function splitEvents(events) {
 	}
 	return returnArray;
 }
-
+/*
 function generateTable(events) {
 	//------------------- Start Table Algorithm ------------------------------
 	// requires an array of Events called "events" as imput 
@@ -120,7 +195,7 @@ function generateTable(events) {
 	//----------------------------End Table Algorithm--------------------------------------
 	
 	return table;
-}
+}*/
 
 //puts text in the HTML below "<pre id="displayArea"><pre>"
 function showTable() {
