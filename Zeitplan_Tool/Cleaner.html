@@ -25,9 +25,7 @@ window.onload = function() {
 		var date = secondLine.slice(dateIndex, dateIndex+10);
 		
 		//get the time from the secondLine
-		//TODO Problem small wie im Block oben
-		//Abstimmung mit Gerit
-		var timeIndex = secondLine.search('Beginn')+8;
+		var timeIndex = secondLine.search(/([01]\d|2[0-3]):[0-5]\d/g);
 		var time = secondLine.slice(timeIndex);
 		
 		//get the eventName and cut it out of the firstLine 
@@ -118,7 +116,7 @@ window.onload = function() {
 	}
 
 	//display debugging output
-	//document.getElementById('displayArea').innerHTML = txt;
+	document.getElementById('displayArea').innerHTML = txt;
 
 	
 	//sorting the event objects 1st Order: date, 2nd Order: time
@@ -140,7 +138,7 @@ window.onload = function() {
 
 	//saves events in the JSON format
 	saveJSON(events);
-	document.getElementById("submit").submit();
+	//document.getElementById("submit").submit();
 }
 
 //constructor for an event
