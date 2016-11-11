@@ -9,6 +9,7 @@ window.onload = function() {
 	
 	var txt = ""
 	var events = [];
+	var cutOutOfBrackets = ['Gala','Laufnacht','Vorprogramm','Hauptprogramm'];
 	
 	// creates one event object out of a paragraph
 	for (var i = 0; i<paragraphs.length; i++) {
@@ -18,39 +19,43 @@ window.onload = function() {
 		var secondLine = paragraphs[i].secondLine;
 	
 		//get the date from the secondLine
-		//TODO Problem small ähnlich wie bei paragraphHandler das +x besser machen, indem man erkennt, dass es sich um ein Datum handelt... 
-		//Irgendwie über die Zeichenfolge?
-		//Abstimmung mit Gerit: Regulärer Ausdruck
-		var dateIndex = secondLine.search('Datum')+7;
-		var date = secondLine.slice(dateIndex, dateIndex+10);
+		//checks only the validy of a date, not it's correctness in all details!
+		//means that special cases like february are not checked
+		var patternDateLength = 10; //date format: dd.mm.yyyy -> length=10
+		var dateIndex = secondLine.search(/(3[01]|[0-2]\d)[.](0\d|1[0-2])[.]20\d\d/g);
+		var date = secondLine.slice(dateIndex, dateIndex+patternDateLength);
 		
 		//get the time from the secondLine
+		//time has to be in the format "hh:mm"; 24h format
 		var timeIndex = secondLine.search(/([01]\d|2[0-3]):[0-5]\d/g);
 		var time = secondLine.slice(timeIndex);
 		
 		//get the eventName and cut it out of the firstLine 
-		//eventName is supposed to be in round brackets
-		// eventName nicht relevant (bzgl. Gala, Vorprogramm etc.) -> Wichtig: A-D, DLV
-		//
-		//  ----------------------------------->   TODO Problem BIG IMPORTANT  <--------------------------------------
-		//
-		//
-		// Es gibt in den Daten die unregelmäßigkeit, dass Teile der ersten Zeile in Klammern stehen, obwohl wir die Veranstaltungsart so ermitteln!
-		// Nicht immer ist eine Veranstaltungsart im Datensatz vorhanden!
-		// Abstimmung mit Gerit
+		//eventName is supposed to be in round brackets, the eventName is not allowed to be contained in the array "cutOutOfBrackets"
+		//after the discipline is cutted out, the cleaned event will be added to discipline
 		var eventName = "";
-		if (firstLine.includes("(")) {
+		if (firstLine.includes("(")&&firstLine.includes(")")) {
 			var brokenFirstLineEvent = firstLine.split(" (");
 			var brokenFirstLineEventHelper = brokenFirstLineEvent[1].split(")");
-			eventName = brokenFirstLineEventHelper[0];			
+			eventName = brokenFirstLineEventHelper[0];
+			//delete the eventName String if not valid, according to the array of not valid Strings
+			for (var j=0; j<cutOutOfBrackets.length; j++) {
+				if (eventName===cutOutOfBrackets[j]) {
+					eventName="";
+				}
+			}
 			firstLine = brokenFirstLineEvent[0] + brokenFirstLineEventHelper[1];
 		}
 	
-		//get the discipline and cut it out of the firstLine
+		//get the discipline and cut it out of the firstLine and add the eventName if it is existing
 		var brokenFristLineDiscipline = firstLine.split(", ");
 		var brokenFirstLineDisciplineHelper = brokenFristLineDiscipline[1].split(" - ");
 		firstLine = brokenFirstLineDisciplineHelper[0];
-		var discipline = brokenFristLineDiscipline[0] + " " + brokenFirstLineDisciplineHelper[1];
+		if (eventName=="") {
+			var discipline = brokenFristLineDiscipline[0] + ", " + brokenFirstLineDisciplineHelper[1];
+		} else {
+			var discipline = brokenFristLineDiscipline[0] + " (" + eventName + "), " + brokenFirstLineDisciplineHelper[1];
+		}
 		
 		//the gender and category are left in the firstLine
 		var brokenFLGender = firstLine.split(" ");
@@ -74,7 +79,7 @@ window.onload = function() {
 		var maxAge = 0;
 		for (var j = 0; j < brokenFLGender.length; j++) {
 			var token = brokenFLGender[j];
-			//mehrere U-Werte abspeichern
+			//TODO mehrere U-Werte abspeichern
 			if (token.charAt(0) == 'U') {
 				var maxAgeLoc = parseInt(token.slice(1));
 				if (maxAgeLoc>maxAge) {
@@ -99,7 +104,6 @@ window.onload = function() {
 										time, 
 										category,
 										discipline, 
-										eventName, 
 										gender);
 										
 		//add the singleEvent to the event array
@@ -109,7 +113,6 @@ window.onload = function() {
 		txt = txt + 
 		singleEvent.date + "<br>" 
 		+ singleEvent.time + "<br>" 
-		+ singleEvent.eventName + "<br>" 
 		+ singleEvent.discipline +"<br>"
 		+ singleEvent.gender + "<br>"
 		+ singleEvent.category[0] + "<br><br><br>";
@@ -142,7 +145,7 @@ window.onload = function() {
 }
 
 //constructor for an event
-function Event(date, time, category, discipline, eventName, gender) {
+function Event(date, time, category, discipline, gender) {
 
 	//TODO Problem Abstimmung mit Gerit
 	//zweites Array mit category einfügen, sodass zwischen Männern und Frauen zur gleichen Uhrzeit unterschieden werden könnte
@@ -151,7 +154,6 @@ function Event(date, time, category, discipline, eventName, gender) {
 	this.time = time;
 	this.category = category;
 	this.discipline = discipline;
-	this.eventName = eventName;
 	this.gender = gender;
 }
 
