@@ -57,7 +57,7 @@ function generateTableBody(tableHead, events) {
 	var tableBody = '';
 	
 	var groupedEvents = getGroupedEvents(events);
-	var rowElements = parseToRowElement(groupedEvents);
+	var rowElements = parseToRowElement(groupedEvents); //checked!
 	
 	for (var i = 0; i < rowElements.length; i++) {
 		tableBody = tableBody + getTableRow(rowElements[i], tableHead);
@@ -78,18 +78,55 @@ function parseToRowElement(groupedEvents) {
 		
 			var currentEvent = currentGroup[j];
 			for (var k = 0; k < currentEvent.category.length; k++) {
-				var currentCell = new Cell(currentEvent.category[k], currentEvent[k]);
+				var currentCell = new Cell(currentEvent.category[k], currentEvent.discipline);
 				rowCells.push(currentCell);
 			}
 		}
-		// TODO rowCells = shortenCells(rowCells);
+		rowCell = sortRowCells(rowCells);
+		rowCells = shortenCells(rowCells);
 		rowElements.push(new RowElement(rowTime, rowCells));
 	}
 	return rowElements;
 }
 
+function sortRowCells(rowCells) {
+	//sorting the rowCells, female before male, youth before old
+	rowCells = rowCells.sort(function (a,b) { 
+		//converts the rowCells in a logical integer which we can better compare
+		var sortKeyA = getSortKeyTableHead(a.category);
+		var sortKeyB = getSortKeyTableHead(b.category);
+		
+		return sortKeyA-sortKeyB;
+	});
+	return rowCells;
+}
+
 function shortenCells(rowCells) {
-	//TODO
+
+	var cellsShort = [];
+	if (rowCells.length > 1){
+	
+		var currentCell = rowCells.shift();
+		while (rowCells.length > 0) {
+		
+			var nextCell = rowCells.shift();
+			
+			//merging (and pushing if it was the last one)
+			if(currentCell.category == nextCell.category) {
+				currentCell.discipline = currentCell.discipline + "<br>" + nextCell.discipline;
+				if (rowCells.length == 0) {
+					cellsShort.push(currentCell);
+				}
+			//pushing if not the same category
+			} else {
+				cellsShort.push(currentCell);
+				currentCell = nextCell;
+			}
+		}
+	} else {
+		cellsShort = rowCells;
+	}
+	return cellsShort;
 }
 
 function RowElement (time, cells) {
@@ -106,20 +143,28 @@ function getTableRow (rowElement, tableHead) {
 	tableRow = tableRow + "<td>" + rowElement.time + "</td>";
 	
 	//var i = 1, because the time is already set
+	var currentCategory = "";
 	for (var i = 1; i < tableHead.length; i++) {
-		if(false/*Zelle ist vorhanden - über das rowElement.category und tablehead[i] checken*/) {
-		
-			tableRow = tableRow + "<td>";
-			//TODO get content according to the tableCell 
-			tableRow = tableRow + "</td>";
-		} else {
-			tableRow = tableRow + "<td></td>";
-		}
+		currentCategory = tableHead[i];
+		tableRow = tableRow + "<td>";
+		tableRow = tableRow + getTableCellContent(rowElement, currentCategory);
+		tableRow = tableRow + "</td>";
 	}
 	
 	tableRow = tableRow + "</tr>";
 	
 	return tableRow;
+}
+
+function getTableCellContent(rowElement, currentCategory) {
+	var content = '';
+	var cells = rowElement.cells;
+	for (var i = 0; i < cells.length; i++) {
+		if (cells[i].category == currentCategory) {
+			content = cells[i].discipline;
+		}
+	}
+	return content;
 }
 
 //returns the events grouped if they are at same time
