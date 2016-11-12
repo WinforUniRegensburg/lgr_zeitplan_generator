@@ -7,22 +7,9 @@ window.onload = function() {
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
 	
-	//sorting the event objects 1st Order: date, 2nd Order: time
-	events = events.sort(function (a,b) { 
-	
-		//converts the date and time in a logical integer which we can better compare
-		var helper = a.date.trim().split(".");
-		var helper2 = a.time.trim().split(":");
-		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
-		var sortKeyAnum = parseInt(sortKeyA);
-		
-		helper = b.date.trim().split(".");
-		helper2 = b.time.trim().split(":");
-		var sortKeyB = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
-		var sortKeyBnum = parseInt(sortKeyB);
-		
-		return sortKeyAnum-sortKeyBnum;
-	});
+	//sorting the event objects 1st Order: date, 2nd Order: time, 3rd Order: category
+	events = sortEventsDateAndTimeAndCategoryOrder(events);
+	//displayDebuggingText(events);
 
 	var pageContent = "";
 	var eventsSplitDays = splitEvents(events);
@@ -41,6 +28,43 @@ window.onload = function() {
 	showTable();
 }
 
+function displayDebuggingText(events) {
+	var debuggingText = "";
+	for (var i = 0; i < events.length; i++) {
+		var singleEvent = events[i];
+		
+		//makes some output for debugging
+		debuggingText = debuggingText + "<p>" 
+		+ singleEvent.date + "<br>" 
+		+ singleEvent.time + "<br>" 
+		+ singleEvent.discipline +"<br>"
+		+ singleEvent.category + "</p>";
+	}
+	document.getElementById("displayArea").innerHTML = debuggingText;
+}
+
+function sortEventsDateAndTimeAndCategoryOrder(events) {
+	events = events.sort(function (a,b) { 
+	
+		//converts the date and time in a logical integer which we can better compare
+		var helper = a.date.trim().split(".");
+		var helper2 = a.time.trim().split(":");
+		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		//*1000 + getSortKeyTableHead(a.category); 
+		//*1000 to get enough place for the category
+		//getSortKeyTableHead(category) contains a logic for sorting the categories in detail -> produces an integer with tree digits
+		var sortKeyAnum = parseInt(sortKeyA)*1000 + getSortKeyTableHead(a.category);
+		
+		helper = b.date.trim().split(".");
+		helper2 = b.time.trim().split(":");
+		var sortKeyB = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		var sortKeyBnum = parseInt(sortKeyB)*1000 + getSortKeyTableHead(b.category);
+		
+		return sortKeyAnum-sortKeyBnum;
+	});
+	return events;
+}
+
 function generateTable(events) {
 	var table = '<table border="1">';
 	var tableHead = getTableHead(events); //Its the array of values which are in the headline of the table
@@ -57,111 +81,90 @@ function generateTableBody(tableHead, events) {
 	var tableBody = '';
 	
 	var groupedEvents = getGroupedEvents(events);
-	var rowElements = parseToRowElement(groupedEvents); //checked!
-	
-	for (var i = 0; i < rowElements.length; i++) {
-		tableBody = tableBody + getTableRow(rowElements[i], tableHead);
+	var rows = parseToRows(groupedEvents);
+	//a row is an object of time and an array of the categories
+
+	for (var i = 0; i < rows.length; i++) {
+		tableBody = tableBody + getTableRow(rows[i], tableHead);
 	}
 
 	return tableBody;
 }
 
-function parseToRowElement(groupedEvents) {
-	var rowElements = [];
+function parseToRows(groupedEvents) {
+	var rows = [];
 	
 	for (var i = 0; i < groupedEvents.length; i++) {
-	//executed for every group, one group is array of events grouped by the same time
 		var currentGroup = groupedEvents[i];
-		var rowTime = currentGroup[0].time;
-		var rowCells = [];
-		for (j = 0; j < currentGroup.length; j++) {
 		
+		var currentRow = [];
+		var currentCells = [];
+		
+		var currentTime = currentGroup[0].time;
+		for (var j = 0; j < currentGroup.length; j++) {
 			var currentEvent = currentGroup[j];
-			for (var k = 0; k < currentEvent.category.length; k++) {
-				var currentCell = new Cell(currentEvent.category[k], currentEvent.discipline);
-				rowCells.push(currentCell);
-			}
+			currentCell = new Cell(currentEvent.category, currentEvent.discipline);
+			currentCells.push(currentCell);
 		}
-		rowCell = sortRowCells(rowCells);
-		rowCells = shortenCells(rowCells);
-		rowElements.push(new RowElement(rowTime, rowCells));
-	}
-	return rowElements;
+		currentCells = shortCells(currentCells);
+		rows.push(new Row(currentTime, currentCells));
+	}	
+	//document.getElementById("displayArea").innerText = JSON.stringify(rows);
+	return rows;
 }
 
-function sortRowCells(rowCells) {
-	//sorting the rowCells, female before male, youth before old
-	rowCells = rowCells.sort(function (a,b) { 
-		//converts the rowCells in a logical integer which we can better compare
-		var sortKeyA = getSortKeyTableHead(a.category);
-		var sortKeyB = getSortKeyTableHead(b.category);
-		
-		return sortKeyA-sortKeyB;
-	});
-	return rowCells;
-}
-
-function shortenCells(rowCells) {
-
-	var cellsShort = [];
-	if (rowCells.length > 1){
+function shortCells(cells) {
+	var smallCells = [];
 	
-		var currentCell = rowCells.shift();
-		while (rowCells.length > 0) {
-		
-			var nextCell = rowCells.shift();
-			
-			//merging (and pushing if it was the last one)
-			if(currentCell.category == nextCell.category) {
-				currentCell.discipline = currentCell.discipline + "<br>" + nextCell.discipline;
-				if (rowCells.length == 0) {
-					cellsShort.push(currentCell);
-				}
-			//pushing if not the same category
-			} else {
-				cellsShort.push(currentCell);
-				currentCell = nextCell;
+	for (var i = 0; i < cells.length; i++) {
+		var hasToBeAdded = true;
+		for (var j = 0; j < smallCells.length; j++) {
+			if (cells[i].category == smallCells[j].category) {
+				hasToBeAdded = false;
+				smallCells[j].content = smallCells[j].content + "<br>" + cells[i].content;
 			}
 		}
-	} else {
-		cellsShort = rowCells;
+		if (hasToBeAdded) {
+			smallCells.push(cells[i]);
+		}
 	}
-	return cellsShort;
+	return smallCells;
 }
 
-function RowElement (time, cells) {
+//constructor for a row
+function Row(time, cells) {
 	this.time = time;
 	this.cells = cells;
 }
-function Cell (category, discipline) {
+//constructor for a cell
+function Cell(category, content) {
 	this.category = category;
-	this.discipline = discipline;
+	this.content = content;
 }
 
-function getTableRow (rowElement, tableHead) {
+function getTableRow (row, tableHead) {
 	var tableRow = "<tr>";
-	tableRow = tableRow + "<td>" + rowElement.time + "</td>";
+	tableRow = tableRow + "<td>" + row.time + "</td>";
 	
 	//var i = 1, because the time is already set
 	var currentCategory = "";
 	for (var i = 1; i < tableHead.length; i++) {
 		currentCategory = tableHead[i];
 		tableRow = tableRow + "<td>";
-		tableRow = tableRow + getTableCellContent(rowElement, currentCategory);
+		tableRow = tableRow + getTableCellContent(row.cells, currentCategory);
 		tableRow = tableRow + "</td>";
 	}
-	
+
 	tableRow = tableRow + "</tr>";
 	
 	return tableRow;
 }
 
-function getTableCellContent(rowElement, currentCategory) {
+function getTableCellContent(cells, currentCategory) {
 	var content = '';
-	var cells = rowElement.cells;
 	for (var i = 0; i < cells.length; i++) {
 		if (cells[i].category == currentCategory) {
-			content = cells[i].discipline;
+			content = content + cells[i].content;
 		}
 	}
 	return content;
@@ -207,24 +210,19 @@ function getTableHead(events) {
 	//get every event
 	for (var i = 0; i < events.length; i++) {
 	
-		var category = events[i].category;
-		//get every category of its event
-		for (var j = 0; j < category.length; j++) {
-			//token = a single category
-			var token = category[j];
-			
-			//check if the single category is already in the tableHead
-			var canBeAdded = true;
-			for (var k = 0; k < tableHead.length; k++) {
-				if(token == tableHead[k]) {
-					canBeAdded=false;
-				}
-			}
-			if (canBeAdded) {
-				tableHead.push(token);
+		var token = events[i].category;
+		//check if the single category is already in the tableHead
+		var canBeAdded = true;
+		for (var k = 0; k < tableHead.length; k++) {
+			if(token == tableHead[k]) {
+				canBeAdded=false;
 			}
 		}
+		if (canBeAdded) {
+			tableHead.push(token);
+		}
 	}
+	
 	
 	//sorting the tableHead, female before male, youth before old
 	tableHead = tableHead.sort(function (a,b) { 

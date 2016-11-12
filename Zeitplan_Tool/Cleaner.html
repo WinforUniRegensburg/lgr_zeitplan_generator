@@ -99,25 +99,23 @@ window.onload = function() {
 			*/
 		} 
 		
-		//collect all evaluated information
-		var singleEvent = new Event (	date, 
-										time, 
-										category,
-										discipline);
-										
-		//add the singleEvent to the event array
-		events.push(singleEvent);
-		
-		var catTxt ="";
-		for(var j = 0; j < singleEvent.category.length; j++) {
-			catTxt = catTxt + singleEvent.category[j] + " ";
+		for (var j = 0; j < category.length; j++) {
+			//collect all evaluated information
+			var singleEvent = new Event (	date, 
+											time, 
+											category[j],
+											discipline);
+											
+			//add the singleEvent to the event array
+			events.push(singleEvent);
+			
+			txt = txt + "<p>" 
+			+ singleEvent.date + "<br>" 
+			+ singleEvent.time + "<br>" 
+			+ singleEvent.discipline + "<br>"
+			+ singleEvent.category + "</p>";
 		}
-		//makes some output for debugging
-		txt = txt + 
-		singleEvent.date + "<br>" 
-		+ singleEvent.time + "<br>" 
-		+ singleEvent.discipline +"<br>"
-		+ catTxt + "<br><br><br>";
+		
 	}
 
 	//display debugging output
@@ -130,10 +128,6 @@ window.onload = function() {
 
 //constructor for an event
 function Event(date, time, category, discipline) {
-
-	//TODO Problem Abstimmung mit Gerit
-	//zweites Array mit category einfügen, sodass zwischen Männern und Frauen zur gleichen Uhrzeit unterschieden werden könnte
-	
 	this.date = date;
 	this.time = time;
 	this.category = category;
