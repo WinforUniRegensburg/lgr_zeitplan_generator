@@ -7,7 +7,7 @@ window.onload = function() {
 	var json = getParagraphesText();
 	var paragraphs = JSON.parse(json);
 	
-	var txt = ""
+	var txt = "";
 	var events = [];
 	var cutOutOfBrackets = ['Gala','Laufnacht','Vorprogramm','Hauptprogramm'];
 	
@@ -56,6 +56,7 @@ window.onload = function() {
 		} else {
 			var discipline = brokenFristLineDiscipline[0] + " (" + eventName + "), " + brokenFirstLineDisciplineHelper[1];
 		}
+		discipline = getAbrieviation(discipline);
 		
 		//the gender and category are left in the firstLine
 		var brokenFLGender = firstLine.split(" ");
@@ -124,6 +125,26 @@ window.onload = function() {
 	//saves events in the JSON format
 	saveJSON(events);
 	document.getElementById("submit").submit();
+}
+var replaceKeys = [	new Replacement("Zeitläufe", "ZEL"), 
+					new Replacement("Hindernis", "Hi"), 
+					new Replacement("Hürden", "H"), 
+					new Replacement(", Finale", ""),
+					new Replacement("Finale", ""),
+					new Replacement("Vorläufe", "VL")];
+
+function Replacement (key, replacement) {
+	this.key = key;
+	this.replacement = replacement;
+}
+function getAbrieviation(discipline) {
+	var val = discipline;
+	
+	for (var i = 0; i<replaceKeys.length; i++) {
+		val = val.replace(replaceKeys[i].key, replaceKeys[i].replacement);
+	}
+	
+	return val;
 }
 
 //constructor for an event
