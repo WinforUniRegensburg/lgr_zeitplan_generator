@@ -1,0 +1,320 @@
+<!DOCTYPE>
+<html>
+<head lang="de">
+	<meta charset="utf-8" />
+	<title>Table</title>
+</head>
+
+<script type="text/javascript">
+window.onload = function() {
+
+	var json = getEventsJSON();
+	var events = JSON.parse(json);
+	
+	//sorting the event objects 1st Order: date, 2nd Order: time, 3rd Order: category
+	events = sortEventsDateAndTimeAndCategoryOrder(events);
+	//displayDebuggingText(events);
+
+	var pageContent = "";
+	var eventsSplitDays = splitEvents(events);
+	
+	for (var i = 0; i < eventsSplitDays.length; i++) {
+		//generate the headline of the table
+		pageContent = pageContent + "<p>" + "<h2>" +
+		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</p>";
+		
+		//generate the table itself
+		pageContent = pageContent + "<p>" +
+			generateTable(eventsSplitDays[i]) + "</p>";
+	}
+	
+	saveTableHTML(pageContent);
+	showTable();
+}
+
+function displayDebuggingText(events) {
+	var debuggingText = "";
+	for (var i = 0; i < events.length; i++) {
+		var singleEvent = events[i];
+		
+		//makes some output for debugging
+		debuggingText = debuggingText + "<p>" 
+		+ singleEvent.date + "<br>" 
+		+ singleEvent.time + "<br>" 
+		+ singleEvent.discipline +"<br>"
+		+ singleEvent.category + "</p>";
+	}
+	document.getElementById("displayArea").innerHTML = debuggingText;
+}
+
+function sortEventsDateAndTimeAndCategoryOrder(events) {
+	events = events.sort(function (a,b) { 
+	
+		//converts the date and time in a logical integer which we can better compare
+		var helper = a.date.trim().split(".");
+		var helper2 = a.time.trim().split(":");
+		var sortKeyA = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		//*1000 + getSortKeyTableHead(a.category); 
+		//*1000 to get enough place for the category
+		//getSortKeyTableHead(category) contains a logic for sorting the categories in detail -> produces an integer with tree digits
+		var sortKeyAnum = parseInt(sortKeyA)*1000 + getSortKeyTableHead(a.category);
+		
+		helper = b.date.trim().split(".");
+		helper2 = b.time.trim().split(":");
+		var sortKeyB = helper[2] + helper[1] + helper[0] + helper2[0] + helper2[1];
+		var sortKeyBnum = parseInt(sortKeyB)*1000 + getSortKeyTableHead(b.category);
+		
+		return sortKeyAnum-sortKeyBnum;
+	});
+	return events;
+}
+
+function generateTable(events) {
+	var table = '<table border="1">';
+	var tableHead = getTableHead(events); //Its the array of values which are in the headline of the table
+	
+	table = table + generateTableHead(tableHead);
+	table = table + generateTableBody(tableHead, events);
+	
+	table = table + '</table>';
+	
+	return table;
+}
+
+function generateTableBody(tableHead, events) {
+	var tableBody = '';
+	
+	var groupedEvents = getGroupedEvents(events);
+	var rows = parseToRows(groupedEvents);
+	//a row is an object of time and an array of the categories
+
+	for (var i = 0; i < rows.length; i++) {
+		tableBody = tableBody + getTableRow(rows[i], tableHead);
+	}
+
+	return tableBody;
+}
+
+function parseToRows(groupedEvents) {
+	var rows = [];
+	
+	for (var i = 0; i < groupedEvents.length; i++) {
+		var currentGroup = groupedEvents[i];
+		
+		var currentRow = [];
+		var currentCells = [];
+		
+		var currentTime = currentGroup[0].time;
+		for (var j = 0; j < currentGroup.length; j++) {
+			var currentEvent = currentGroup[j];
+			currentCell = new Cell(currentEvent.category, currentEvent.discipline);
+			currentCells.push(currentCell);
+		}
+		currentCells = shortCells(currentCells);
+		rows.push(new Row(currentTime, currentCells));
+	}	
+	//document.getElementById("displayArea").innerText = JSON.stringify(rows);
+	return rows;
+}
+
+function shortCells(cells) {
+	var smallCells = [];
+	
+	for (var i = 0; i < cells.length; i++) {
+		var hasToBeAdded = true;
+		for (var j = 0; j < smallCells.length; j++) {
+			if (cells[i].category == smallCells[j].category) {
+				hasToBeAdded = false;
+				smallCells[j].content = smallCells[j].content + "<br>" + cells[i].content;
+			}
+		}
+		if (hasToBeAdded) {
+			smallCells.push(cells[i]);
+		}
+	}
+	return smallCells;
+}
+
+//constructor for a row
+function Row(time, cells) {
+	this.time = time;
+	this.cells = cells;
+}
+//constructor for a cell
+function Cell(category, content) {
+	this.category = category;
+	this.content = content;
+}
+
+function getTableRow (row, tableHead) {
+	var tableRow = "<tr>";
+	tableRow = tableRow + "<td>" + row.time + "</td>";
+	
+	//var i = 1, because the time is already set
+	var currentCategory = "";
+	for (var i = 1; i < tableHead.length; i++) {
+		currentCategory = tableHead[i];
+		tableRow = tableRow + "<td>";
+		tableRow = tableRow + getTableCellContent(row.cells, currentCategory);
+		tableRow = tableRow + "</td>";
+	}
+
+	tableRow = tableRow + "</tr>";
+	
+	return tableRow;
+}
+
+function getTableCellContent(cells, currentCategory) {
+	var content = '';
+	for (var i = 0; i < cells.length; i++) {
+		if (cells[i].category == currentCategory) {
+			content = content + cells[i].content;
+		}
+	}
+	return content;
+}
+
+//returns the events grouped if they are at same time
+function getGroupedEvents(events) {
+	var splittedEvents = [];
+	splittedEvents[0] = [];
+	var index = 0;
+	
+	var currentTime = events[0].time;
+	
+	for (var i = 0; i<events.length; i++) {
+		if (currentTime == events[i].time) {
+			splittedEvents[index].push(events[i]);
+		} else {
+			index = index + 1;
+			splittedEvents[index] = [];
+			splittedEvents[index].push(events[i]);
+			currentTime = events[i].time;
+		}
+	}
+		
+	return splittedEvents;
+}
+
+function generateTableHead (tableHead) {
+	//parses the TableHead array to a HTML string which can be added to the 
+	var txt = "<tr>";
+	for(var i = 0; i<tableHead.length; i++) {
+		txt = txt + "<th>" + tableHead[i] + "</th>";
+	}
+	txt = txt + "</tr>";
+	return txt;
+}
+
+function getTableHead(events) {
+	//generate the head of the table
+	var tableHead = [];
+	//def. "Zeit" has always to be there
+	tableHead.push('Zeit');
+	//get every event
+	for (var i = 0; i < events.length; i++) {
+	
+		var token = events[i].category;
+		//check if the single category is already in the tableHead
+		var canBeAdded = true;
+		for (var k = 0; k < tableHead.length; k++) {
+			if(token == tableHead[k]) {
+				canBeAdded=false;
+			}
+		}
+		if (canBeAdded) {
+			tableHead.push(token);
+		}
+	}
+	
+	
+	//sorting the tableHead, female before male, youth before old
+	tableHead = tableHead.sort(function (a,b) { 
+		//converts the tableHead in a logical integer which we can better compare
+		var sortKeyA = getSortKeyTableHead(a);
+		var sortKeyB = getSortKeyTableHead(b);
+		
+		return sortKeyA-sortKeyB;
+	});
+	
+	return tableHead;
+}
+
+function getSortKeyTableHead(token) {
+	//Key for "Zeit" has to stay at the left border...
+	if(token == "Zeit") {
+		return 0;
+	}
+
+	//Keys for the main classes
+	if (token == 'Frauen') {
+		return 200;
+	} else if (token == 'Männer') {
+		return 600;
+	} 	
+	
+	//Keys for the youth
+	if (token.includes('WU')) {
+		var val = 100;
+		val = val + parseInt(token.slice(2));
+		return val;
+	} else if (token.includes('MU')) {
+		var val = 500;
+		val = val + parseInt(token.slice(2));
+		return val;
+	}
+
+/*	
+	//Keys for the old generation
+	if (token.includes('W')) {
+		var val = 300;
+		val = val + parseInt(token.slice(1));
+	} else if (token.includes('M')&&(token != 'Männer') {
+		var val = 700;
+		val = val + parseInt(token.slice(1));
+	}
+*/
+	return 1;
+}
+
+function splitEvents(events) {
+	var returnArray = [];
+	returnArray[0] = [];
+	
+	var indexReturnArray = 0;
+	var currentDate = events[0].date;
+	
+	for (var i = 0; i<events.length; i++) {		
+		if (events[i].date == currentDate) {
+			returnArray[indexReturnArray].push(events[i]);
+		} else {
+			indexReturnArray = indexReturnArray + 1;
+			returnArray[indexReturnArray] = [];
+			returnArray[indexReturnArray].push(events[i]);
+			currentDate = events[i].date;
+		}
+	}
+	return returnArray;
+}
+
+//puts text in the HTML below "<pre id="displayArea"><pre>"
+function showTable() {
+    var area = document.getElementById('displayArea');
+	area.innerHTML = sessionStorage.getItem('table');
+}
+
+//saves the tabel content should be executed before saving the text
+function saveTableHTML(table) {
+	sessionStorage.getItem('table');
+	sessionStorage.setItem('table',table);
+}
+
+//returns the events in JSON format from the Cleaner before
+function getEventsJSON() {
+	return sessionStorage.getItem('events');
+}
+</script>
+<body id="body">
+<pre id="displayArea"><pre>
+</body>
+</html>

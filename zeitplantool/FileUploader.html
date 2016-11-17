@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html lang="de">
+<meta charset="utf-8"/>
+<head><title>File Uploader!</title></head>
+<script type="text/javascript">
+window.onload = function() {
+        var fileInput = document.getElementById('fileInput');
+        var fileDisplayArea = document.getElementById('displayArea');
+        fileInput.addEventListener('change', function(e) {
+            var file = fileInput.files[0];
+            var textType = /html.*/;
+            if (file.type.match(textType)) {
+                var reader = new FileReader();
+				reader.readAsText(file, 'ISO-8859-1');
+                reader.onload = function(e) {
+					var rawText = reader.result;
+					saveRawText(rawText);
+					showText(fileDisplayArea);
+					document.getElementById("submit").submit();
+                } 
+            } else {
+                fileDisplayArea.innerText = "File not supported!";
+            }
+        });		
+}
+function showText(area) {
+	area.innerHTML = sessionStorage.getItem('rawText');
+}
+function saveRawText(rawText) {
+	sessionStorage.getItem('rawText');
+	sessionStorage.setItem('rawText',rawText);
+}
+</script>
+<body id="body">
+read in "rawTable"
+	<div>
+		<input type="file" id="fileInput">
+	</div>
+	<form id="submit" action="ParagraphHandler.html">
+		<input type="submit" name="button" value="ok"/>
+	</form>
+<pre id="displayArea"><pre>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE>
+<html>
+<head><title>Paragraph handler!</title></head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script type="text/javascript">
+window.onload = function() {
+	var raw = getRawText();
+	
+	//saves the raw text so it will be displayed in a first stepp
+	saveParagraphText(raw);
+	
+	//we need to display the text once, so the html will be created, so the tags can be found by JQuery
+	showText();
+	
+	
+	
+	//finds the paragraphes with the class "ev1"
+	var $html = $('p.ev1').clone().text();
+	
+	//after finding the paragraphes, deletes the content of the page
+	document.getElementById('displayArea').innerHTML = "";
+	
+	//puts in the new content on the page
+	$('pre').prepend($html);
+	
+	
+	
+	//copies the content of the page 
+	var paragraphs = document.getElementById('displayArea').innerHTML;
+	
+	//saves the the text which we had copied
+	saveParagraphText(paragraphs);
+	
+	//slices the text, so we can put the paragraph (1. line, 2. line) Object in the array.
+	var text = sessionStorage.getItem('paragraphText');
+	var array = [];
+	var startSliceP = 0;
+	var endSliceP = 0;
+	var middleSliceLine = 0;
+	var patternTimeLength = 5;
+	while (text != "") {
+
+		
+		endSliceP = text.search(/([01]\d|2[0-3]):[0-5]\d/g)+patternTimeLength;
+		
+		var storageOneParagraph = text.slice(0, endSliceP);
+		
+		middleSliceLine = storageOneParagraph.search('Datum');
+		
+		var storageFirstLine = storageOneParagraph.slice(0, middleSliceLine-1);
+		var storageSecondLine = storageOneParagraph.slice(middleSliceLine);
+		
+		array.push(new StrucParagraph(storageFirstLine, storageSecondLine));
+		text = text.slice(endSliceP);
+	}
+	
+	var arrayJSON = JSON.stringify(array);
+	saveParagraphText(arrayJSON);
+	showText();
+	document.getElementById("submit").submit();
+}
+
+//constructor for an strucParagraph
+function StrucParagraph(firstLine, secondLine) {
+	//2 Strings
+	this.firstLine = firstLine;
+	this.secondLine = secondLine;
+}
+
+//puts text in the HTML below "<pre id="displayArea"><pre>"
+function showText() {
+    var area = document.getElementById('displayArea');
+	area.innerHTML = sessionStorage.getItem('paragraphText');
+}
+
+//saves the paragraphes should be executed before showing the text
+function saveParagraphText(paragraphText) {
+	sessionStorage.getItem('paragraphText');
+	sessionStorage.setItem('paragraphText',paragraphText);
+}
+
+//returns the rawText from the File Uploader before
+function getRawText() {
+	return sessionStorage.getItem('rawText');
+}
+</script>
+<body id="body">
+	<form id="submit" action="Cleaner.html">
+		<input type="submit" name="button" value="weiter"/>
+	</form>
+<pre id="displayArea"><pre>
+</form>
+</body>
+</html>
