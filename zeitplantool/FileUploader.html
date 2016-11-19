@@ -4,41 +4,57 @@
 <head><title>File Uploader!</title></head>
 <script type="text/javascript">
 window.onload = function() {
+		//gets the relevant DOM elements
         var fileInput = document.getElementById('fileInput');
         var fileDisplayArea = document.getElementById('displayArea');
+		
         fileInput.addEventListener('change', function(e) {
+			//gets the first file which was choosen
             var file = fileInput.files[0];
+			//defines the type of the file
             var textType = /html.*/;
+			
+			//file has to match the type which was defined before
             if (file.type.match(textType)) {
+				//gets the FileReader and reads out the file
                 var reader = new FileReader();
+				//ISO-8859-1 is the encoding of the file -> to read properly German texts
 				reader.readAsText(file, 'ISO-8859-1');
+				
+				//if ready with loading
                 reader.onload = function(e) {
+					//getting the text of the file, save it, display it and forward the process to the paragraphHandler
 					var rawText = reader.result;
 					saveRawText(rawText);
-					showText(fileDisplayArea);
+					//showText(fileDisplayArea);
 					document.getElementById("submit").submit();
                 } 
             } else {
+				//Catches the case of a wrong file type
                 fileDisplayArea.innerText = "File not supported!";
             }
         });		
 }
+
+//shows the text out of the sessionStorage 'rawText'
 function showText(area) {
 	area.innerHTML = sessionStorage.getItem('rawText');
 }
+
+//saves the rawText in the sessionStorage by rawText
 function saveRawText(rawText) {
-	sessionStorage.getItem('rawText');
 	sessionStorage.setItem('rawText',rawText);
 }
 </script>
 <body id="body">
-read in "rawTable"
+Read in the "rawTable"!
 	<div>
 		<input type="file" id="fileInput">
 	</div>
 	<form id="submit" action="ParagraphHandler.html">
-		<input type="submit" name="button" value="ok"/>
+		<!--<input type="submit" name="button" value="ok"/>-->
 	</form>
-<pre id="displayArea"><pre>
+<!-- note for debugging: remove the "hidden" -->
+<pre hidden id="displayArea"><pre>
 </body>
 </html>
