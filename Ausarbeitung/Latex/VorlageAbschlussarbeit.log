@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  20 NOV 2016 17:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  21 NOV 2016 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,7 +776,8 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count141
 \c@blind@pangrammax=\count142
 )
-(./VorlageAbschlussarbeit.aux)
+(./VorlageAbschlussarbeit.aux (./DeckblattProjektseminar.aux) (./Abstract.aux)
+(./01_Einleitung.aux) (./02_Hauptteil.aux) (./03_Schluss.aux))
 \openout1 = `VorlageAbschlussarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 174.
@@ -908,7 +909,7 @@ Package babel Info: Redefining ngerman shorthand "~
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
 
-<./images/uni_logo.JPG, id=4, 431.36156pt x 312.41719pt>
+<./images/uni_logo.JPG, id=88, 431.36156pt x 312.41719pt>
 File: ./images/uni_logo.JPG Graphic file (type jpg)
 
 <use ./images/uni_logo.JPG>
@@ -988,10 +989,49 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 224.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 224.
+ (./VorlageAbschlussarbeit.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 8.
 
 
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `ztmcm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 8.
 
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 8.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 8.
+
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 8.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+)
 \tf@toc=\write5
 \openout5 = `VorlageAbschlussarbeit.toc'.
 
@@ -1016,10 +1056,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 232.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 232.
-
-
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
-
+ (./VorlageAbschlussarbeit.lof)
 \tf@lof=\write6
 \openout6 = `VorlageAbschlussarbeit.lof'.
 
@@ -1031,7 +1068,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 234.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 234.
-[2
+ [2
 
 
 ]
@@ -1040,9 +1077,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 239.
 
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+(./VorlageAbschlussarbeit.lot)
 \tf@lot=\write7
 \openout7 = `VorlageAbschlussarbeit.lot'.
 
@@ -1054,7 +1089,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 241.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 241.
-[3
+ [3
 
 
 ]
@@ -1062,10 +1097,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 246.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 246.
-
-
-Package hyperref Warning: old lol file detected, not used; run LaTeX again.
-
+ (./VorlageAbschlussarbeit.lol)
 \tf@lol=\write8
 \openout8 = `VorlageAbschlussarbeit.lol'.
 
@@ -1077,7 +1109,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 248.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 248.
-[4
+ [4
 
 
 ]
@@ -1085,8 +1117,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 256.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 256.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 257.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 268.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1101,7 +1131,8 @@ Package babel Info: Redefining ngerman shorthand "~
 ]
 \openout2 = `01_Einleitung.aux'.
 
- (./01_Einleitung.tex
+
+(./01_Einleitung.tex
 Kapitel 1.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
@@ -1109,14 +1140,20 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 15.
 [1
 
 
@@ -1198,79 +1235,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
 LaTeX Warning: Citation `Kolter2009' on page 7 undefined on input line 39.
 
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 39
-.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `ztmcm' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 39
-.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 39
-.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 39
-.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
 Package acronym Info: Label `acro:Bsp.' newly defined as it shall be overridden
 
 although it is yet undefined on input line 41.
-
-
-Package acronym Warning: Acronym `Bsp.' is not defined on input line 41.
-
-
-Package acronym Warning: Acronym `Bsp.' is not defined on input line 41.
-
 Package acronym Info: Label `acro:SaaS' newly defined as it shall be overridden
 
 although it is yet undefined on input line 41.
-
-Package acronym Warning: Acronym `SaaS' is not defined on input line 41.
-
-
-Package acronym Warning: Acronym `SaaS' is not defined on input line 41.
-
-
-LaTeX Warning: Reference `fig:Fig1' on page 7 undefined on input line 43.
-
-
-LaTeX Warning: Reference `img:subFig2' on page 7 undefined on input line 43.
-
-
-LaTeX Warning: Reference `img:subFigs' on page 7 undefined on input line 43.
-
-<./images/Fig1.pdf, id=81, 278.97827pt x 194.06203pt>
+<./images/Fig1.pdf, id=186, 278.97827pt x 194.06203pt>
 File: ./images/Fig1.pdf Graphic file (type pdf)
  <use ./images/Fig1.pdf>
 Package pdftex.def Info: ./images/Fig1.pdf used on input line 47.
@@ -1278,13 +1249,13 @@ Package pdftex.def Info: ./images/Fig1.pdf used on input line 47.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 48.
 
-<./images/Fig.png, id=82, 278.9622pt x 193.6836pt>
+<./images/Fig.png, id=187, 278.9622pt x 193.6836pt>
 File: ./images/Fig.png Graphic file (type png)
  <use ./images/Fig.png>
 Package pdftex.def Info: ./images/Fig.png used on input line 55.
 (pdftex.def)             Requested size: 172.84932pt x 120.01164pt.
 
-<./images/Fig2.pdf, id=83, 722.7pt x 542.025pt>
+<./images/Fig2.pdf, id=188, 722.7pt x 542.025pt>
 File: ./images/Fig2.pdf Graphic file (type pdf)
  <use ./images/Fig2.pdf>
 Package pdftex.def Info: ./images/Fig2.pdf used on input line 56.
@@ -1426,37 +1397,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
 (./Abstract.aux) (./01_Einleitung.aux) (./02_Hauptteil.aux) (./03_Schluss.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
+Package rerunfilecheck Info: File `VorlageAbschlussarbeit.out' has not changed.
 
-Package rerunfilecheck Warning: File `VorlageAbschlussarbeit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `VorlageAbschlussarbeit.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  8FC4C877933DCDE260084B774FD591FB;1267.
+(rerunfilecheck)             Checksum: 8FC4C877933DCDE260084B774FD591FB;1267.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
- 12448 strings out of 493014
- 187116 string characters out of 6133350
- 342076 words of memory out of 5000000
- 15540 multiletter control sequences out of 15000+600000
- 71586 words of font info for 174 fonts, out of 8000000 for 9000
+ 12501 strings out of 493014
+ 187927 string characters out of 6133350
+ 347931 words of memory out of 5000000
+ 15567 multiletter control sequences out of 15000+600000
+ 71846 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,44p,3464b,1177s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 6/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (20 pages, 242154 bytes).
+Output written on VorlageAbschlussarbeit.pdf (20 pages, 245633 bytes).
 PDF statistics:
- 174 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
- 62 named destinations out of 1000 (max. 500000)
- 35349 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 35517 words of extra memory for PDF output out of 35830 (max. 10000000)
 
