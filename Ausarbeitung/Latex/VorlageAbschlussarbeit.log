@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  21 NOV 2016 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  21 NOV 2016 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,93 +1193,92 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 19.
+(babel)             in language  on input line 25.
  [4]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 39.
  [5]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 42.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 36.
+(babel)             in language  on input line 42.
  [6]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 47.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 47.
 
 
-LaTeX Warning: Citation `Kolter2009' on page 7 undefined on input line 39.
+LaTeX Warning: Citation `Kolter2009' on page 7 undefined on input line 48.
 
 Package acronym Info: Label `acro:Bsp.' newly defined as it shall be overridden
 
-although it is yet undefined on input line 41.
+although it is yet undefined on input line 50.
 Package acronym Info: Label `acro:SaaS' newly defined as it shall be overridden
 
-although it is yet undefined on input line 41.
-<./images/Fig1.pdf, id=186, 278.97827pt x 194.06203pt>
+although it is yet undefined on input line 50.
+<./images/Fig1.pdf, id=187, 278.97827pt x 194.06203pt>
 File: ./images/Fig1.pdf Graphic file (type pdf)
  <use ./images/Fig1.pdf>
-Package pdftex.def Info: ./images/Fig1.pdf used on input line 47.
+Package pdftex.def Info: ./images/Fig1.pdf used on input line 56.
 (pdftex.def)             Requested size: 364.90543pt x 253.84111pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 57.
 
-<./images/Fig.png, id=187, 278.9622pt x 193.6836pt>
+<./images/Fig.png, id=188, 278.9622pt x 193.6836pt>
 File: ./images/Fig.png Graphic file (type png)
  <use ./images/Fig.png>
-Package pdftex.def Info: ./images/Fig.png used on input line 55.
+Package pdftex.def Info: ./images/Fig.png used on input line 64.
 (pdftex.def)             Requested size: 172.84932pt x 120.01164pt.
 
-<./images/Fig2.pdf, id=188, 722.7pt x 542.025pt>
+<./images/Fig2.pdf, id=189, 722.7pt x 542.025pt>
 File: ./images/Fig2.pdf Graphic file (type pdf)
  <use ./images/Fig2.pdf>
-Package pdftex.def Info: ./images/Fig2.pdf used on input line 56.
+Package pdftex.def Info: ./images/Fig2.pdf used on input line 65.
 (pdftex.def)             Requested size: 172.84932pt x 129.63376pt.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 65.
+nput line 74.
 
 (./listings/HelloWorld.java
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
-))
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 294.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 294.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 294.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 294.
- [7 <./images/Fig1.pdf>]
+(babel)             in language  on input line 6.
+ [7 <./images/Fig1.pdf>]))
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 294.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1407,19 +1406,19 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
  12501 strings out of 493014
- 187927 string characters out of 6133350
- 347931 words of memory out of 5000000
+ 187930 string characters out of 6133350
+ 348319 words of memory out of 5000000
  15567 multiletter control sequences out of 15000+600000
  71846 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,44p,3464b,1177s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,44p,1919b,1938s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 6/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (20 pages, 245633 bytes).
+Output written on VorlageAbschlussarbeit.pdf (20 pages, 245970 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 235 compressed objects within 3 object streams
+ 269 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
  64 named destinations out of 1000 (max. 500000)
  35517 words of extra memory for PDF output out of 35830 (max. 10000000)
 
