@@ -376,7 +376,8 @@ function getEventsJSON() {
 //creates a local copy of the table as "Zeitplan.html"
 //acts like a download
 function createLocalCopy() {
-	var text = sessionStorage.getItem('table');
+	//var text = sessionStorage.getItem('table');
+	var text = document.getElementsByTagName("HTML")[0].outerHTML;
 	var name = "Zeitplan.html";
 	var type = /html.*/;
 	
