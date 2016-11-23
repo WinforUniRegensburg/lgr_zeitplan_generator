@@ -1,7 +1,6 @@
 <!DOCTYPE>
 <html lang="de">
 
-
 <head>
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,14 +63,8 @@ function clickedButton() {
     <div class="well">
 		<input class="btn btn-info" type="button" onClick="clickedButton()" value="Datei hochladen">
     </div>
-	
-	
-	<div class="page-header">
-        <h3>... oder alternativ hierüber: </h3>
-    </div>
-	<div class="well">
-		<input id="fileInput" type="file" class="file">
-	</div>
+
+	<input style="display: none;" id="fileInput" type="file" class="file">
 	
 	<form id="submit" action="ParagraphHandler.html">
 		<!--<input type="submit" name="button" value="ok"/>-->
