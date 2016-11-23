@@ -1,10 +1,16 @@
 <!DOCTYPE>
 <html>
 <head lang="de">
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Table</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-
+<script>
+	//Includes jQuery for Electron and Node.js
+	window.$ = window.jQuery = require('jquery');
+</script>
 <script type="text/javascript">
 window.onload = function() {
 
@@ -24,13 +30,17 @@ window.onload = function() {
 	//generates the whole pageContent, multiple tables with headlines are possible
 	//one loop creates a headline + table
 	for (var i = 0; i < eventsSplitDays.length; i++) {
+		pageContent = pageContent + '<div class="well"';
+	
 		//generate the headline of the table
-		pageContent = pageContent + "<p>" + "<h2>" +
-		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</p>";
+		pageContent = pageContent + '<div class="page-header">' + "<h2>" +
+		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</div>";
 		
 		//generate the table itself
 		pageContent = pageContent + "<p>" +
 			generateTable(eventsSplitDays[i]) + "</p>";
+		
+		pageContent = pageContent + '</div>';
 	}
 	
 	//save that pageContent and display it
@@ -82,7 +92,7 @@ function sortEventsDateAndTimeAndCategoryOrder(events) {
 //creates the basic of the table and triggers the creation of the table head and table body
 //returns that table as HTML-String
 function generateTable(events) {
-	var table = '<table border="1">';
+	var table = '<table class="table table-hover" border="1">';
 	var tableHead = getTableHead(events); //Its the array of values which are in the headline of the table
 	
 	table = table + generateTableHead(tableHead);
@@ -232,7 +242,7 @@ function getGroupedEvents(events) {
 //returns the HTML form of the TableHead, the data form is provided by getTableHead()
 function generateTableHead (tableHead) {
 	//parses the TableHead array to a HTML string which can be added to the table
-	var txt = "<tr>";
+	var txt = '<tr class="info">';
 	for(var i = 0; i<tableHead.length; i++) {
 		txt = txt + "<th>" + tableHead[i] + "</th>";
 	}
@@ -377,9 +387,14 @@ function createLocalCopy() {
 </script>
 <body id="body">
 
-<a hidden href="" id="a"></a>
-<input href="" type="button" onclick="createLocalCopy()" value="Save this page!">
+    <div class="well">
+		<a hidden href="" id="a"></a>
+		<input class="btn btn-info" href="" type="button" onclick="createLocalCopy()" value="Seite als Datei ausgeben!">
+	</div>
+	
+	<div id="displayArea"></div>
 
-<pre id="displayArea"><pre>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
