@@ -360,8 +360,26 @@ function saveTableHTML(table) {
 function getEventsJSON() {
 	return sessionStorage.getItem('events');
 }
+
+//creates a local copy of the table as "Zeitplan.html"
+//acts like a download
+function createLocalCopy() {
+	var text = sessionStorage.getItem('table');
+	var name = "Zeitplan.html";
+	var type = /html.*/;
+	
+	var a = document.getElementById("a");
+	var file = new Blob([text], {type: type});
+	a.href = URL.createObjectURL(file);
+	a.download = name;
+	a.click();
+}
 </script>
 <body id="body">
+
+<a hidden href="" id="a"></a>
+<input id = "a" href="" type="button" onclick="createLocalCopy()" value="Save this page!">
+
 <pre id="displayArea"><pre>
 </body>
 </html>
