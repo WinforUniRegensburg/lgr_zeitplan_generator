@@ -376,6 +376,9 @@ function getEventsJSON() {
 //creates a local copy of the table as "Zeitplan.html"
 //acts like a download
 function createLocalCopy() {
+	//removing the button for the downloaded timetable
+	$("input").remove();
+
 	//var text = sessionStorage.getItem('table');
 	var text = document.getElementsByTagName("HTML")[0].outerHTML;
 	var name = "Zeitplan.html";
@@ -392,7 +395,7 @@ function createLocalCopy() {
 
     <div class="well">
 		<a hidden href="" id="a"></a>
-		<input class="btn btn-info" href="" type="button" onclick="createLocalCopy()" value="Seite als Datei ausgeben!">
+		<input class="btn btn-info" href="" type="button" onclick="createLocalCopy()" value="Seite als Datei ausgeben!"/>
 	</div>
 	
 	<div id="displayArea"></div>
