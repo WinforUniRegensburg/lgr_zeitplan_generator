@@ -376,10 +376,11 @@ function getEventsJSON() {
 //creates a local copy of the table as "Zeitplan.html"
 //acts like a download
 function createLocalCopy() {
-	//removing the button for the downloaded timetable
-	$("input").remove();
-
+	
+	$("input").css("display", "none");
+	//$("input").remove();
 	//var text = sessionStorage.getItem('table');
+	
 	var text = document.getElementsByTagName("HTML")[0].outerHTML;
 	var name = "Zeitplan.html";
 	var type = /html.*/;
@@ -389,6 +390,8 @@ function createLocalCopy() {
 	a.href = URL.createObjectURL(file);
 	a.download = name;
 	a.click();
+	
+	$("input").css("display", "inline");
 }
 </script>
 <body id="body">
