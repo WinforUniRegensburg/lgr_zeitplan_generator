@@ -31,14 +31,14 @@ window.onload = function() {
 		//checks only the validy of a date, not it's correctness in details!
 		//means that special cases like february are not checked
 		var patternDateLength = 10; //date format: dd.mm.yyyy -> length=10
-		var dateIndex = secondLine.search(/(3[01]|[0-2]\d)[.](0\d|1[0-2])[.]20\d\d/g);
+		var dateIndex = secondLine.search(/(3[01]|[0-2]\d)[.](0\d|1[0-2])[.]20\d\d/);
 		var date = secondLine.slice(dateIndex, dateIndex+patternDateLength);
 		
 		
 		
 		//get the time from the secondLine
 		//time has to be in the format "hh:mm"; 24h format
-		var timeIndex = secondLine.search(/([01]\d|2[0-3]):[0-5]\d/g);
+		var timeIndex = secondLine.search(/([01]\d|2[0-3]):[0-5]\d/);
 		var time = secondLine.slice(timeIndex);
 		
 		

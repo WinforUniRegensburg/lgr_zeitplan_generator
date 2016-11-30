@@ -12,7 +12,7 @@ window.onload = function() {
 	//recieves the rawText from the sessionStorage
 	var raw = getRawText();
 	
-	//saves the raw text so it will be displayed in a first stepp
+	//saves the raw text so it will be displayed in a first step
 	saveParagraphText(raw);
 	
 	//we need to display the text once, so the html will be created, so the tags can be found by JQuery
@@ -31,7 +31,7 @@ window.onload = function() {
 	//copies the content of the page 
 	var paragraphs = document.getElementById('displayArea').innerHTML;
 	
-	//saves the the text which we had copied
+	//saves the text which we had copied
 	saveParagraphText(paragraphs);
 	
 	//slices the text, so we can put the paragraph (1st line, 2nd line) Object in the array.
@@ -45,17 +45,17 @@ window.onload = function() {
 
 		//returns the end of the first time pattern ("hh:mm") which can be found in the text
 		//this represents the end of the current paragraph
-		endSliceP = text.search(/([01]\d|2[0-3]):[0-5]\d/g)+patternTimeLength;
+		endSliceP = text.search(/([01]\d|2[0-3]):[0-5]\d/)+patternTimeLength;
 		
 		//returns the String of the current paragraph (includes the first and second line)
 		//copies the paragraph in a local variable
-		var storageOneParagraph = text.slice(0, endSliceP);
+		var storageOneParagraph = text.slice(startSliceP, endSliceP);
 		
 		//gets the breakpoint of the paragraph by searching for the 'Datum'.
 		middleSliceLine = storageOneParagraph.search('Datum');
 		
 		//gets apart the first and second line
-		var storageFirstLine = storageOneParagraph.slice(0, middleSliceLine-1);
+		var storageFirstLine = storageOneParagraph.slice(startSliceP, middleSliceLine-1);
 		var storageSecondLine = storageOneParagraph.slice(middleSliceLine);
 		
 		//pushes the solutions of slicing in a first structure of the paragraph
