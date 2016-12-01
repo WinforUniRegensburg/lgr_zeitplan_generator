@@ -9,11 +9,11 @@
 \contentsline {section}{\numberline {2.2}Konzeptionelle Phase und Identifikation m\IeC {\"o}glicher Probleme bzw. Schl\IeC {\"u}sselstellen }{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Spezifikation des Rohtextes}{6}{section.2.3}
 \contentsline {section}{\numberline {2.4}Funktionalit\IeC {\"a}t des File-Uploaders}{7}{section.2.4}
-\contentsline {section}{\numberline {2.5}Paragraph Handler: Herausfiltern der relevanten Informationen aus dem Rohtext }{9}{section.2.5}
+\contentsline {section}{\numberline {2.5}Paragraph Handler: Herausfiltern der Paragraphen aus dem Rohtext }{9}{section.2.5}
 \contentsline {chapter}{\numberline {3}Schluss}{13}{chapter.3}
-\contentsline {chapter}{Anhang}{14}{section*.22}
+\contentsline {chapter}{Anhang}{14}{section*.21}
 \contentsline {chapter}{\numberline {A}Erster Anhang}{15}{appendix.A}
 \contentsline {chapter}{\numberline {B}Zweiter Anhang}{16}{appendix.B}
 \contentsline {section}{\numberline {B.1}Anhang}{16}{section.B.1}
 \contentsline {section}{\numberline {B.2}Anhang}{16}{section.B.2}
-\contentsline {chapter}{Literaturverzeichnis}{17}{section*.23}
+\contentsline {chapter}{Literaturverzeichnis}{17}{section*.22}

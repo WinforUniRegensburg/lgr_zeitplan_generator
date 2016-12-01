@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  30 NOV 2016 21:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  1 DEC 2016 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1147,7 +1147,7 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package acronym Info: Label `acro:CSS' newly defined as it shall be overridden
-although it is yet undefined on input line 21.
+although it is yet undefined on input line 19.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1174,83 +1174,90 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 32.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 32.
-Package acronym Info: Label `acro:DOM' newly defined as it shall be overridden
-although it is yet undefined on input line 33.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 42.
+(babel)             in language  on input line 44.
  [6]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 50.
 Package acronym Info: Label `acro:UTF-8' newly defined as it shall be overridde
 n
-although it is yet undefined on input line 51.
+although it is yet undefined on input line 53.
 Package acronym Info: Label `acro:IETF' newly defined as it shall be overridden
 
-although it is yet undefined on input line 51.
+although it is yet undefined on input line 53.
 Package acronym Info: Label `acro:ISO' newly defined as it shall be overridden
-although it is yet undefined on input line 51.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 52.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 52.
- [7]
-Package acronym Info: Label `acro:API' newly defined as it shall be overridden
 although it is yet undefined on input line 53.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 56.
+(babel)             in language  on input line 54.
+ [7]
+Package acronym Info: Label `acro:API' newly defined as it shall be overridden
+although it is yet undefined on input line 55.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
  [8]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 61.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 68.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 68.
  [9]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 70.
+(babel)             in language  on input line 72.
  [10]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 72.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `pcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 77.
+(babel)             in language  on input line 81.
  [11]
 Package acronym Info: Label `acro:JSON' newly defined as it shall be overridden
 
-although it is yet undefined on input line 80.
+although it is yet undefined on input line 84.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 300.
@@ -1263,7 +1270,8 @@ Package babel Info: Redefining ngerman shorthand "~
  [12]
 \openout2 = `03_Schluss.aux'.
 
- (./03_Schluss.tex
+
+(./03_Schluss.tex
 Kapitel 3.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
@@ -1371,28 +1379,29 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
 Package rerunfilecheck Info: File `VorlageAbschlussarbeit.out' has not changed.
 
-(rerunfilecheck)             Checksum: 3F12A9BB85E0E35CCD87F65C2247D02F;1422.
+(rerunfilecheck)             Checksum: 9350D6B43BB7A4FDC9AE82B46E3707D9;1409.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 21 ({)
+### simple group (level 1) entered at line 19 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12119 strings out of 493014
- 184001 string characters out of 6133350
- 331088 words of memory out of 5000000
- 15197 multiletter control sequences out of 15000+600000
- 63648 words of font info for 174 fonts, out of 8000000 for 9000
+ 12151 strings out of 493014
+ 184475 string characters out of 6133350
+ 331021 words of memory out of 5000000
+ 15222 multiletter control sequences out of 15000+600000
+ 64399 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,12n,43p,2652b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,43p,2748b,480s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (23 pages, 101026 bytes).
+}</usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on VorlageAbschlussarbeit.pdf (23 pages, 108367 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 33974 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 288 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 34486 words of extra memory for PDF output out of 35830 (max. 10000000)
 
