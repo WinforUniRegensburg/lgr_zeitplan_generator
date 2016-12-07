@@ -6,6 +6,7 @@ Maybe you are in charge to generate a timetable for events.
 You already got a document where the data you need to put in the table is saved.
 If the information fits in our format, which is described below, you can easily convert it into a schedule with our tool.
 That will save your time for task which should be rather in your focus.
+Furthermore if you use the table generator from [Seltec](www.seltec.at) this tool will be compatible.
 
 ### Usage and Requirements
 
@@ -62,6 +63,8 @@ Furthermore in those paragraphes there has to be the following structure:
 2. Second line
   * The __date__ valid to the regex ```(3[01]|[0-2]\d)[.](0\d|1[0-2])[.]20\d\d``` and beginning the second line with "Datum" will be the date of the event. The tool will create for each a day a separated table.
   * The __time__ valid to the regex ```([01]\d|2[0-3]):[0-5]\d```. The time will be the index of the rows.
+
+This format is provided if you use the table generator from [Seltec](www.seltec.at).
   
 #### Output
 
