@@ -30,16 +30,14 @@ window.onload = function() {
 	//generates the whole pageContent, multiple tables with headlines are possible
 	//one loop creates a headline + table
 	for (var i = 0; i < eventsSplitDays.length; i++) {
-		pageContent = pageContent + '<div class="well>"';
+		pageContent = pageContent + '<div class="page-header">';
 	
 		//generate the headline of the table
-		pageContent = pageContent + '<div class="page-header">' + "<h2>" +
-		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</div>";
+		pageContent = pageContent + '<div class="well">' + "<h2>" +
+		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</div>" + '</div>';
 		
 		//generate the table itself
 		pageContent = pageContent + "<p>" +	generateTable(eventsSplitDays[i]) + "</p>";
-		
-		pageContent = pageContent + '</div>';
 	}
 		
 	//save that pageContent and display it
