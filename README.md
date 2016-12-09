@@ -35,10 +35,14 @@ to run the app.
 
 You can also create a desktop using 
 
-```electron-packager <directory-to-put-the-code> <name-of-app> --version=1.3.9```
+For Mac: ```npm run package-mac```
 
-and run the app using the 'name-of-app.exe'
+For Windows: ```npm run package-win```
 
+For Linux: ```npm run package-linux```
+
+and run the app using e.g. for windows the 'Zeitplan.exe'. 
+For exact information about how to customize the packager feel free to read about in the [API](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md) about it.
 
 It's possible that those instructions above won't work for you. 
 
@@ -49,6 +53,9 @@ In this case please use the following links for further information about conven
 [Electron #2](https://github.com/electron/electron/blob/master/docs/tutorial/quick-start.md)
 
 [Electron Packager](https://github.com/electron-userland/electron-packager)
+
+And most important: 
+[__Electron Packager API__](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md)
 
 #### Requirements
 

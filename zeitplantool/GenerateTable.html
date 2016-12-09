@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Table</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="icon" type="image/ico" href="icon/icon.ico">
 </head>
 <script>
 	//Includes jQuery for Electron and Node.js
@@ -17,39 +18,33 @@ window.onload = function() {
 	var json = getEventsJSON();
 	var events = JSON.parse(json);
 	
-	try {	
-		//sorting the event objects 1st Order: date, 2nd Order: time, 3rd Order: category
-		events = sortEventsDateAndTimeAndCategoryOrder(events);
-		//displayDebuggingText(events);
-
-		var pageContent = "";
+	//sorting the event objects 1st Order: date, 2nd Order: time, 3rd Order: category
+	events = sortEventsDateAndTimeAndCategoryOrder(events);
+	//displayDebuggingText(events);
+	var pageContent = "";
+	
+	//splits the events in an array 
+	//-> every index of the array return another array of events with the same date
+	var eventsSplitDays = splitEvents(events);
+	
+	//generates the whole pageContent, multiple tables with headlines are possible
+	//one loop creates a headline + table
+	for (var i = 0; i < eventsSplitDays.length; i++) {
+		pageContent = pageContent + '<div class="well>"';
+	
+		//generate the headline of the table
+		pageContent = pageContent + '<div class="page-header">' + "<h2>" +
+		"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</div>";
 		
-		//splits the events in an array 
-		//-> every index of the array return another array of events with the same date
-		var eventsSplitDays = splitEvents(events);
+		//generate the table itself
+		pageContent = pageContent + "<p>" +	generateTable(eventsSplitDays[i]) + "</p>";
 		
-		//generates the whole pageContent, multiple tables with headlines are possible
-		//one loop creates a headline + table
-		for (var i = 0; i < eventsSplitDays.length; i++) {
-			pageContent = pageContent + '<div class="well"';
-		
-			//generate the headline of the table
-			pageContent = pageContent + '<div class="page-header">' + "<h2>" +
-			"Tagesprogramm für den " + eventsSplitDays[i][0].date + "</h2>" + "</div>";
-			
-			//generate the table itself
-			pageContent = pageContent + "<p>" +
-				generateTable(eventsSplitDays[i]) + "</p>";
-			
-			pageContent = pageContent + '</div>';
-		}
-		
-		//save that pageContent and display it
-		saveTableHTML(pageContent);
-		showTable();
-	} catch (err) {
-		document.getElementById("displayArea").innerHTML = '<div class="well">Oops! Da ging etwas schief. Hast du das richtige Dokument ausgewählt?</div>';
+		pageContent = pageContent + '</div>';
 	}
+		
+	//save that pageContent and display it
+	saveTableHTML(pageContent);
+	showTable();
 }
 
 //just some debugging Text
@@ -401,7 +396,7 @@ function createLocalCopy() {
 <body id="body">
 
     <div class="well">
-		<a hidden href="" id="a"></a>
+		<a style="display: none;" href="" id="a"></a>
 		<input class="btn btn-info" href="" type="button" onclick="createLocalCopy()" value="Seite als Datei ausgeben!"/>
 	</div>
 	
