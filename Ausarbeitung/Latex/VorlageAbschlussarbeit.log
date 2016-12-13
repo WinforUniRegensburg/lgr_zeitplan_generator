@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  9 DEC 2016 16:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  13 DEC 2016 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1437,14 +1437,23 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 196.
  [20]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 209.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 209.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 209.
+(babel)             in language  on input line 205.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 209.
- [21])
+(babel)             in language  on input line 205.
+ [21]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 213.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 213.
+ [22])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1453,7 +1462,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 309.
- [22]
+ [23]
 \openout2 = `03_Schluss.aux'.
 
  (./03_Schluss.tex
@@ -1471,7 +1480,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 313.
- [23
+ [24
 
 
 
@@ -1488,7 +1497,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 328.
- [24
+ [25
 
 
 ]
@@ -1505,7 +1514,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 339.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 339.
-[25
+[26
 
 ]
 Anhang B.
@@ -1529,7 +1538,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 348.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 348.
-[26
+[27
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -1553,7 +1562,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 391.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 391.
-[27
+[28
 
 
 ]
@@ -1576,8 +1585,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 391.
 ### simple group (level 1) entered at line 17 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12718 strings out of 493014
- 190123 string characters out of 6133350
+ 12719 strings out of 493014
+ 190130 string characters out of 6133350
  350554 words of memory out of 5000000
  15751 multiletter control sequences out of 15000+600000
  70676 words of font info for 185 fonts, out of 8000000 for 9000
@@ -1588,10 +1597,10 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (33 pages, 150357 bytes).
+Output written on VorlageAbschlussarbeit.pdf (34 pages, 152054 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 328 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
  35526 words of extra memory for PDF output out of 35830 (max. 10000000)
 
