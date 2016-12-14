@@ -7,18 +7,21 @@
 \BOOKMARK [0][]{chapter*.12}{Abk\374rzungsverzeichnis}{}% 7
 \BOOKMARK [0][]{chapter.1}{1 Einleitung}{}% 8
 \BOOKMARK [0][]{chapter.2}{2 Hauptteil}{}% 9
-\BOOKMARK [1][]{section.2.1}{2.1 Grundlegende \334berlegungen zur Durchf\374hrung des Projektes}{chapter.2}% 10
-\BOOKMARK [1][]{section.2.2}{2.2 Konzeptionelle Phase und Identifikation m\366glicher Probleme bzw. Schl\374sselstellen }{chapter.2}% 11
-\BOOKMARK [1][]{section.2.3}{2.3 Spezifikation des Rohtextes}{chapter.2}% 12
-\BOOKMARK [1][]{section.2.4}{2.4 Funktionalit\344t des File-Uploaders}{chapter.2}% 13
-\BOOKMARK [1][]{section.2.5}{2.5 Paragraph Handler: Herausfiltern der Paragraphen aus dem Rohtext}{chapter.2}% 14
-\BOOKMARK [1][]{section.2.6}{2.6 Cleaner: Strukturiertes Ablegen der Informationen aus den Paragraphen als Event}{chapter.2}% 15
-\BOOKMARK [1][]{section.2.7}{2.7 GenerateTable: Dynamische Erstellung des Zeitplans}{chapter.2}% 16
-\BOOKMARK [0][]{chapter.3}{3 Schluss}{}% 17
-\BOOKMARK [0][]{section*.21}{Anhang}{}% 18
-\BOOKMARK [0][]{appendix.A}{A Erster Anhang}{}% 19
-\BOOKMARK [0][]{appendix.B}{B Zweiter Anhang}{}% 20
-\BOOKMARK [1][]{section.B.1}{B.1 Anhang}{appendix.B}% 21
-\BOOKMARK [1][]{section.B.2}{B.2 Anhang}{appendix.B}% 22
-\BOOKMARK [0][]{section*.22}{Literaturverzeichnis}{}% 23
-\BOOKMARK [0][]{erklaerung.0}{Eidesstattliche Erkl\344rung}{}% 24
+\BOOKMARK [1][]{section.2.1}{2.1 Projektdurchf\374hrung und Konzeption}{chapter.2}% 10
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Grundlegende \334berlegungen zur Durchf\374hrung des Projektes}{section.2.1}% 11
+\BOOKMARK [2][]{subsection.2.1.2}{2.1.2 Identifikation m\366glicher Probleme bzw. Schl\374sselstellen}{section.2.1}% 12
+\BOOKMARK [2][]{subsection.2.1.3}{2.1.3 Spezifikation des Rohtextes}{section.2.1}% 13
+\BOOKMARK [1][]{section.2.2}{2.2 Programmarchitektur und Ablauf}{chapter.2}% 14
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Funktionalit\344t des File-Uploaders}{section.2.2}% 15
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Paragraph Handler: Herausfiltern der Paragraphen aus dem Rohtext}{section.2.2}% 16
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Cleaner: Strukturiertes Ablegen der Informationen aus den Paragraphen als Event}{section.2.2}% 17
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 GenerateTable: Dynamische Erstellung des Zeitplans}{section.2.2}% 18
+\BOOKMARK [2][]{subsection.2.2.5}{2.2.5 Erstellung einer Desktop-App f\374r den Zeitplan-Generator}{section.2.2}% 19
+\BOOKMARK [0][]{chapter.3}{3 Schluss}{}% 20
+\BOOKMARK [0][]{section*.21}{Anhang}{}% 21
+\BOOKMARK [0][]{appendix.A}{A Erster Anhang}{}% 22
+\BOOKMARK [0][]{appendix.B}{B Zweiter Anhang}{}% 23
+\BOOKMARK [1][]{section.B.1}{B.1 Anhang}{appendix.B}% 24
+\BOOKMARK [1][]{section.B.2}{B.2 Anhang}{appendix.B}% 25
+\BOOKMARK [0][]{section*.22}{Literaturverzeichnis}{}% 26
+\BOOKMARK [0][]{erklaerung.0}{Eidesstattliche Erkl\344rung}{}% 27
