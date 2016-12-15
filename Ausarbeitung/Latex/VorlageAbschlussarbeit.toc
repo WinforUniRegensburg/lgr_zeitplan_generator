@@ -1,8 +1,8 @@
 \select@language {ngerman}
-\contentsline {chapter}{Abbildungsverzeichnis}{ii}{section*.5}
-\contentsline {chapter}{Tabellenverzeichnis}{iii}{section*.7}
-\contentsline {chapter}{Listings}{iv}{section*.9}
-\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{v}{chapter*.12}
+\contentsline {chapter}{Abbildungsverzeichnis}{iii}{section*.5}
+\contentsline {chapter}{Tabellenverzeichnis}{iv}{section*.7}
+\contentsline {chapter}{Listings}{v}{section*.9}
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{vi}{chapter*.12}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Hauptteil}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Projektdurchf\IeC {\"u}hrung und Konzeption}{3}{section.2.1}
@@ -11,14 +11,28 @@
 \contentsline {subsection}{\numberline {2.1.3}Spezifikation des Rohtextes}{6}{subsection.2.1.3}
 \contentsline {section}{\numberline {2.2}Programmarchitektur und Ablauf}{8}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Funktionalit\IeC {\"a}t des File-Uploaders}{8}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Paragraph Handler: Herausfiltern der Paragraphen aus dem Rohtext}{11}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Einbindung von Bootstrap}{8}{subsubsection.2.2.1.1}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Festlegung des Designs des File-Uploaders}{9}{subsubsection.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.1.3}Einlesen und Abspeichern der Ursprungsdatei}{10}{subsubsection.2.2.1.3}
+\contentsline {subsection}{\numberline {2.2.2}ParagraphHandler: Herausfiltern der Paragraphen aus dem Rohtext}{11}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Einbindung von jQuery}{11}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Identifizierung und Speichern der relevanten Paragraphen}{12}{subsubsection.2.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.3}Vorbereitungen f\IeC {\"u}r ein strukturiertes Abspeichern der Paragraphen}{12}{subsubsection.2.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.2.4}Unterteilung der Paragraphen in erste und zweite Zeile}{14}{subsubsection.2.2.2.4}
 \contentsline {subsection}{\numberline {2.2.3}Cleaner: Strukturiertes Ablegen der Informationen aus den Paragraphen als Event}{15}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Identifizierung des Datums und der Uhrzeit}{16}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Identifizierung der Disziplin}{17}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Identifizierung der Kategorie}{18}{subsubsection.2.2.3.3}
 \contentsline {subsection}{\numberline {2.2.4}GenerateTable: Dynamische Erstellung des Zeitplans}{19}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Erstellung einer Desktop-App f\IeC {\"u}r den Zeitplan-Generator}{23}{subsection.2.2.5}
-\contentsline {chapter}{\numberline {3}Schluss}{24}{chapter.3}
-\contentsline {chapter}{Anhang}{25}{section*.21}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{26}{appendix.A}
-\contentsline {chapter}{\numberline {B}Zweiter Anhang}{27}{appendix.B}
-\contentsline {section}{\numberline {B.1}Anhang}{27}{section.B.1}
-\contentsline {section}{\numberline {B.2}Anhang}{27}{section.B.2}
-\contentsline {chapter}{Literaturverzeichnis}{28}{section*.22}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Gestaltung des Speichern-Buttons}{19}{subsubsection.2.2.4.1}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Sortierung der Events}{20}{subsubsection.2.2.4.2}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Gruppierung nach tagesgleichen Events}{21}{subsubsection.2.2.4.3}
+\contentsline {subsubsection}{\numberline {2.2.4.4}Generierung der Tabelle}{22}{subsubsection.2.2.4.4}
+\contentsline {subsection}{\numberline {2.2.5}Erstellung einer Desktop-App f\IeC {\"u}r den Zeitplan-Generator}{24}{subsection.2.2.5}
+\contentsline {chapter}{\numberline {3}Schluss}{25}{chapter.3}
+\contentsline {chapter}{Anhang}{26}{section*.21}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{27}{appendix.A}
+\contentsline {chapter}{\numberline {B}Zweiter Anhang}{28}{appendix.B}
+\contentsline {section}{\numberline {B.1}Anhang}{28}{section.B.1}
+\contentsline {section}{\numberline {B.2}Anhang}{28}{section.B.2}
+\contentsline {chapter}{Literaturverzeichnis}{29}{section*.22}
