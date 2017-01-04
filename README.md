@@ -10,7 +10,7 @@ Furthermore if you use the table generator from [Seltec](www.seltec.at) this too
 
 ### Usage and Requirements
 
-This tool uses HTML5, JavaScript, JQuery, Bootstrap, Node.js and Electron.
+This tool uses HTML5, JavaScript, jQuery, Bootstrap, Node.js and Electron.
 
 #### Getting started
 
@@ -41,7 +41,7 @@ For Windows: ```npm run package-win```
 
 For Linux: ```npm run package-linux```
 
-and run the app using e.g. for windows the 'Zeitplan.exe'. 
+and run the app using e.g. for Windows the 'Zeitplan.exe'. 
 For exact information about how to customise the packager feel free to read about in the [API](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md) about it.
 
 It's possible that those instructions above won't work for you. 

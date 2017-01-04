@@ -42,9 +42,9 @@
 \contentsline {subsection}{\numberline {2.3.2}Zielerreichung}{29}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Ergebnispr\IeC {\"a}sentation}{30}{section.2.4}
 \contentsline {chapter}{\numberline {3}Schluss}{32}{chapter.3}
-\contentsline {chapter}{Anhang}{33}{section*.28}
-\contentsline {chapter}{\numberline {A}Erster Anhang}{34}{appendix.A}
-\contentsline {chapter}{\numberline {B}Zweiter Anhang}{35}{appendix.B}
-\contentsline {section}{\numberline {B.1}Anhang}{35}{section.B.1}
-\contentsline {section}{\numberline {B.2}Anhang}{35}{section.B.2}
-\contentsline {chapter}{Literaturverzeichnis}{36}{section*.29}
+\contentsline {chapter}{Anhang}{34}{section*.28}
+\contentsline {chapter}{\numberline {A}Erster Anhang}{35}{appendix.A}
+\contentsline {chapter}{\numberline {B}Zweiter Anhang}{36}{appendix.B}
+\contentsline {section}{\numberline {B.1}Anhang}{36}{section.B.1}
+\contentsline {section}{\numberline {B.2}Anhang}{36}{section.B.2}
+\contentsline {chapter}{Literaturverzeichnis}{37}{section*.29}
