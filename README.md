@@ -10,12 +10,12 @@ Furthermore if you use the table generator from [Seltec](www.seltec.at) this too
 
 ### Usage and Requirements
 
-This tool uses HTML5, JavaScript, jQuery, Bootstrap, Node.js and Electron.
+This tool uses HTML5, JavaScript, jQuery, Bootstrap, Node.js and Electron (+the electron-packager).
 
 #### Getting started
 
 ##### Use in browser
-Just go down to ```/zeitplantool/index.html``` and open the file in your browser.
+Download the Repo and execute ```/zeitplantool/index.html```  in your browser.
 We recommend Google Chrome or Firefox.
 
 ##### Use as a desktop application with Electron
@@ -25,15 +25,17 @@ For that you need to install Node.js and Electron.
 
 [Electron](https://github.com/electron/electron)
 
+[electron-packager](https://github.com/electron-userland/electron-packager)
 
-Clone the timetable tool ```/zeitplantool``` and navigate to into this directory with the command line.
+
+Download the timetable tool ```/zeitplantool``` and navigate to into its directory with the command line.
 Once you are there you can simply call 
 
 ```electron .```
 
 to run the app.
 
-You can also create a desktop using 
+You can also create there a desktop using 
 
 For Mac: ```npm run package-mac```
 
@@ -42,6 +44,7 @@ For Windows: ```npm run package-win```
 For Linux: ```npm run package-linux```
 
 and run the app using e.g. for Windows the 'Zeitplan.exe'. 
+A pre packed version for windows is distributed in this repo as well.
 For exact information about how to customise the packager feel free to read about in the [API](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md) about it.
 
 It's possible that those instructions above won't work for you. 
