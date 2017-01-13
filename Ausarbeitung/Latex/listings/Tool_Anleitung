@@ -5,14 +5,14 @@ $ git clone https://github.com/lg-regensburg/zeitplan_generator/
 $ cd zeitplan-generator
 $ cd zeitplantool
 
+# Für ein einfaches Ausführen des Programms (ohne das Packen zu einer App)
+$ electron .
+
 # Packe für Mac OS
 $ npm run package-mac
 
 # Packe für Windows
-$ npm run package-win 
+$ npm run package-win
 
 # Packe für Linux
 $ npm run package-linux
-
-# Einfaches Ausführen des Programms
-$ electron.
