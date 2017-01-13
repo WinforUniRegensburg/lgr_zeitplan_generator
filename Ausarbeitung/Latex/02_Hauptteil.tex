@@ -27,26 +27,29 @@ Ausgehend der gemeinsamen konzeptionellen Überlegungen im Team wird zuerst der 
 Die erste Anforderung an den Rohtext ist, dass dieser das Dateiformat HTML besitzen soll. Dies ermöglicht eine genaue Navigation mit jQuery. Im Folgenden wird nun der Inhalt und die Struktur des Inputfiles näher spezifiziert, wobei zunächst der Aufbau eines Paragraphen (<p>-Tag) erläutert wird. Im listing ist beispielhaft der erste Paragraph in der zur Entwicklung verwendeten Ursprungsdatei aufgeführt. 
 \lstset{language=html}
 \lstinputlisting[caption=Beispiel eines Paragraphen, label=Ist:Beispiel eines Paragraphen]{listings/paragraphExample.html}
-Im Testfile ergibt sich folgender Klartext:\\
-\\
+Im Testfile ergibt sich folgender Klartext (Tabelle 2.1), woraus eine verallgemeinerte Darstellung abgeleitet werden kann (Tabelle 2.2):\\
+\begin{table}[h]
+\caption{Beispielparagraph im Klartext}
 \begin{tabular}{|l||l|}
 \hline
 Zeile 1: & „100m (Vorprogramm), Frauen + U20 + U18 – Zeitläufe“ \\
 \hline
 Zeile 2: & „Datum: 05.05.2016 Beginn: 12:00“ \\
 \hline
-\end{tabular} \\
-\\
-Daraus lässt sich eine verallgemeinerte Darstellung ableiten:\\
-\\
+\end{tabular}
+\label{tab:Beispielparagraph im Klartext}
+\end{table}
+\begin{table}[h]
+\caption{Verallgemeinerte Darstellung eines Paragraphen}
 \begin{tabular}{|l||l|}
 \hline
 Zeile 1: & „Disziplin (Zusatzinformation), Kategorie(n) – Disziplin“ \\
 \hline
 Zeile 2: & „Datum Beginn“ \\
 \hline
-\end{tabular} \\
-\\
+\end{tabular} 
+\label{tab:Verallgemeinerte Darstellung eines Paragraphen}
+\end{table}\\
 Diese zwei Zeilen sind DOM-Elemente der Form <p class=“ev1“> ... </p>. Die relevanten Informationen werden mit Hilfe dieser Form identifiziert. \\
 Die erste Zeile beinhaltet die Teilnehmerklasse(n) bzw. Kategorie(n) (hier: „Frauen + U20 + U18“) ungefähr in der Mitte der Zeile. Um die Teilnehmerklassen genau abzugrenzen, wird nach einleitenden bzw. beendenden Merkmalen der Teilnehmerklasse in der ersten Zeile gesucht. Die Teilnehmerklassen werden im Beispiel initiiert durch ein Komma und beendet durch einen Bindestrich. Dieses Muster ist für alle Paragraphen zutreffend, weshalb die Kategorie auf diese Weise in der ersten Zeile identifiziert werden kann. Des weiteren ist es möglich, dass mehrere Kategorien in einem Paragraphen enthalten sind. Dabei sind die Kategorien durch ein „+“ -Zeichen voneinander getrennt. 
 In der Kategorie ist zudem die Information über das Geschlecht der Teilnehmer vorhanden. Mit Hilfe der Zeichenfolgen „weiblich“, „weibliche“ oder „Frauen“ bzw. „männlich“, „männliche“ oder „Männer“ kann dies festgestellt werden, da diese Schlüsselwörter das Geschlecht in allen Paragraphen eindeutig kennzeichnen. \\
@@ -69,7 +72,7 @@ Der erste Schritt ist das Einlesen der Ursprungsdatei. Um mit dem Rohtext zu arb
 Der zweite Schritt ist aus der Ursprungsdatei nur die relevanten Daten herauszufiltern. Hier werden praktisch nur noch alle relevanten Absätze betrachtet. Darüber hinaus bietet es sich an die jeweiligen Paragraphen gleich nach erster und zweiter Zeile abzuspeichern (vgl. Abbildung 2.1). Dieses Teilproblem wird im HTML-File ParagraphHandler gelöst.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.6\textwidth]{Chen_StrucParagraph.png}
+  \includegraphics[width=0.4\textwidth]{Chen_StrucParagraph.png}
   \caption{Datenmodell eines strukturierten Paragraphen}
   \label{fig:Fig1}
 \end{figure}\\
@@ -221,17 +224,19 @@ Die Funktionaliät wird in der Methode createLocalCopy() umgesetzt. Da die dritt
 
 \subsubsection{Sortierung der Events}
 Im JavaScript-Code werden im ersten Schritt die als JSON im sessionStorage gespeicherten Events ausgelesen und in event-Objekte geparst. Im Anschluss werden die event-Objekte sortiert. Da für jeden Wettkampftag eine eigene Tabelle erzeugt wird, werden die Events zuerst nach dem Kriterium Datum sortiert. Die Sortierung zweiter Ordnung erfolgt nach der Zeit, da alle Wettkämpfe an einem Tag aufsteigend nach dem Beginn sortiert werden sollen. Darüber hinaus sollen die Events nach den Altersklassen geordnet im Zeitplan angezeigt werden. Es wird also noch nach der Kategorie sortiert. Die Sortierung nach diesen drei Kriterien wird in der ausgelagerten Methode sortEventsDateAndTimeAndCategoryOrder(events) vorgenommen.\\
-Im ersten Schritt ist es nötig eine Möglichkeit zum Vergleichen der drei Kriterien mit den verschiedenen Werten eines Events zu finden. Durch die Umwandlung des Datums, der Uhrzeit bzw. der Kategorie zu einem Integer, ist es leicht möglich die entstehenden Werte miteinander zu vergleichen. Das Ziel ist es also aus den drei Kriterien einen Vergleichswert (Integer) der folgenden Form zu generieren: \\
-\\
+Im ersten Schritt ist es nötig eine Möglichkeit zum Vergleichen der drei Kriterien mit den verschiedenen Werten eines Events zu finden. Durch die Umwandlung des Datums, der Uhrzeit bzw. der Kategorie zu einem Integer, ist es leicht möglich die entstehenden Werte miteinander zu vergleichen. Das Ziel ist es also aus den drei Kriterien einen Vergleichswert (Integer) der folgenden Form zu generieren: 
+\begin{table}[h]
+\caption{Vergleichswert zur Sortierung der Events}
 \begin{tabular}{|l||c|c|c|c|c|c|}
 \hline
  & Jahr & Monat & Tag & Stunden & Minuten & Kategorie \\
 \hline
 Beispiel & 2016 & 06 & 05 & 12 & 15 & 116 \\
 \hline
-\end{tabular} \\
-\\
-Anmerkung: Kategorie soll durch einen dreistelligen Integer dargestellt werden\\
+\end{tabular}
+\label{tab: Vergleichswert zur Sortierung der Events}
+\end{table} \\
+Anmerkung: Die Kategorie soll durch einen dreistelligen Integer dargestellt werden.\\
 \\
 Zuerst wird mit Hilfe der split-Methode das Datum und die Uhrzeit in ein Array aus Substrings aufgeteilt. Dabei werden für die Unterteilung der Punkt bzw. der Doppelpunkt verwendet. Nun ist es möglich das Datum und die Uhrzeit absteigend nach dem Jahr, dem Monat, dem Tag, den Stunden und den Minuten anzuordnen. 
 Nach der Kategorie wird in der Methode getSortKeyTableHead(category) sortiert. Diese Funktion wird ausgelagert, da sie mehrmals benötigt wird. Die Kategorien sollen folgendermaßen geordnet sein: \\
