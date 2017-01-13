@@ -2,6 +2,7 @@
 $ git clone https://github.com/lg-regensburg/zeitplan_generator/
 
 # Navigiere zum Zeitplantool
+$ cd zeitplan-generator
 $ cd zeitplantool
 
 # Packe für Mac OS
