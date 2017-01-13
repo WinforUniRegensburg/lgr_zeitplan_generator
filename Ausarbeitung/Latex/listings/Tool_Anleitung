@@ -1,17 +1,17 @@
-# Clone the repository
-$ git clone https://github.com/WinforUniRegensburg/lgr_zeitplan_generator
+# Klone das Repository
+$ git clone https://github.com/lg-regensburg/zeitplan_generator/
 
-# Go into the repository
-$ cd lgr_zeitplan_generator
+# Navigiere zum Zeitplantool
+$ cd zeitplantool
 
-# Install the dependencies and run
-$ npm install && npm start
-
-# Run in Mac OS
+# Packe für Mac OS
 $ npm run package-mac
 
-# Run in Windows
+# Packe für Windows
 $ npm run package-win 
 
-# Run in Linux
+# Packe für Linux
 $ npm run package-linux
+
+# Einfaches Ausführen des Programms
+$ electron.
