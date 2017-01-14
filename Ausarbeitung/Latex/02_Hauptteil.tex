@@ -191,7 +191,7 @@ Am Beginn der for-Schleife wird der Vorteil genutzt, dass im StrucParagraph-Obje
 Die erste und zweite Zeile können prinzipiell unabhängig voneinander bearbeitet werden. Im Code wird mit der Aufarbeitung der zweiten Zeile begonnen. Die zweite Zeile enthält am Anfang die Information des Datums der Veranstaltung und ungefähr ab der Mitte der Zeile steht der Veranstaltungsbeginn. Die Daten in der zweiten Zeile werden anhand von regulären Ausdrücken identifiziert. Dies ermöglicht, dass valide Informationen als Datum bzw. Veranstaltungsbeginn in der Zeile gefunden werden.\\
 Der reguläre Ausdruck für das Datum setzt sich folgendermaßen zusammen:
 \begin{verbatim}
-(3[01]|[0-2]\d)[.](0\d|1[0-2])[.]20\d\d
+(3[01]|[0-2]\d)\.(0\d|1[0-2])\.20\d\d
 \end{verbatim}
 Der reguläre Ausdruck setzt sich aus der Angabe des Tages, des Monats und des Jahres zusammen. Diese werden durch einen Punkt voneinander getrennt. Ein Tag beginnt mit einer 3 gefolgt von einer 0 oder einer 1. Die andere Möglichkeit ist, dass sich ein Tag mit einer 0, 1 oder 2 gefolgt von einer Zahl zwischen 0 und 9 (d für digit) zusammensetzt. Ein Monat besteht entweder aus einer 0 gefolgt von einem digit oder aus einer 1 gefolgt von einer 0, 1 oder 2. Somit sind alle Fälle vom ersten Monat Januar bis zum letzten Monat Dezember abgedeckt. Zum Schluss wird noch die Form des Jahres definiert. Die Jahreszahl beginnt mit einer 2 und einer 0 gefolgt von zwei Zahlen zwischen 0 und 9. 
 In diesem regulären Ausdruck wird nur die Validität eines Datums und nicht die Korrektheit überprüft, da der reguläre Ausdruck nur zur Identifizierung eines Datums dient. D.h. Sonderfälle wie der Februar, der keine 3 an erster Stelle bei der Angabe des Tages haben kann, werden nicht auf Korrektheit geprüft.
