@@ -1,0 +1,12 @@
+% Encoding: UTF-8
+
+@Book{duckett,
+  title     = {JavaScript \& jQuery: Interaktive Websites entwickeln},
+  publisher = {Wiley},
+  year      = {2015},
+  author    = {Duckett, J.},
+  isbn      = {9783527760572},
+  url       = {https://books.google.de/books?id=413MoAEACAAJ},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
