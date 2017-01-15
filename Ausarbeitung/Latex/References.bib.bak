@@ -10,9 +10,41 @@
 
 @Misc{w3schools,
   howpublished = {Website},
-  note         = {Zuletzt abgerufen am 30.11.2016},
+  note         = {http://www.w3schools.com, zuletzt abgerufen am 30.11.2016},
   comment      = {Zuletzt abgerufen am 30.11.2016},
   url          = {http://www.w3schools.com},
+}
+
+@Misc{gala,
+  note = {http://www.sparkassen-gala.de/zeitplan.php, zuletzt abgerufen am 21.11.16},
+}
+
+@Misc{bootstrap,
+  note = {https://de.wikipedia.org/wiki/Bootstrap_(Framework), zuletzt abgerufen am 30.11.16},
+}
+
+@Misc{bootstrap2,
+  note = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp, zuletzt abgerufen am 30.11.16},
+}
+
+@Misc{git,
+  note = {https://git-scm.com/about, zuletzt abgerufen am 29.12.16},
+}
+
+@Misc{github,
+  note = {https://desktop.github.com, zuletzt abgerufen am 14.01.17},
+}
+
+@Misc{kodierung,
+  note = {https://wiki.selfhtml.org/wiki/Zeichenkodierung, zuletzt abgerufen am 23.11.16},
+}
+
+@Misc{utf8,
+  note = {https://de.wikipedia.org/wiki/UTF-8, zuletzt abgerufen am 23.11.16},
+}
+
+@Misc{meta,
+  note = {http://v4-alpha.getbootstrap.com/getting-started/browsers-devices/, zuletzt abgerufen am 02.12.16},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
