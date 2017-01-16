@@ -7,11 +7,48 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[booa]{bootstrap}
+https://de.wikipedia.org/wiki/Bootstrap\_(Framework), zuletzt abgerufen am
+  30.11.16
+
+\bibitem[boob]{bootstrap2}
+http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp, zuletzt
+  abgerufen am 30.11.16
+
 \bibitem[Duc15]{duckett}
 \textsc{Duckett}, J.:
 \newblock \emph{JavaScript \& jQuery: Interaktive Websites entwickeln}.
 \newblock Wiley, 2015. --
 \newblock ISBN 9783527760572
+
+\bibitem[gal]{gala}
+http://www.sparkassen-gala.de/zeitplan.php, zuletzt abgerufen am 21.11.16
+
+\bibitem[gita]{git}
+https://git-scm.com/about, zuletzt abgerufen am 29.12.16
+
+\bibitem[gitb]{github}
+https://desktop.github.com, zuletzt abgerufen am 14.01.17
+
+\bibitem[jQu]{jQuery}
+http://www.html-seminar.de/jquery-tutorial.htm, zuletzt abgerufen am 27.11.16
+
+\bibitem[kod]{kodierung}
+https://wiki.selfhtml.org/wiki/Zeichenkodierung, zuletzt abgerufen am 23.11.16
+
+\bibitem[meta]{meta}
+http://v4-alpha.getbootstrap.com/getting-started/browsers-devices/, zuletzt
+  abgerufen am 02.12.16
+
+\bibitem[metb]{meta3}
+http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp, zuletzt
+  abgerufen am 02.12.16
+
+\bibitem[plu]{plugin}
+http://holdirbootstrap.de/los-gehts/, zuletzt abgerufen am 02.12.16
+
+\bibitem[utf]{utf8}
+https://de.wikipedia.org/wiki/UTF-8, zuletzt abgerufen am 23.11.16
 
 \bibitem[w3s]{w3schools}
 http://www.w3schools.com, zuletzt abgerufen am 30.11.2016
