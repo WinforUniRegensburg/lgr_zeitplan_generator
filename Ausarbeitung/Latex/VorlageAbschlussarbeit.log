@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  16 JAN 2017 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  16 JAN 2017 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1653,6 +1653,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 292.
 
+
+LaTeX Warning: Citation `agilewerte' on page 28 undefined on input line 296.
+
 <./images/Spiralmodel_nach_Boehm.png, id=590, 803.0pt x 659.46375pt>
 File: ./images/Spiralmodel_nach_Boehm.png Graphic file (type png)
 
@@ -1662,7 +1665,7 @@ Package pdftex.def Info: ./images/Spiralmodel_nach_Boehm.png used on input line
 (pdftex.def)             Requested size: 268.87737pt x 220.81354pt.
 
 
-LaTeX Warning: Citation `spiralmodell' on page 28 undefined on input line 303.
+LaTeX Warning: Citation `prototyping' on page 28 undefined on input line 303.
 
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 304.
@@ -1708,22 +1711,18 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 325.
 
-<./images/FileUploader.png, id=607, 392.1852pt x 152.2488pt>
+<./images/FileUploader.png, id=609, 392.1852pt x 152.2488pt>
 File: ./images/FileUploader.png Graphic file (type png)
 
 <use ./images/FileUploader.png>
 Package pdftex.def Info: ./images/FileUploader.png used on input line 329.
 (pdftex.def)             Requested size: 384.11221pt x 149.1238pt.
 
-<./images/Table.png, id=608, 440.3652pt x 198.0198pt>
+<./images/Table.png, id=610, 440.3652pt x 198.0198pt>
 File: ./images/Table.png Graphic file (type png)
  <use ./images/Table.png>
 Package pdftex.def Info: ./images/Table.png used on input line 335.
 (pdftex.def)             Requested size: 384.11221pt x 172.73209pt.
-
-
-LaTeX Warning: Citation `mitlicense' on page 31 undefined on input line 339.
-
 )
 Underfull \hbox (badness 10000) in paragraph at lines 326--309
 
@@ -1848,13 +1847,13 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 352.
  (./VorlageAbschlussarbeit.bbl
-Underfull \hbox (badness 4341) in paragraph at lines 11--13
+Underfull \hbox (badness 4341) in paragraph at lines 15--17
 []\T1/ptm/m/n/10.95 (+20) https://www.leichtathletik-scdhfk.de/altersklassen/, 
 zu-letzt ab-ge-ru-fen am
  []
 
 
-Underfull \hbox (badness 5064) in paragraph at lines 23--24
+Underfull \hbox (badness 5064) in paragraph at lines 27--28
 []\T1/ptm/m/n/10.95 (+20) http://www.w3schools.com/jquery/html_clone.asp, zu-le
 tzt ab-ge-ru-fen am
  []
@@ -1871,7 +1870,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Overfull \hbox (87.87178pt too wide) in paragraph at lines 88--90
+[]\T1/ptm/m/n/10.95 (-20) https://de.wikipedia.org/wiki/Prototyping_(Softwareen
+twicklung)#Evolution.C3.A4res_Prototyping,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 []\T1/ptm/m/n/10.95 (+20) http://www.w3schools.com/jsref/jsref_search.asp, zu-l
 etzt ab-ge-ru-fen am
  []
@@ -1920,10 +1925,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 391.
  ) 
 Here is how much of TeX's memory you used:
- 13059 strings out of 493014
- 195536 string characters out of 6133350
- 355029 words of memory out of 5000000
- 15940 multiletter control sequences out of 15000+600000
+ 13065 strings out of 493014
+ 195617 string characters out of 6133350
+ 355099 words of memory out of 5000000
+ 15944 multiletter control sequences out of 15000+600000
  82965 words of font info for 208 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,51p,2003b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1933,10 +1938,10 @@ xlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (48 pages, 421704 bytes).
+Output written on VorlageAbschlussarbeit.pdf (48 pages, 421607 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 648 compressed objects within 7 object streams
- 194 named destinations out of 1000 (max. 500000)
+ 731 PDF objects out of 1000 (max. 8388607)
+ 652 compressed objects within 7 object streams
+ 196 named destinations out of 1000 (max. 500000)
  44494 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -176,16 +176,16 @@
   url          = {https://de.wikipedia.org/wiki/Spiralmodel},
 }
 
-@Misc{prototyping,
-  howpublished = {Website},
-  note         = {https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)\, zuletzt abgerufen am 03.01.17},
-  url          = {https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)\},
-}
-
 @Misc{mitlicense,
   howpublished = {Website},
   note         = {https://opensource.org/licenses/MIT, zuletzt abgerufen am 13.01.17},
   url          = {https://opensource.org/licenses/MIT},
+}
+
+@Misc{agilewerte,
+  howpublished = {Website},
+  note         = {https://de.wikipedia.org/wiki/Agile\_Softwareentwicklung\#Agile\_Werte, zuletzt abgerufen am 03.01.17},
+  url          = {https://de.wikipedia.org/wiki/Agile\_Softwareentwicklung\#Agile\_Werte},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

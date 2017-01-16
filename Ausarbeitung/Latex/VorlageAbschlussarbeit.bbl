@@ -7,6 +7,10 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[agi]{agilewerte}
+https://de.wikipedia.org/wiki/Agile\_Softwareentwicklung\#Agile\_Werte, zuletzt
+  abgerufen am 03.01.17
+
 \bibitem[alt]{altersklassen}
 https://www.leichtathletik-scdhfk.de/altersklassen/, zuletzt abgerufen am
   04.12.16
@@ -79,6 +83,10 @@ http://holdirbootstrap.de/los-gehts/, zuletzt abgerufen am 02.12.16
 \bibitem[pre]{prepend}
 http://www.w3schools.com/jquery/html\_prepend.asp, zuletzt abgerufen am
   27.11.16
+
+\bibitem[pro]{prototyping}
+https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung)\#Evolution.C3.A4res\_Prototyping,
+  zuletzt abgerufen am 03.01.17
 
 \bibitem[sea]{search}
 http://www.w3schools.com/jsref/jsref\_search.asp, zuletzt abgerufen am 27.11.16
