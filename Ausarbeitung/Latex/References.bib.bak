@@ -94,7 +94,7 @@
 
 @Misc{wells,
   howpublished = {Website},
-  note         = {http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp,zuletzt abgerufen am 02.12.16},
+  note         = {http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp, zuletzt abgerufen am 02.12.16},
   url          = {http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp},
 }
 
@@ -140,7 +140,7 @@
   url          = {http://www.w3schools.com/jsref/jsref\_slice\_array.asp},
 }
 
-@Misc{,
+@Misc{split,
   howpublished = {Website},
   note         = {http://www.w3schools.com/jsref/jsref\_split.asp, zuletzt abgerufen am 04.12.16},
   url          = {http://www.w3schools.com/jsref/jsref\_split.asp},

@@ -7,6 +7,10 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[alt]{altersklassen}
+https://www.leichtathletik-scdhfk.de/altersklassen/, zuletzt abgerufen am
+  04.12.16
+
 \bibitem[booa]{bootstrap}
 https://de.wikipedia.org/wiki/Bootstrap\_(Framework), zuletzt abgerufen am
   30.11.16
@@ -23,6 +27,14 @@ http://www.w3schools.com/jquery/html\_clone.asp, zuletzt abgerufen am 27.11.16
 \newblock \emph{JavaScript \& jQuery: Interaktive Websites entwickeln}.
 \newblock Wiley, 2015. --
 \newblock ISBN 9783527760572
+
+\bibitem[elea]{electron}
+http://t3n.de/news/electron-github-nodejs-chromium-656328/, zuletzt abgerufen
+  am 20.12.16
+
+\bibitem[eleb]{electron2}
+http://electron.atom.io/docs/tutorial/quick-start/, zuletzt abgerufen am
+  20.12.16
 
 \bibitem[fil]{fileapi}
 https://www.w3.org/TR/FileAPI/, zuletzt abgerufen am 24.11.16
@@ -72,6 +84,13 @@ http://www.w3schools.com/jsref/jsref\_search.asp, zuletzt abgerufen am 27.11.16
 http://www.w3schools.com/jsref/jsref\_slice\_array.asp, zuletzt abgerufen am
   27.11.16
 
+\bibitem[spl]{split}
+http://www.w3schools.com/jsref/jsref\_split.asp, zuletzt abgerufen am 04.12.16
+
+\bibitem[tab]{table}
+http://www.w3schools.com/bootstrap/bootstrap\_tables.asp, zuletzt abgerufen am
+  08.12.16
+
 \bibitem[utf]{utf8}
 https://de.wikipedia.org/wiki/UTF-8, zuletzt abgerufen am 23.11.16
 
@@ -79,7 +98,7 @@ https://de.wikipedia.org/wiki/UTF-8, zuletzt abgerufen am 23.11.16
 http://www.w3schools.com, zuletzt abgerufen am 30.11.2016
 
 \bibitem[wel]{wells}
-http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp,zuletzt abgerufen am
+http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp, zuletzt abgerufen am
   02.12.16
 
 \end{thebibliography}
