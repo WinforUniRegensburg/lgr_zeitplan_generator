@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  16 JAN 2017 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  16 JAN 2017 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1380,12 +1380,19 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 146.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 146.
+
+
+LaTeX Warning: Citation `header' on page 13 undefined on input line 147.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 152.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 152.
 Package acronym Info: Label `acro:API' newly defined as it shall be overridden
 although it is yet undefined on input line 156.
+
+LaTeX Warning: Citation `fileapi' on page 13 undefined on input line 156.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 157.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1394,7 +1401,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 157.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 157.
- [13]
+[13]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 158.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1403,6 +1410,16 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 160.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 160.
+
+
+LaTeX Warning: Citation `clone' on page 14 undefined on input line 161.
+
+
+LaTeX Warning: Citation `innerhtml' on page 14 undefined on input line 161.
+
+
+LaTeX Warning: Citation `prepend' on page 14 undefined on input line 161.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 162.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1411,7 +1428,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 162.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 162.
- [14]
+[14]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 163.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1426,8 +1443,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 166.
  [15]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 166.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic settings for font family
@@ -1615,7 +1631,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 273.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 273.
- <./images/Icon.png, id=533, 96.36pt x 96.36pt>
+ <./images/Icon.png, id=535, 96.36pt x 96.36pt>
 File: ./images/Icon.png Graphic file (type png)
 
 <use ./images/Icon.png>
@@ -1653,7 +1669,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 292.
 
-<./images/Spiralmodel_nach_Boehm.png, id=563, 803.0pt x 659.46375pt>
+<./images/Spiralmodel_nach_Boehm.png, id=565, 803.0pt x 659.46375pt>
 File: ./images/Spiralmodel_nach_Boehm.png Graphic file (type png)
 
 <use ./images/Spiralmodel_nach_Boehm.png>
@@ -1703,14 +1719,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 325.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 325.
- <./images/FileUploader.png, id=580, 392.1852pt x 152.2488pt>
+ <./images/FileUploader.png, id=582, 392.1852pt x 152.2488pt>
 File: ./images/FileUploader.png Graphic file (type png)
 
 <use ./images/FileUploader.png>
 Package pdftex.def Info: ./images/FileUploader.png used on input line 329.
 (pdftex.def)             Requested size: 384.11221pt x 149.1238pt.
 
-<./images/Table.png, id=581, 440.3652pt x 198.0198pt>
+<./images/Table.png, id=583, 440.3652pt x 198.0198pt>
 File: ./images/Table.png Graphic file (type png)
  <use ./images/Table.png>
 Package pdftex.def Info: ./images/Table.png used on input line 335.
@@ -1838,7 +1854,24 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 352.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 352.
- (./VorlageAbschlussarbeit.bbl)
+ (./VorlageAbschlussarbeit.bbl
+Underfull \hbox (badness 5064) in paragraph at lines 19--20
+[]\T1/ptm/m/n/10.95 (+20) http://www.w3schools.com/jquery/html_clone.asp, zu-le
+tzt ab-ge-ru-fen am
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 74.
+[39
+
+
+])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 356.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1847,10 +1880,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 356.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 356.
- [39
-
-
-]
+ [40]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 369.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1864,13 +1894,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 391.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 391.
- [40
+ [41
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 391.
- (./VorlageAbschlussarbeit.aux
-(./DeckblattProjektseminar.aux) (./01_Einleitung.aux) (./02_Hauptteil.aux)
-(./03_Schluss.aux))
+ (./VorlageAbschlussarbeit.aux (./DeckblattProjektseminar.aux)
+(./01_Einleitung.aux) (./02_Hauptteil.aux) (./03_Schluss.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 391.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 391.
 Package rerunfilecheck Info: File `VorlageAbschlussarbeit.out' has not changed.
@@ -1878,28 +1907,31 @@ Package rerunfilecheck Info: File `VorlageAbschlussarbeit.out' has not changed.
 (rerunfilecheck)             Checksum: EC556B44D455E2E5E37382847E3B61B4;4618.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 391.
  ) 
 Here is how much of TeX's memory you used:
- 13007 strings out of 493014
- 195007 string characters out of 6133350
- 354625 words of memory out of 5000000
- 15910 multiletter control sequences out of 15000+600000
- 82705 words of font info for 204 fonts, out of 8000000 for 9000
+ 13029 strings out of 493014
+ 195209 string characters out of 6133350
+ 354654 words of memory out of 5000000
+ 15922 multiletter control sequences out of 15000+600000
+ 82835 words of font info for 206 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,51p,1934b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,51p,2003b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (47 pages, 417377 bytes).
+Output written on VorlageAbschlussarbeit.pdf (48 pages, 418873 bytes).
 PDF statistics:
- 690 PDF objects out of 1000 (max. 8388607)
- 612 compressed objects within 7 object streams
- 178 named destinations out of 1000 (max. 500000)
+ 703 PDF objects out of 1000 (max. 8388607)
+ 624 compressed objects within 7 object streams
+ 185 named destinations out of 1000 (max. 500000)
  44494 words of extra memory for PDF output out of 51595 (max. 10000000)
 

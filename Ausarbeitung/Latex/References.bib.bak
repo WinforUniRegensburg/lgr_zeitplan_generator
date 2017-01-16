@@ -24,16 +24,16 @@
 
 @Misc{bootstrap,
   howpublished = {Website},
-  note         = {https://de.wikipedia.org/wiki/Bootstrap_(Framework), zuletzt abgerufen am 30.11.16},
+  note         = {https://de.wikipedia.org/wiki/Bootstrap\_(Framework), zuletzt abgerufen am 30.11.16},
   comment      = {Zuletzt abgerufen am 30.11.16},
-  url          = {https://de.wikipedia.org/wiki/Bootstrap_(Framework)zuletzt abgerufen am 30.11.16},
+  url          = {https://de.wikipedia.org/wiki/Bootstrap_\(Framework)zuletzt abgerufen am 30.11.16},
 }
 
 @Misc{bootstrap2,
   howpublished = {Website},
-  note         = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp, zuletzt abgerufen am 30.11.16},
+  note         = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp, zuletzt abgerufen am 30.11.16},
   comment      = {Zuletzt abgerufen am 30.11.16},
-  url          = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp zuletzt abgerufen am 30.11.16},
+  url          = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp zuletzt abgerufen am 30.11.16},
 }
 
 @Misc{git,
@@ -73,9 +73,9 @@
 
 @Misc{meta3,
   howpublished = {Website},
-  note         = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp, zuletzt abgerufen am 02.12.16},
+  note         = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp, zuletzt abgerufen am 02.12.16},
   comment      = {zuletzt abgerufen am 02.12.16},
-  url          = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp zuletzt abgerufen am 02.12.16},
+  url          = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp zuletzt abgerufen am 02.12.16},
 }
 
 @Misc{plugin,
@@ -90,6 +90,12 @@
   note         = {http://www.html-seminar.de/jquery-tutorial.htm, zuletzt abgerufen am 27.11.16},
   comment      = {zuletzt abgerufen am 27.11.16},
   url          = {http://www.html-seminar.de/jquery-tutorial.htm},
+}
+
+@Misc{wells,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp,zuletzt abgerufen am 02.12.16},
+  url          = {http://www.w3schools.com/Bootstrap/bootstrap\_wells.asp},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
