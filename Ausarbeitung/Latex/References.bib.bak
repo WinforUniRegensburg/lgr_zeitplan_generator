@@ -24,16 +24,16 @@
 
 @Misc{bootstrap,
   howpublished = {Website},
-  note         = {https://de.wikipedia.org/wiki/Bootstrap_(Framework), zuletzt abgerufen am 30.11.16},
+  note         = {https://de.wikipedia.org/wiki/Bootstrap\_(Framework), zuletzt abgerufen am 30.11.16},
   comment      = {Zuletzt abgerufen am 30.11.16},
-  url          = {https://de.wikipedia.org/wiki/Bootstrap_(Framework)zuletzt abgerufen am 30.11.16},
+  url          = {https://de.wikipedia.org/wiki/Bootstrap_\(Framework)zuletzt abgerufen am 30.11.16},
 }
 
 @Misc{bootstrap2,
   howpublished = {Website},
-  note         = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp, zuletzt abgerufen am 30.11.16},
+  note         = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp, zuletzt abgerufen am 30.11.16},
   comment      = {Zuletzt abgerufen am 30.11.16},
-  url          = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp zuletzt abgerufen am 30.11.16},
+  url          = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp zuletzt abgerufen am 30.11.16},
 }
 
 @Misc{git,
@@ -73,9 +73,9 @@
 
 @Misc{meta3,
   howpublished = {Website},
-  note         = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp, zuletzt abgerufen am 02.12.16},
+  note         = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp, zuletzt abgerufen am 02.12.16},
   comment      = {zuletzt abgerufen am 02.12.16},
-  url          = {http://www.w3schools.com/bootstrap/bootstrap_get_started.asp zuletzt abgerufen am 02.12.16},
+  url          = {http://www.w3schools.com/bootstrap/bootstrap\_get\_started.asp zuletzt abgerufen am 02.12.16},
 }
 
 @Misc{plugin,
@@ -90,6 +90,131 @@
   note         = {http://www.html-seminar.de/jquery-tutorial.htm, zuletzt abgerufen am 27.11.16},
   comment      = {zuletzt abgerufen am 27.11.16},
   url          = {http://www.html-seminar.de/jquery-tutorial.htm},
+}
+
+@Misc{pageheader,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.asp, zuletzt abgerufen am 02.12.16},
+  comment      = {Zuletzt abgerufen am 02.12.16},
+  url          = {http://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.aspabgerufen am 02.12.16},
+}
+
+@Misc{wells,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/Bootstrap/bootstrap_wells.asp, zuletzt abgerufen am 02.12.16},
+  comment      = {Zuletzt abgerufen am 02.12.16},
+  url          = {http://www.w3schools.com/Bootstrap/bootstrap_wells.asp},
+}
+
+@Misc{fileapi,
+  howpublished = {Website},
+  note         = {https://www.w3.org/TR/FileAPI/, zuletzt abgerufen am 24.11.16},
+  comment      = {Zuletzt abgerufen am 24.11.16},
+  url          = {https://www.w3.org/TR/FileAPI/ zuletzt abgerufen am 24.11.16},
+}
+
+@Misc{clone,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/jquery/html_clone.asp, zuletzt abgerufen am 27.11.16},
+  comment      = {Zuletzt abgerufen am 27.11.16},
+  url          = {http://www.w3schools.com/jquery/html_clone.asp zuletzt abgerufen am 27.11.16},
+}
+
+@Misc{innerhtml,
+  howpublished = {Website},
+  note         = {https://wiki.selfhtml.org/wiki/JavaScript/DOM/Element/innerHTML, zuletzt abgerufen am 27.11.16},
+  comment      = {Zuletzt abgerufen am 27.11.16},
+  url          = {https://wiki.selfhtml.org/wiki/JavaScript/DOM/Element/innerHTML zuletzt abgerufen am 27.11.16},
+}
+
+@Misc{prepend,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/jquery/html_prepend.asp, zuletzt abgerufen am 27.11.16},
+  comment      = {Zuletzt abgerufen am 27.11.16},
+  url          = {http://www.w3schools.com/jquery/html_prepend.asp zuletzt abgerufen am 27.11.16},
+}
+
+@Misc{search,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/jsref/jsref_search.asp, zuletzt abgerufen am 27.11.16},
+  comment      = {Zuletzt abgerufen am 27.11.16},
+  url          = {http://www.w3schools.com/jsref/jsref_search.aspzuletzt abgerufen am 27.11.16},
+}
+
+@Misc{slice,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/jsref/jsref_slice_array.asp, zuletzt abgerufen am 27.11.16},
+  comment      = {Zuletzt abgerufen am 27.11.16},
+  url          = {http://www.w3schools.com/jsref/jsref_slice_array.asp zuletzt abgerufen am 27.11.16},
+}
+
+@Misc{split,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/jsref/jsref_split.asp, zuletzt abgerufen am 04.12.16},
+  comment      = {Zuletzt abgerufen am 04.12.16},
+  url          = {http://www.w3schools.com/jsref/jsref_split.aspzuletzt abgerufen am 04.12.16},
+}
+
+@Misc{altersklassen,
+  howpublished = {Website},
+  note         = {https://www.leichtathletik-scdhfk.de/altersklassen/, zuletzt abgerufen am 04.12.16},
+  comment      = {Zuletzt abgerufen am 04.12.16},
+  url          = {https://www.leichtathletik-scdhfk.de/altersklassen/ zuletzt abgerufen am 04.12.16},
+}
+
+@Misc{table,
+  howpublished = {Website},
+  note         = {http://www.w3schools.com/bootstrap/bootstrap_tables.asp, zuletzt abgerufen am 08.12.16},
+  comment      = {Zuletzt abgerufen am 08.12.16},
+  url          = {http://www.w3schools.com/bootstrap/bootstrap_tables.asp zuletzt abgerufen am 08.12.16},
+}
+
+@Misc{electron,
+  howpublished = {Website},
+  note         = {http://t3n.de/news/electron-github-nodejs-chromium-656328/, zuletzt abgerufen am 20.12.16},
+  comment      = {Zuletzt abgerufen am 20.12.16},
+  url          = {http://t3n.de/news/electron-github-nodejs-chromium-656328/ zuletzt abgerufen am 20.12.16},
+}
+
+@Misc{electron2,
+  howpublished = {Website},
+  note         = {http://electron.atom.io/docs/tutorial/quick-start/, zuletzt abgerufen am 20.12.16},
+  comment      = {Zuletzt abgerufen am 20.12.16},
+  url          = {http://electron.atom.io/docs/tutorial/quick-start/ zuletzt abgerufen am 20.12.16},
+}
+
+@Misc{icon,
+  howpublished = {Website},
+  note         = {http://iconion.com/de/, zuletzt abgerufen am 20.12.16},
+  url          = {http://iconion.com/de/ zuletzt abgerufen am 20.12.16},
+}
+
+@Misc{agilewerte,
+  howpublished = {Website},
+  note         = {https://de.wikipedia.org/wiki/Agile\_Softwareentwicklung\\#Agile\\_Werte, zuletzt abgerufen am 03.01.17},
+  comment      = {Zuletzt abgerufen am 03.01.17},
+  url          = {https://de.wikipedia.org/wiki/Agile\_Softwareentwicklung\\#Agile\\_Werte zuletzt abgerufen am 03.01.17},
+}
+
+@Misc{spiralmodell,
+  howpublished = {Website},
+  note         = {https://de.wikipedia.org/wiki/Spiralmodell, zuletzt abgerufen am 03.01.17},
+  comment      = {Zuletzt abgerufen am 03.01.17},
+  url          = {https://de.wikipedia.org/wiki/Spiralmodell zuletzt abgerufen am 03.01.17},
+}
+
+@Misc{prototyping,
+  howpublished = {Website},
+  note         = {https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung)\\#Evolution.C3.A4res\\_Prototyping, zuletzt abgerufen am 03.01.17},
+  comment      = {Zuletzt abgerufen am 03.01.17},
+  url          = {https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung)\\#Evolution.C3.A4res\\_Prototyping zuletzt abgerufen am 03.01.17},
+}
+
+@Misc{mitlicense,
+  howpublished = {Website},
+  note         = {https://opensource.org/licenses/MIT, zuletzt abgerufen am 13.01.17},
+  comment      = {Zuletzt abgerufen am 13.01.17},
+  url          = {https://opensource.org/licenses/MIT zuletzt abgerufen am 13.01.17},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
