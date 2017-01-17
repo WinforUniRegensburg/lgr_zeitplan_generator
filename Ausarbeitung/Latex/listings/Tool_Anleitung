@@ -2,7 +2,7 @@
 $ git clone https://github.com/lg-regensburg/zeitplan_generator/
 
 # Navigiere zum Zeitplantool
-$ cd zeitplan-generator
+$ cd zeitplan_generator
 $ cd zeitplantool
 
 # Für ein einfaches Ausführen des Programms (ohne das Packen zu einer App)
