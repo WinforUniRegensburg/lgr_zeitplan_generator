@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {2.3}Evaluierung des Projektverlaufs}{28}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Projektbeginn und Konzeption}{28}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Erste Implementierungsphase und Problemabstimmung}{29}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}\IeC {\"A}nderungs- und Optimierungsvorschl\IeC {\"a}ge}{31}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}\IeC {\"A}nderungs- und Optimierungsvorschl\IeC {\"a}ge}{30}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Pr\IeC {\"a}sentation \& Abgabe des Tools bzw. der Abschlussarbeit}{31}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Pr\IeC {\"a}sentation und Ver\IeC {\"o}ffentlichung der Ergebnisse}{31}{section.2.4}
 \contentsline {chapter}{\numberline {3}Schluss}{34}{chapter.3}
