@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  19 JAN 2017 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  19 JAN 2017 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1777,35 +1777,23 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 324.
  (./VorlageAbschlussarbeit.bbl
-Underfull \hbox (badness 4341) in paragraph at lines 15--17
-[]\T1/ptm/m/n/10.95 (+20) https://www.leichtathletik-scdhfk.de/altersklassen/, 
-zu-letzt ab-ge-ru-fen am
- []
-
-
-Underfull \hbox (badness 5064) in paragraph at lines 27--28
-[]\T1/ptm/m/n/10.95 (+20) http://www.w3schools.com/jquery/html_clone.asp, zu-le
-tzt ab-ge-ru-fen am
+Underfull \hbox (badness 1286) in paragraph at lines 4--7
+[]\T1/ptm/m/n/10.95 (+20) Website.  http://www.sparkassen-gala.de/zeitplan.php,
+ zu-letzt ab-ge-ru-fen am
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 81.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
+(babel)             in language  on input line 81.
 [36
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-[]\T1/ptm/m/n/10.95 (+20) http://www.w3schools.com/jsref/jsref_search.asp, zu-l
-etzt ab-ge-ru-fen am
- []
-
-)
+])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 328.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1846,11 +1834,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
  ) 
 Here is how much of TeX's memory you used:
- 12953 strings out of 493014
- 194001 string characters out of 6133350
- 353470 words of memory out of 5000000
- 15843 multiletter control sequences out of 15000+600000
- 82965 words of font info for 208 fonts, out of 8000000 for 9000
+ 12937 strings out of 493014
+ 193838 string characters out of 6133350
+ 353411 words of memory out of 5000000
+ 15840 multiletter control sequences out of 15000+600000
+ 77167 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,51p,2003b,1310s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1859,10 +1847,10 @@ xlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (45 pages, 419229 bytes).
+Output written on VorlageAbschlussarbeit.pdf (45 pages, 419362 bytes).
 PDF statistics:
  695 PDF objects out of 1000 (max. 8388607)
  619 compressed objects within 7 object streams
  188 named destinations out of 1000 (max. 500000)
- 44454 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 40358 words of extra memory for PDF output out of 42996 (max. 10000000)
 
