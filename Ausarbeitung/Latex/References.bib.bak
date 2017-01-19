@@ -190,8 +190,8 @@
 
 @Misc{prototyping,
   howpublished = {Website},
-  note         = {https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung)\#Evolution.C3.A4res\_Prototyping, zuletzt abgerufen am 03.01.17},
-  url          = {https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung)\#Evolution.C3.A4res\_Prototyping},
+  note         = {https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung), zuletzt abgerufen am 03.01.17},
+  url          = {https://de.wikipedia.org/wiki/Prototyping\_(Softwareentwicklung)},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
