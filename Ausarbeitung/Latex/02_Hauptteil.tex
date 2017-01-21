@@ -69,11 +69,11 @@ Der erste Schritt ist das Einlesen der Ursprungsdatei. Um mit dem Rohtext zu arb
 Der zweite Schritt ist, aus der Ursprungsdatei nur die relevanten Daten herauszufiltern. Hier werden praktisch nur noch alle relevanten Absätze betrachtet. Darüber hinaus bietet es sich an, die jeweiligen Paragraphen gleich nach erster und zweiter Zeile abzuspeichern (vgl. Abbildung 2.1). Dieses Teilproblem wird im HTML-File ParagraphHandler gelöst.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.4\textwidth]{Chen_StrucParagraph.png}
+  \includegraphics[width=0.7\textwidth]{Chen_StrucParagraph.png}
   \caption{Datenmodell eines strukturierten Paragraphen}
   \label{fig:Fig1}
 \end{figure}\\
-Anschließend werden diese Daten im dritten Schritt extrahiert, was im Web-Dokument Cleaner umgesetzt wird. Anhand bestimmter Suchkriterien werden das Datum bzw. die Uhrzeit in der zweiten Zeile und die Kategorie bzw. die Disziplin in der ersten Zeile von jedem Paragraphen erkannt und strukturiert abgespeichert. Hier ist es von Vorteil, dass ein Paragraph im ParagraphHandler unterteilt nach erster und zweiter Zeile abgespeichert wird. Um die Veranstaltungsdaten strukturiert ablegen zu können, wird der Datentyp Event (event) definiert (vgl. Abbildung 2.2).
+Anschließend werden diese Daten im dritten Schritt extrahiert, was im Web-Dokument Cleaner umgesetzt wird. Anhand bestimmter Suchkriterien werden das Datum bzw. die Uhrzeit in der zweiten Zeile und die Kategorie bzw. die Disziplin in der ersten Zeile von jedem Paragraphen erkannt und strukturiert abgespeichert. Hier ist es von Vorteil, dass ein Paragraph im ParagraphHandler unterteilt nach erster und zweiter Zeile abgespeichert wird. Um die Veranstaltungsdaten strukturiert ablegen zu können, wird der Datentyp Event (event) definiert (vgl. Abbildung 2.2).\\
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.6\textwidth]{Chen_Event.png}
@@ -325,7 +325,7 @@ Da das Tool frühzeitig fertig gestellt werden konnte, ist es möglich rechtzeit
 Im Rahmen des Projektes wurde ein voll funktionsfähiger Zeitplan-Generator für Leichtathletikveranstaltungen realisiert. Der Nutzer hat die Möglichkeit, eine Teilnehmerliste über den Button einzulesen, aus der der Zeitplan generiert wird. Darüber hinaus ist noch ein Button integriert, der es dem Nutzer erlaubt, den Zeitplan herunterzuladen. Ein besonderes Augenmerk wurde auf die Funktionalität und das Design bzw. die Nutzerfreundlichkeit gelegt, was durch die übersichtliche Darstellung und die eindeutigen Bezeichner der Buttons bzw. Überschriften verwirklicht wurde. In den folgenden Abbildungen ist die Benutzeroberfläche des Tools in Ausschnitten abgebildet.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=1.0\textwidth]{FileUploader.png}
+  \includegraphics[width=0.7\textwidth]{FileUploader.png}
   \caption{Ausschnitt der Benutzeroberfläche des FileUploaders}
   \label{fig:Fig1}
 \end{figure}
