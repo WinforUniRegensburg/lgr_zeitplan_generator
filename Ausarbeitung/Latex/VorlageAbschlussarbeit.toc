@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Funktionalit\IeC {\"a}t des File-Uploaders}{13}{subsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.2.1}Festlegung des Designs des File-Uploaders}{13}{subsubsection.2.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2.2}Einlesen und Abspeichern der Ursprungsdatei}{14}{subsubsection.2.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}ParagraphHandler: Herausfiltern der Paragraphen aus dem Rohtext}{14}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}ParagraphHandler: Herausfiltern der Paragraphen aus der Ursprungsdatei}{14}{subsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.3.1}Identifizierung und Speichern der relevanten Paragraphen}{14}{subsubsection.2.2.3.1}
 \contentsline {subsubsection}{\numberline {2.2.3.2}Vorbereitungen f\IeC {\"u}r ein strukturiertes Abspeichern der Paragraphen}{15}{subsubsection.2.2.3.2}
 \contentsline {subsubsection}{\numberline {2.2.3.3}Unterteilung der Paragraphen in erste und zweite Zeile}{16}{subsubsection.2.2.3.3}

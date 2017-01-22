@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  21 JAN 2017 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  22 JAN 2017 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1007,18 +1007,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 29.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 ... der Kategorie}{20}{subsubsection.2.2.4.4}
+l.29 ... der Disziplin}{19}{subsubsection.2.2.4.3}
                                                    [1
 
 
@@ -1234,7 +1234,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 64.
- <./images/Chen_StrucParagraph.png, id=368, 221.02576pt x 174.05025pt>
+ <./images/Chen_StrucParagraph.png, id=369, 221.02576pt x 174.05025pt>
 File: ./images/Chen_StrucParagraph.png Graphic file (type png)
 
 <use ./images/Chen_StrucParagraph.png>
@@ -1242,14 +1242,14 @@ Package pdftex.def Info: ./images/Chen_StrucParagraph.png used on input line 72
 .
 (pdftex.def)             Requested size: 268.87737pt x 211.75404pt.
 
-<./images/Chen_Event.png, id=370, 406.51875pt x 248.127pt>
+<./images/Chen_Event.png, id=371, 406.51875pt x 248.127pt>
 File: ./images/Chen_Event.png Graphic file (type png)
 
 <use ./images/Chen_Event.png>
 Package pdftex.def Info: ./images/Chen_Event.png used on input line 79.
 (pdftex.def)             Requested size: 230.46967pt x 140.66905pt.
 
-<./images/Chen_Table.png, id=371, 589.60275pt x 413.74574pt>
+<./images/Chen_Table.png, id=372, 589.60275pt x 413.74574pt>
 File: ./images/Chen_Table.png Graphic file (type png)
 
 <use ./images/Chen_Table.png>
@@ -1296,7 +1296,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 98.
 
-<./images/GroberAblauf_UML.png, id=388, 572.1375pt x 554.07pt>
+<./images/GroberAblauf_UML.png, id=389, 572.1375pt x 554.07pt>
 File: ./images/GroberAblauf_UML.png Graphic file (type png)
 
 <use ./images/GroberAblauf_UML.png>
@@ -1390,6 +1390,11 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 156.
  [13]
+Overfull \hbox (11.81241pt too wide) in paragraph at lines 157--157
+[]\T1/ptm/b/n/12 ParagraphHandler: Her-aus-fil-tern der Pa-ra-gra-phen aus der 
+Ur-sprungs-
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 157.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1406,7 +1411,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 161.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 161.
- [14]
+[14]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 162.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1421,8 +1426,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 165.
  [15]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 165.
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 Package microtype Info: Loading generic settings for font family
@@ -1613,7 +1617,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 272.
- <./images/Icon.png, id=533, 96.36pt x 96.36pt>
+ <./images/Icon.png, id=534, 96.36pt x 96.36pt>
 File: ./images/Icon.png Graphic file (type png)
 
 <use ./images/Icon.png>
@@ -1651,7 +1655,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 291.
 
-<./images/Spiralmodel_nach_Boehm.png, id=564, 803.0pt x 659.46375pt>
+<./images/Spiralmodel_nach_Boehm.png, id=565, 803.0pt x 659.46375pt>
 File: ./images/Spiralmodel_nach_Boehm.png Graphic file (type png)
 
 <use ./images/Spiralmodel_nach_Boehm.png>
@@ -1701,14 +1705,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 324.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 324.
- <./images/FileUploader.png, id=588, 392.1852pt x 152.2488pt>
+ <./images/FileUploader.png, id=589, 392.1852pt x 152.2488pt>
 File: ./images/FileUploader.png Graphic file (type png)
 
 <use ./images/FileUploader.png>
 Package pdftex.def Info: ./images/FileUploader.png used on input line 328.
 (pdftex.def)             Requested size: 268.87737pt x 104.38503pt.
 
-<./images/Table.png, id=589, 440.3652pt x 198.0198pt>
+<./images/Table.png, id=590, 440.3652pt x 198.0198pt>
 File: ./images/Table.png Graphic file (type png)
  <use ./images/Table.png>
 Package pdftex.def Info: ./images/Table.png used on input line 334.
@@ -1830,7 +1834,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
 Package rerunfilecheck Info: File `VorlageAbschlussarbeit.out' has not changed.
 
-(rerunfilecheck)             Checksum: 3687690E3CBF2421C36E24C7CB71F801;4363.
+(rerunfilecheck)             Checksum: 780B121A9D42DAB064657A3F8C155038;4370.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1840,7 +1844,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
 Here is how much of TeX's memory you used:
  12937 strings out of 493014
  193838 string characters out of 6133350
- 353411 words of memory out of 5000000
+ 353477 words of memory out of 5000000
  15840 multiletter control sequences out of 15000+600000
  77167 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1851,10 +1855,10 @@ xlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (45 pages, 419080 bytes).
+Output written on VorlageAbschlussarbeit.pdf (45 pages, 418552 bytes).
 PDF statistics:
- 695 PDF objects out of 1000 (max. 8388607)
- 619 compressed objects within 7 object streams
+ 696 PDF objects out of 1000 (max. 8388607)
+ 620 compressed objects within 7 object streams
  188 named destinations out of 1000 (max. 500000)
  40358 words of extra memory for PDF output out of 42996 (max. 10000000)
 
