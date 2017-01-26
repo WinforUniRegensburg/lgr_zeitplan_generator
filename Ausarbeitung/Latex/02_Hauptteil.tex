@@ -70,7 +70,7 @@ Der zweite Schritt ist, aus der Ursprungsdatei nur die relevanten Daten herauszu
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{Chen_StrucParagraph.png}
-  \caption{Datenmodell eines strukturierten Paragraphen}
+  \caption{Gedanklicher Aufbau eines strukturierten Paragraphen}
   \label{fig:Fig1}
 \end{figure}\\
 Anschließend werden diese Daten im dritten Schritt extrahiert, was im Web-Dokument Cleaner umgesetzt wird. Anhand bestimmter Suchkriterien werden das Datum bzw. die Uhrzeit in der zweiten Zeile und die Kategorie bzw. die Disziplin in der ersten Zeile von jedem Paragraphen erkannt und strukturiert abgespeichert. Hier ist es von Vorteil, dass ein Paragraph im ParagraphHandler unterteilt nach erster und zweiter Zeile abgespeichert wird. Um die Veranstaltungsdaten strukturiert ablegen zu können, wird der Datentyp Event (event) definiert (vgl. Abbildung 2.2).\\
@@ -86,7 +86,7 @@ Der Tabellenkörper einer Tabelle kann aus mehreren Zeilen (TableRow) bestehen, 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{Chen_Table.png}
-  \caption{Datenmodell einer Tabelle}
+  \caption{Datentyp zur Verdeutlichung des Aufbaus der View von GenerateTable}
   \label{fig:Fig1}
 \end{figure} \\
 Zusammenfassend werden also neben dem vorhandenen Inputfile vier HTML-Files mit JavaScript erstellt, die der Problemlösung dienen. Des Weiteren werden für die Desktop-App noch die Dateien index.html, main.js und package.json benötigt (vgl. Kapitel 2.2.6). Die genaue Vorgehensweise in den einzelnen Schritten wird im Folgenden genauer erläutert.

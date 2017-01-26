@@ -1,9 +1,9 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Datenmodell eines strukturierten Paragraphen\relax }}{7}{figure.caption.18}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Gedanklicher Aufbau eines strukturierten Paragraphen\relax }}{7}{figure.caption.18}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Datenmodell eines Events\relax }}{8}{figure.caption.19}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Datenmodell einer Tabelle\relax }}{8}{figure.caption.20}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Datentyp zur Verdeutlichung des Aufbaus der View von GenerateTable\relax }}{8}{figure.caption.20}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces \IeC {\"U}bersicht Programmablauf\relax }}{9}{figure.caption.21}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Icon der Desktop-App\relax }}{27}{figure.caption.28}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Spiralmodel nach Boehm\relax }}{29}{figure.caption.29}
