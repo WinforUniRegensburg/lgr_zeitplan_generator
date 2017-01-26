@@ -16,7 +16,6 @@ Warning--to sort, need author or key in github
 Warning--to sort, need author or key in kodierung
 Warning--to sort, need author or key in utf8
 Warning--to sort, need author or key in meta
-Warning--to sort, need author or key in meta3
 Warning--to sort, need author or key in plugin
 Warning--to sort, need author or key in jQuery
 Warning--to sort, need author or key in header
@@ -32,22 +31,23 @@ Warning--to sort, need author or key in altersklassen
 Warning--to sort, need author or key in table
 Warning--to sort, need author or key in electron
 Warning--to sort, need author or key in electron2
+Warning--to sort, need author or key in iconion
 Warning--to sort, need author or key in agilewerte
 Warning--to sort, need author or key in spiralmodell
 Warning--to sort, need author or key in prototyping
 Warning--to sort, need author or key in mitlicense
 You've used 30 entries,
             2118 wiz_defined-function locations,
-            566 strings with 6712 characters,
-and the built_in function-call counts, 4819 in all, are:
-= -- 454
+            565 strings with 7933 characters,
+and the built_in function-call counts, 4442 in all, are:
+= -- 338
 > -- 36
 < -- 0
 + -- 32
 - -- 2
 * -- 155
-:= -- 513
-add.period$ -- 61
+:= -- 426
+add.period$ -- 32
 call.type$ -- 30
 change.case$ -- 61
 chr.to.int$ -- 0
@@ -55,17 +55,17 @@ cite$ -- 59
 duplicate$ -- 215
 empty$ -- 690
 format.name$ -- 2
-if$ -- 1207
+if$ -- 1091
 int.to.chr$ -- 0
 int.to.str$ -- 30
 missing$ -- 2
-newline$ -- 124
+newline$ -- 95
 num.names$ -- 2
-pop$ -- 327
+pop$ -- 356
 preamble$ -- 1
 purify$ -- 61
 quote$ -- 0
-skip$ -- 179
+skip$ -- 208
 stack$ -- 0
 substring$ -- 150
 swap$ -- 30
@@ -76,5 +76,5 @@ type$ -- 118
 warning$ -- 29
 while$ -- 2
 width$ -- 32
-write$ -- 215
+write$ -- 157
 (There were 29 warnings)
