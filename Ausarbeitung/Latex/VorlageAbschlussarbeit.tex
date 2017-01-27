@@ -148,7 +148,7 @@ pdfpagelayout={SinglePage}
 \usepackage[printonlyused]{acronym}
 
 %Anhang
-%\usepackage{appendix}
+\usepackage{appendix}
 
 
 %Bild-, Tabellenuntschriften schöner formatieren
@@ -319,7 +319,27 @@ pdfpagelayout={SinglePage}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\appendixpagename}{Anhang}
 
+\newpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Anhang}
+\appendix
+\appendixpage
+
+%%\appendix
+%%\phantomsection\appendixpagename{Anhang} 
+% \renewcommand*
+%%\appendixpage
+%%\addappheadtotoc
+
+\chapter{Zeitplan-Generator}
+\label{chap:anhang_1}
+
+
+
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \phantomsection
