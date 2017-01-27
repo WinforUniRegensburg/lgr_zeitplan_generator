@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  27 JAN 2017 09:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  27 JAN 2017 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1234,7 +1234,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 63.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 63.
- <./images/Chen_StrucParagraph.png, id=369, 221.02576pt x 174.05025pt>
+ <./images/Chen_StrucParagraph.png, id=368, 221.02576pt x 174.05025pt>
 File: ./images/Chen_StrucParagraph.png Graphic file (type png)
 
 <use ./images/Chen_StrucParagraph.png>
@@ -1242,14 +1242,14 @@ Package pdftex.def Info: ./images/Chen_StrucParagraph.png used on input line 71
 .
 (pdftex.def)             Requested size: 268.87737pt x 211.75404pt.
 
-<./images/Chen_Event.png, id=371, 406.51875pt x 248.127pt>
+<./images/Chen_Event.png, id=370, 406.51875pt x 248.127pt>
 File: ./images/Chen_Event.png Graphic file (type png)
 
 <use ./images/Chen_Event.png>
 Package pdftex.def Info: ./images/Chen_Event.png used on input line 78.
 (pdftex.def)             Requested size: 230.46967pt x 140.66905pt.
 
-<./images/Chen_Table.png, id=372, 589.60275pt x 413.74574pt>
+<./images/Chen_Table.png, id=371, 589.60275pt x 413.74574pt>
 File: ./images/Chen_Table.png Graphic file (type png)
 
 <use ./images/Chen_Table.png>
@@ -1296,7 +1296,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 97.
 
-<./images/GroberAblauf_UML.png, id=389, 572.1375pt x 554.07pt>
+<./images/GroberAblauf_UML.png, id=388, 572.1375pt x 554.07pt>
 File: ./images/GroberAblauf_UML.png Graphic file (type png)
 
 <use ./images/GroberAblauf_UML.png>
@@ -1547,9 +1547,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--242
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 242.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1613,7 +1610,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 270.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 270.
- <./images/Icon.png, id=534, 96.36pt x 96.36pt>
+ <./images/Icon.png, id=533, 96.36pt x 96.36pt>
 File: ./images/Icon.png Graphic file (type png)
 
 <use ./images/Icon.png>
@@ -1634,13 +1631,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 285.
 [26] (./listings/Tool_Anleitung
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 8.
  [27 <./images/Icon.png>])
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 288.
@@ -1651,7 +1648,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 289.
 
-<./images/Spiralmodel_nach_Boehm.png, id=565, 803.0pt x 659.46375pt>
+<./images/Spiralmodel_nach_Boehm.png, id=555, 803.0pt x 659.46375pt>
 File: ./images/Spiralmodel_nach_Boehm.png Graphic file (type png)
 
 <use ./images/Spiralmodel_nach_Boehm.png>
@@ -1681,13 +1678,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 313.
  [29 <./images/Spiralmodel_nach_Boehm.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 313.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 314.
+(babel)             in language  on input line 313.
  [30]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 314.
@@ -1701,19 +1698,25 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 322.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 322.
- <./images/FileUploader.png, id=590, 392.1852pt x 152.2488pt>
+ <./images/FileUploader.png, id=589, 392.1852pt x 152.2488pt>
 File: ./images/FileUploader.png Graphic file (type png)
 
 <use ./images/FileUploader.png>
 Package pdftex.def Info: ./images/FileUploader.png used on input line 326.
 (pdftex.def)             Requested size: 268.87737pt x 104.38503pt.
 
-<./images/Table.png, id=591, 440.3652pt x 198.0198pt>
+<./images/Table.png, id=590, 440.3652pt x 198.0198pt>
 File: ./images/Table.png Graphic file (type png)
  <use ./images/Table.png>
 Package pdftex.def Info: ./images/Table.png used on input line 332.
 (pdftex.def)             Requested size: 384.11221pt x 172.73209pt.
 )
+Overfull \hbox (16.91771pt too wide) in paragraph at lines 323--309
+\T1/ptm/m/n/10.95 (-20) Source-Software zur Ver-fü-gung ge-stellt (https://gith
+ub.com/lg-regensburg/zeitplan_generator).
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 323--309
 
  []
@@ -1726,7 +1729,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 309.
-[31 <./images/FileUploader.png>]
+[31]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1735,7 +1738,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 309.
- [32 <./images/Table.png>]
+ [32 <./images/FileUploader.png> <./images/Table.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 309.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1860,21 +1863,21 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
 Here is how much of TeX's memory you used:
  12938 strings out of 493014
  193851 string characters out of 6133350
- 353479 words of memory out of 5000000
+ 354467 words of memory out of 5000000
  15840 multiletter control sequences out of 15000+600000
  77167 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,51p,2014b,1873s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,51p,2028b,1871s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 16/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on VorlageAbschlussarbeit.pdf (46 pages, 418872 bytes).
+Output written on VorlageAbschlussarbeit.pdf (46 pages, 419117 bytes).
 PDF statistics:
- 701 PDF objects out of 1000 (max. 8388607)
- 624 compressed objects within 7 object streams
+ 700 PDF objects out of 1000 (max. 8388607)
+ 623 compressed objects within 7 object streams
  189 named destinations out of 1000 (max. 500000)
  40358 words of extra memory for PDF output out of 42996 (max. 10000000)
 

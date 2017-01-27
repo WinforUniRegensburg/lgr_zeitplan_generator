@@ -28,8 +28,8 @@
 \contentsline {subsubsection}{\numberline {2.2.4.2}Identifizierung des Datums und der Uhrzeit}{18}{subsubsection.2.2.4.2}
 \contentsline {subsubsection}{\numberline {2.2.4.3}Identifizierung der Disziplin}{19}{subsubsection.2.2.4.3}
 \contentsline {subsubsection}{\numberline {2.2.4.4}Identifizierung der Kategorie}{20}{subsubsection.2.2.4.4}
-\contentsline {subsection}{\numberline {2.2.5}GenerateTable: Dynamische Erstellung des Zeitplans}{21}{subsection.2.2.5}
-\contentsline {subsubsection}{\numberline {2.2.5.1}Gestaltung des Speichern-Buttons}{21}{subsubsection.2.2.5.1}
+\contentsline {subsection}{\numberline {2.2.5}GenerateTable: Dynamische Erstellung des Zeitplans}{22}{subsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.5.1}Gestaltung des Speichern-Buttons}{22}{subsubsection.2.2.5.1}
 \contentsline {subsubsection}{\numberline {2.2.5.2}Sortierung der Events}{22}{subsubsection.2.2.5.2}
 \contentsline {subsubsection}{\numberline {2.2.5.3}Gruppierung nach tagesgleichen Events}{23}{subsubsection.2.2.5.3}
 \contentsline {subsubsection}{\numberline {2.2.5.4}Generierung der Tabelle}{24}{subsubsection.2.2.5.4}
