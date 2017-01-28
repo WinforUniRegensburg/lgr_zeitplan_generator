@@ -5,7 +5,6 @@ A level-1 auxiliary file: DeckblattProjektseminar.aux
 A level-1 auxiliary file: 01_Einleitung.aux
 A level-1 auxiliary file: 02_Hauptteil.aux
 A level-1 auxiliary file: 03_Schluss.aux
-A level-1 auxiliary file: 04_DigitalerAnhang.aux
 The style file: plain.bst
 Database file #1: References.bib
 Warning--to sort, need author or key in gala
@@ -39,7 +38,7 @@ Warning--to sort, need author or key in prototyping
 Warning--to sort, need author or key in mitlicense
 You've used 30 entries,
             2118 wiz_defined-function locations,
-            566 strings with 7955 characters,
+            565 strings with 7933 characters,
 and the built_in function-call counts, 4442 in all, are:
 = -- 338
 > -- 36

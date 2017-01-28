@@ -314,25 +314,40 @@ pdfpagelayout={SinglePage}
 
 \include{03_Schluss}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%DigitalerAnhang%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\include{04_DigitalerAnhang}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\appendixpagename}{Digitaler Anhang}
+\renewcommand{\appendixpagename}{Anhang}
 
 \newpage
 
 \phantomsection
-\addcontentsline{toc}{chapter}{Digitaler Anhang}
+\addcontentsline{toc}{chapter}{Anhang}
 \appendix
 \appendixpage
 
-\chapter{Zeitplan-Generator}
-\label{chap:Zeitplan-Generator} 
+\chapter{Abbildungen}
+\label{chap:Abbildungen}
+
+\section{Datenmodell eines Events}
+\label{sec:Datenmodell eines Events}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Chen_Event.png}
+\end{figure}
+
+\newpage
+
+\section{Datentyp zur Verdeutlichung des Aufbaus der View von GenerateTable}
+\label{Datentyp zur Verdeutlichung des Aufbaus der View von GenerateTable}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Chen_Table.png}
+\end{figure}
+
+\chapter{Digitaler Anhang des Zeitplan-Generators}
+\label{chap:Digitaler Anhang des Zeitplan-Generators} 
 
 %%\appendix
 %%\phantomsection\appendixpagename{Anhang} 

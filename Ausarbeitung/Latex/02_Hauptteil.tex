@@ -72,7 +72,7 @@ Der zweite Schritt ist, aus der Ursprungsdatei nur die relevanten Daten herauszu
   \caption{Gedanklicher Aufbau eines strukturierten Paragraphen}
   \label{fig:Fig1}
 \end{figure}\\
-Anschließend werden diese Daten im dritten Schritt extrahiert, was im Web-Dokument Cleaner umgesetzt wird. Anhand bestimmter Suchkriterien werden das Datum bzw. die Uhrzeit in der zweiten Zeile und die Kategorie bzw. die Disziplin in der ersten Zeile von jedem Paragraphen erkannt und strukturiert abgespeichert. Hier ist es von Vorteil, dass ein Paragraph im ParagraphHandler unterteilt nach erster und zweiter Zeile abgespeichert wird. Um die Veranstaltungsdaten strukturiert ablegen zu können, wird der Datentyp Event (event) definiert (vgl. Abbildung 2.2).\\
+Anschließend werden diese Daten im dritten Schritt extrahiert, was im Web-Dokument Cleaner umgesetzt wird. Anhand bestimmter Suchkriterien werden das Datum bzw. die Uhrzeit in der zweiten Zeile und die Kategorie bzw. die Disziplin in der ersten Zeile von jedem Paragraphen erkannt und strukturiert abgespeichert. Hier ist es von Vorteil, dass ein Paragraph im ParagraphHandler unterteilt nach erster und zweiter Zeile abgespeichert wird. Um die Veranstaltungsdaten strukturiert ablegen zu können, wird der Datentyp Event (event) definiert (vgl. Abbildung 2.2 und A.1).\\
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.6\textwidth]{Chen_Event.png}
@@ -81,7 +81,7 @@ Anschließend werden diese Daten im dritten Schritt extrahiert, was im Web-Dokum
 \end{figure}\\
 Im letzten Schritt wird schließlich im HTML-File GenerateTable der gewünschte Zeitplan aus den zuvor identifizierten Informationen dynamisch generiert. Für jeden Wettkampftag (eindeutiges Datum) wird dabei eine eigene Tabelle erzeugt, wobei als Überschrift für eine Tabelle das Datum dient. 
 Eine Tabelle besteht aus einem Tabellenkopf (TableHead) und einem Tabellenkörper. Der Tabellenkopf ist die erste Zeile einer Tabelle. Der Eintrag in der ersten Zelle im Tabellenkopf ist stets das Wort Zeit. Die folgenden Inhalte der Zellen der ersten Zeile sind die jeweiligen Kategorien, die identifiziert wurden. Diese werden aszendierend und nach dem Geschlecht sortiert dargestellt. 
-Der Tabellenkörper einer Tabelle kann aus mehreren Zeilen (TableRow) bestehen, wobei der jeweilige Beginn der Veranstaltung (Uhrzeit) in der ersten Spalte unter dem im Tabellenkopf definierten Titel Zeit angeordnet wird. Die Uhrzeit wird aufsteigend sortiert angezeigt. Jede Zeile beinhaltet Zellen (Cell), die gegebenenfalls die Disziplin(en) oder keinen Inhalt (Content) als Eintrag haben. Darüber hinaus ist eine Zelle einer Kategorie aus dem Tabellenkopf zugeordnet. Die Disziplin wird also anhand des Datums, der Uhrzeit und der Kategorie zugeordnet (vgl. Abbildung 2.3).
+Der Tabellenkörper einer Tabelle kann aus mehreren Zeilen (TableRow) bestehen, wobei der jeweilige Beginn der Veranstaltung (Uhrzeit) in der ersten Spalte unter dem im Tabellenkopf definierten Titel Zeit angeordnet wird. Die Uhrzeit wird aufsteigend sortiert angezeigt. Jede Zeile beinhaltet Zellen (Cell), die gegebenenfalls die Disziplin(en) oder keinen Inhalt (Content) als Eintrag haben. Darüber hinaus ist eine Zelle einer Kategorie aus dem Tabellenkopf zugeordnet. Die Disziplin wird also anhand des Datums, der Uhrzeit und der Kategorie zugeordnet (vgl. Abbildung 2.3 und A.2).
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{Chen_Table.png}
