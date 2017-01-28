@@ -314,19 +314,25 @@ pdfpagelayout={SinglePage}
 
 \include{03_Schluss}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%DigitalerAnhang%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{04_DigitalerAnhang}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\appendixpagename}{Anhang}
+\renewcommand{\appendixpagename}{Digitaler Anhang}
 
 \newpage
 
 \phantomsection
-\addcontentsline{toc}{chapter}{Anhang}
+\addcontentsline{toc}{chapter}{Digitaler Anhang}
 \appendix
 \appendixpage
+
+\chapter{Zeitplan-Generator}
+\label{chap:Zeitplan-Generator} 
 
 %%\appendix
 %%\phantomsection\appendixpagename{Anhang} 
@@ -334,8 +340,7 @@ pdfpagelayout={SinglePage}
 %%\appendixpage
 %%\addappheadtotoc
 
-\chapter{Zeitplan-Generator}
-\label{chap:anhang_1}
+
 
 
 
@@ -356,30 +361,5 @@ pdfpagelayout={SinglePage}
 % nur bei Abschlussarbeiten!
 %
 
-\thispagestyle{empty}
-\phantomsection
-\label{erklaerung}
-%\addcontentsline{toc}{chapter}{Erklärung}
-\pdfbookmark[0]{Eidesstattliche Erklärung}{erklaerung}
-
-\setlength{\parindent}{0em}
-
-\markboth{\uppercase{Eidesstattliche Erklärung}}{}
-\textbf{\large{Erklärung an Eides statt}}
-
-\vspace*{20pt}
-Hiermit versichere ich an Eides statt, dass ich die vorliegende Arbeit selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe. Die aus fremden Quellen direkt oder indirekt übernommenen Gedanken sind als solche kenntlich gemacht. Die Arbeit wurde bisher in gleicher oder ähnlicher Form keiner anderen Prüfungsbehörde vorgelegt und auch nicht veröffentlicht.
-
-\vspace*{65pt}
-
-
-Regensburg, den \abgabedatum
-
-\vspace*{60pt}
-
-
-\authorname
-
-Matrikelnummer \matrikelnr
 
 \end{document}
